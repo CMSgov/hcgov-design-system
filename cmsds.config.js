@@ -7,7 +7,7 @@ module.exports = {
   rootPath: '',
 
   // Name of the design system. This replaces the {{name}} template in documentation content.
-  name: 'Healthcare.gov Child Design System',
+  name: 'HealthCare.gov Design System',
   // The URL for your GitHub repository. This replaces the {{github}} template in documentation content.
   githubUrl: 'https://github.com/CMSgov/hcgov-design-system',
   // The name of your design system NPM package. This replaces the {{npm}} template in documentation content.'

@@ -1,10 +1,10 @@
-# HealthCare.gov Child Design System
+# HealthCare.gov Design System
 
 [![npm](https://img.shields.io/npm/v/@cmsgov/ds-healthcare-gov.svg?label=@cmsgov%2Fds-healthcare-gov)](https://www.npmjs.com/package/@cmsgov/ds-healthcare-gov)
 
 [>> **View the full documentation site here** <<](https://github.com/CMSgov/hcgov-design-system/)
 
-The _HealthCare.gov Child Design System_ is a standalone design system, built on top of the [CMS Design System](https://design.cms.gov/) (CMSDS), for use in healthcare.gov applications. It is a _child_ of the CMS Design System in that it inherits all of the functionality of its parent while also adding its own features and customizations.
+The _HealthCare.gov Design System_ contains shared design and front-end development resources for Healthcare.gov applications, and is built on top of the [CMS Design System](https://design.cms.gov/) (CMSDS). As a _child design system_, it inherits base styles, components, and guidance from the CMS Design System, while also adding its own features and customizations.
 
 ## Usage
 
@@ -54,4 +54,4 @@ These scripts can all be run from the root level of the repo:
 
 ## Building on top of the CMS Design System
 
-As a child design system to the CMS Design System, we need to know how the CMSDS and its tooling work. For more information on how to build off of the CMSDS, extend it, and customize it, check out the [child design system example and its documentation](https://github.com/CMSgov/design-system/tree/master/examples/child-design-system).
+As a child design system, the Healthcare.gov Design System shares the same tooling and organization as the CMSDS. For more information on how to extend and customize SASS, JS, and documentation, check out the [child design system example and its documentation](https://github.com/CMSgov/design-system/tree/master/examples/child-design-system).
