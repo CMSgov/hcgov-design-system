@@ -2,7 +2,9 @@
 
 ## 1) Publish to NPM
 
-Run `yarn release` to build a release from the HEAD of the master branch and publish it to NPM. The pre-publish script will prompt you for the version number change. 
+1. Run `yarn release` to build a release branch from the HEAD of the master branch. The pre-publish script will prompt you for the version number change. If the script finishes successfully, move on to the next step.
+2. Run `npm publish` to publish the release to NPM. Note that this cannot be undone.
+3. Create a pull request on GitHub for the release branch so it can be merged into the master branch.
 
 **Note:** You must be logged in to an NPM account with publishing rights on the `cmsgov` organization for this to work. To request access, create a [Jira ticket on the QPP Tools and Access board](https://jira.cms.gov/browse/QTA-847) with your EUA and NPM username. Reach out on the [`#hcgov-design-system` channel](https://cmsgov.slack.com/archives/C0111BVM1LZ) for any questions on this process.
 
