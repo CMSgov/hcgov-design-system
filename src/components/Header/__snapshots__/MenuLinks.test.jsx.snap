@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuLinks renders list of links 1`] = `
+<ul
+  className="hc-c-menu__links ds-c-list ds-c-list--bare"
+>
+  <li
+    className="ds-u-margin--0"
+    key="#foo"
+  >
+    <a
+      className="hc-c-menu__link"
+      href="#foo"
+    >
+      Foo
+    </a>
+  </li>
+  <li
+    className="ds-u-margin--0"
+    key="#bar"
+  >
+    <a
+      className="hc-c-menu__link"
+      href="#bar"
+    >
+      Bar
+    </a>
+  </li>
+  <li
+    className="ds-u-margin--0"
+    key="#baz"
+  >
+    <a
+      className="hc-c-menu__link"
+      href="#baz"
+      onClick={[Function]}
+    >
+      Baz
+    </a>
+  </li>
+</ul>
+`;

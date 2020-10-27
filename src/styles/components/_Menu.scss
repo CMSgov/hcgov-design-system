@@ -1,0 +1,90 @@
+/**
+ * Shared across header variations
+ */
+.hc-c-menu {
+  display: none;
+
+  .ds-l-row {
+    // Allow us to align hc-c-menu__content with the "Menu" button
+    position: relative;
+  }
+}
+
+.hc-c-menu--open {
+  // Ensure the menu is open when its visibility is toggled on
+  display: block !important; // stylelint-disable-line
+}
+
+// Position the menu below the "Menu" toggle button
+.hc-c-menu__content {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  .hc-c-menu__link {
+    display: block;
+  }
+}
+
+.hc-c-menu__link {
+  color: $color-primary-darker;
+  padding: $spacer-1;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color-primary-darkest;
+  }
+}
+
+/**
+ * Homepage header
+ */
+
+.hc-c-header--home .hc-c-menu {
+  background-color: $color-primary;
+}
+
+@media (min-width: $width-sm) {
+  .hc-c-header--home {
+    // On non-mobile screens, the homepage menu is always visible
+    .hc-c-menu {
+      display: block;
+    }
+
+    .hc-c-menu__content {
+      position: static;
+    }
+
+    .hc-c-menu__links li {
+      display: inline-block;
+    }
+  }
+}
+
+.hc-c-header--home .hc-c-menu__link {
+  color: $color-white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.75;
+  }
+}
+
+/**
+ * Logged-in and Product headers
+ */
+.hc-c-header--logged-in .hc-c-menu__content,
+.hc-c-header--minimal .hc-c-menu__content {
+  background-color: $color-primary-alt-light;
+  color: $color-base;
+
+  @media (min-width: $width-sm) {
+    // Span only part of non-mobile screens
+    left: auto;
+    max-width: 30ch;
+    min-width: 20ch;
+  }
+}

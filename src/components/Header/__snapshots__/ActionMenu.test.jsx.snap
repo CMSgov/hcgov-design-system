@@ -1,0 +1,421 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionMenu logged-in version renders logged-in version 1`] = `
+<Component
+  firstName="John"
+  locale="en"
+  loggedIn={true}
+  onMenuToggleClick={[MockFunction]}
+>
+  <ActionMenu
+    firstName="John"
+    locale="en"
+    loggedIn={true}
+    onMenuToggleClick={[MockFunction]}
+    t={[Function]}
+  >
+    <nav
+      className="hc-c-header__actions ds-l-col ds-l-col--auto ds-u-margin-left--auto ds-u-font-weight--bold"
+      id="hc-c-header__actions"
+      role="navigation"
+    >
+      <LoggedInActionMenu
+        firstName="John"
+        locale="en"
+        loggedIn={true}
+        onMenuToggleClick={[MockFunction]}
+        t={[Function]}
+      >
+        <div>
+          <span
+            className="ds-u-display--none ds-u-sm-display--inline-block"
+          >
+            John
+          </span>
+          <MenuButton
+            firstName="John"
+            locale="en"
+            loggedIn={true}
+            onMenuToggleClick={[MockFunction]}
+            t={[Function]}
+          >
+            <Button
+              aria-controls="hc-c-menu"
+              aria-expanded={false}
+              aria-label="header.openMenu"
+              className="hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2"
+              component="button"
+              onClick={[MockFunction]}
+              size="small"
+              type="button"
+            >
+              <button
+                aria-controls="hc-c-menu"
+                aria-expanded={false}
+                aria-label="header.openMenu"
+                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2"
+                onClick={[Function]}
+                type="button"
+              >
+                header.menu
+              </button>
+            </Button>
+          </MenuButton>
+        </div>
+      </LoggedInActionMenu>
+    </nav>
+  </ActionMenu>
+</Component>
+`;
+
+exports[`ActionMenu logged-in version set aria-expanded to true 1`] = `
+<Component
+  firstName="John"
+  locale="en"
+  loggedIn={true}
+  onMenuToggleClick={[MockFunction]}
+  open={true}
+>
+  <ActionMenu
+    firstName="John"
+    locale="en"
+    loggedIn={true}
+    onMenuToggleClick={[MockFunction]}
+    open={true}
+    t={[Function]}
+  >
+    <nav
+      className="hc-c-header__actions ds-l-col ds-l-col--auto ds-u-margin-left--auto ds-u-font-weight--bold"
+      id="hc-c-header__actions"
+      role="navigation"
+    >
+      <LoggedInActionMenu
+        firstName="John"
+        locale="en"
+        loggedIn={true}
+        onMenuToggleClick={[MockFunction]}
+        open={true}
+        t={[Function]}
+      >
+        <div>
+          <span
+            className="ds-u-display--none ds-u-sm-display--inline-block"
+          >
+            John
+          </span>
+          <MenuButton
+            firstName="John"
+            locale="en"
+            loggedIn={true}
+            onMenuToggleClick={[MockFunction]}
+            open={true}
+            t={[Function]}
+          >
+            <Button
+              aria-controls="hc-c-menu"
+              aria-expanded={true}
+              aria-label="header.closeMenu"
+              className="hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2"
+              component="button"
+              onClick={[MockFunction]}
+              size="small"
+              type="button"
+            >
+              <button
+                aria-controls="hc-c-menu"
+                aria-expanded={true}
+                aria-label="header.closeMenu"
+                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2"
+                onClick={[Function]}
+                type="button"
+              >
+                header.close
+              </button>
+            </Button>
+          </MenuButton>
+        </div>
+      </LoggedInActionMenu>
+    </nav>
+  </ActionMenu>
+</Component>
+`;
+
+exports[`ActionMenu logged-out version renders custom locale switch link 1`] = `
+<Component
+  locale="en"
+  loggedIn={false}
+  onMenuToggleClick={[MockFunction]}
+  switchLocaleLink="https://ayudalocal.cuidadodesalud.gov/es"
+>
+  <ActionMenu
+    locale="en"
+    loggedIn={false}
+    onMenuToggleClick={[MockFunction]}
+    switchLocaleLink="https://ayudalocal.cuidadodesalud.gov/es"
+    t={[Function]}
+  >
+    <nav
+      className="hc-c-header__actions ds-l-col ds-l-col--auto ds-u-margin-left--auto ds-u-font-weight--bold"
+      id="hc-c-header__actions"
+      role="navigation"
+    >
+      <LoggedOutActionMenu
+        locale="en"
+        loggedIn={false}
+        onMenuToggleClick={[MockFunction]}
+        switchLocaleLink="https://ayudalocal.cuidadodesalud.gov/es"
+        t={[Function]}
+      >
+        <div>
+          <LoggedOutLinks
+            locale="en"
+            switchLocaleLink="https://ayudalocal.cuidadodesalud.gov/es"
+          >
+            <ul
+              className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block"
+            >
+              <li
+                className="hc-c-logged-out-links__li"
+                key="/login"
+              >
+                <a
+                  className="hc-c-logged-out-links__link"
+                  href="/login"
+                >
+                  header.login
+                </a>
+              </li>
+              <li
+                className="hc-c-logged-out-links__li"
+                key="https://ayudalocal.cuidadodesalud.gov/es"
+              >
+                <a
+                  className="hc-c-logged-out-links__link"
+                  href="https://ayudalocal.cuidadodesalud.gov/es"
+                >
+                  header.español
+                </a>
+              </li>
+            </ul>
+          </LoggedOutLinks>
+          <MenuButton
+            className="ds-u-display--inline-block ds-u-sm-display--none"
+            locale="en"
+            loggedIn={false}
+            onMenuToggleClick={[MockFunction]}
+            switchLocaleLink="https://ayudalocal.cuidadodesalud.gov/es"
+            t={[Function]}
+          >
+            <Button
+              aria-controls="hc-c-menu"
+              aria-expanded={false}
+              aria-label="header.openMenu"
+              className="hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
+              component="button"
+              onClick={[MockFunction]}
+              size="small"
+              type="button"
+            >
+              <button
+                aria-controls="hc-c-menu"
+                aria-expanded={false}
+                aria-label="header.openMenu"
+                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
+                onClick={[Function]}
+                type="button"
+              >
+                header.menu
+              </button>
+            </Button>
+          </MenuButton>
+        </div>
+      </LoggedOutActionMenu>
+    </nav>
+  </ActionMenu>
+</Component>
+`;
+
+exports[`ActionMenu logged-out version renders links with absolute URLs 1`] = `
+<Component
+  locale="en"
+  loggedIn={false}
+  onMenuToggleClick={[MockFunction]}
+  primaryDomain="https://www.healthcare.gov"
+>
+  <ActionMenu
+    locale="en"
+    loggedIn={false}
+    onMenuToggleClick={[MockFunction]}
+    primaryDomain="https://www.healthcare.gov"
+    t={[Function]}
+  >
+    <nav
+      className="hc-c-header__actions ds-l-col ds-l-col--auto ds-u-margin-left--auto ds-u-font-weight--bold"
+      id="hc-c-header__actions"
+      role="navigation"
+    >
+      <LoggedOutActionMenu
+        locale="en"
+        loggedIn={false}
+        onMenuToggleClick={[MockFunction]}
+        primaryDomain="https://www.healthcare.gov"
+        t={[Function]}
+      >
+        <div>
+          <LoggedOutLinks
+            locale="en"
+            primaryDomain="https://www.healthcare.gov"
+          >
+            <ul
+              className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block"
+            >
+              <li
+                className="hc-c-logged-out-links__li"
+                key="https://www.healthcare.gov/login"
+              >
+                <a
+                  className="hc-c-logged-out-links__link"
+                  href="https://www.healthcare.gov/login"
+                >
+                  header.login
+                </a>
+              </li>
+              <li
+                className="hc-c-logged-out-links__li"
+                key="https://www.cuidadodesalud.gov/es/"
+              >
+                <a
+                  className="hc-c-logged-out-links__link"
+                  href="https://www.cuidadodesalud.gov/es/"
+                >
+                  header.español
+                </a>
+              </li>
+            </ul>
+          </LoggedOutLinks>
+          <MenuButton
+            className="ds-u-display--inline-block ds-u-sm-display--none"
+            locale="en"
+            loggedIn={false}
+            onMenuToggleClick={[MockFunction]}
+            primaryDomain="https://www.healthcare.gov"
+            t={[Function]}
+          >
+            <Button
+              aria-controls="hc-c-menu"
+              aria-expanded={false}
+              aria-label="header.openMenu"
+              className="hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
+              component="button"
+              onClick={[MockFunction]}
+              size="small"
+              type="button"
+            >
+              <button
+                aria-controls="hc-c-menu"
+                aria-expanded={false}
+                aria-label="header.openMenu"
+                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
+                onClick={[Function]}
+                type="button"
+              >
+                header.menu
+              </button>
+            </Button>
+          </MenuButton>
+        </div>
+      </LoggedOutActionMenu>
+    </nav>
+  </ActionMenu>
+</Component>
+`;
+
+exports[`ActionMenu logged-out version renders logged-out version 1`] = `
+<Component
+  locale="en"
+  loggedIn={false}
+  onMenuToggleClick={[MockFunction]}
+>
+  <ActionMenu
+    locale="en"
+    loggedIn={false}
+    onMenuToggleClick={[MockFunction]}
+    t={[Function]}
+  >
+    <nav
+      className="hc-c-header__actions ds-l-col ds-l-col--auto ds-u-margin-left--auto ds-u-font-weight--bold"
+      id="hc-c-header__actions"
+      role="navigation"
+    >
+      <LoggedOutActionMenu
+        locale="en"
+        loggedIn={false}
+        onMenuToggleClick={[MockFunction]}
+        t={[Function]}
+      >
+        <div>
+          <LoggedOutLinks
+            locale="en"
+          >
+            <ul
+              className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block"
+            >
+              <li
+                className="hc-c-logged-out-links__li"
+                key="/login"
+              >
+                <a
+                  className="hc-c-logged-out-links__link"
+                  href="/login"
+                >
+                  header.login
+                </a>
+              </li>
+              <li
+                className="hc-c-logged-out-links__li"
+                key="https://www.cuidadodesalud.gov/es/"
+              >
+                <a
+                  className="hc-c-logged-out-links__link"
+                  href="https://www.cuidadodesalud.gov/es/"
+                >
+                  header.español
+                </a>
+              </li>
+            </ul>
+          </LoggedOutLinks>
+          <MenuButton
+            className="ds-u-display--inline-block ds-u-sm-display--none"
+            locale="en"
+            loggedIn={false}
+            onMenuToggleClick={[MockFunction]}
+            t={[Function]}
+          >
+            <Button
+              aria-controls="hc-c-menu"
+              aria-expanded={false}
+              aria-label="header.openMenu"
+              className="hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
+              component="button"
+              onClick={[MockFunction]}
+              size="small"
+              type="button"
+            >
+              <button
+                aria-controls="hc-c-menu"
+                aria-expanded={false}
+                aria-label="header.openMenu"
+                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
+                onClick={[Function]}
+                type="button"
+              >
+                header.menu
+              </button>
+            </Button>
+          </MenuButton>
+        </div>
+      </LoggedOutActionMenu>
+    </nav>
+  </ActionMenu>
+</Component>
+`;

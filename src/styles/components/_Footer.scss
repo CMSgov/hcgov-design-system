@@ -1,0 +1,41 @@
+
+@import './Logo';
+
+.hc-c-footer {
+  a {
+    color: $color-muted;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $color-primary-darker;
+    }
+  }
+}
+
+.hc-c-footer__inline-item {
+  color: $color-muted;
+  // We use a right margin and padding to avoid a weird
+  // left indent when an item wraps to the next line
+  margin-right: $spacer-half;
+
+  a {
+    padding-right: $spacer-half;
+  }
+
+  &::after {
+    content: '·';
+  }
+
+  &:first-child a {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:last-child::after {
+    content: '';
+  }
+}

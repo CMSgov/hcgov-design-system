@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuList English returns array of menu list objects 1`] = `
+Object {
+  "home": Array [
+    Object {
+      "href": "#TODO",
+      "label": "TODO: defaultMenuLinks.js",
+    },
+  ],
+  "logged-in": Array [
+    Object {
+      "href": "/marketplace/auth/global/en_US/myProfile#landingPage",
+      "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"en\\"}",
+    },
+    Object {
+      "href": "/marketplace/auth/global/en_US/myProfile#settings",
+      "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
+    },
+    Object {
+      "href": "/logout",
+      "label": "header.logout | {\\"lng\\":\\"en\\"}",
+    },
+  ],
+  "minimal": Array [
+    Object {
+      "href": "/login",
+      "label": "header.login",
+    },
+    Object {
+      "href": "https://www.cuidadodesalud.gov/es/",
+      "label": "header.español",
+    },
+  ],
+}
+`;
+
+exports[`MenuList English returns array of menu list objects with absolute URLs 1`] = `
+Object {
+  "home": Array [
+    Object {
+      "href": "#TODO",
+      "label": "TODO: defaultMenuLinks.js",
+    },
+  ],
+  "logged-in": Array [
+    Object {
+      "href": "https://www.healthcare.gov/marketplace/auth/global/en_US/myProfile#landingPage",
+      "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"en\\"}",
+    },
+    Object {
+      "href": "https://www.healthcare.gov/marketplace/auth/global/en_US/myProfile#settings",
+      "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
+    },
+    Object {
+      "href": "https://www.healthcare.gov/logout",
+      "label": "header.logout | {\\"lng\\":\\"en\\"}",
+    },
+  ],
+  "minimal": Array [
+    Object {
+      "href": "https://www.healthcare.gov/login",
+      "label": "header.login",
+    },
+    Object {
+      "href": "https://www.cuidadodesalud.gov/es/",
+      "label": "header.español",
+    },
+  ],
+}
+`;
+
+exports[`MenuList English returns array of menu list objects with custom locale switch link 1`] = `
+Object {
+  "home": Array [
+    Object {
+      "href": "#TODO",
+      "label": "TODO: defaultMenuLinks.js",
+    },
+  ],
+  "logged-in": Array [
+    Object {
+      "href": "/marketplace/auth/global/en_US/myProfile#landingPage",
+      "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"en\\"}",
+    },
+    Object {
+      "href": "/marketplace/auth/global/en_US/myProfile#settings",
+      "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
+    },
+    Object {
+      "href": "/logout",
+      "label": "header.logout | {\\"lng\\":\\"en\\"}",
+    },
+  ],
+  "minimal": Array [
+    Object {
+      "href": "/login",
+      "label": "header.login",
+    },
+    Object {
+      "href": "https://ayudalocal.cuidadodesalud.gov/es",
+      "label": "header.español",
+    },
+  ],
+}
+`;
+
+exports[`MenuList English returns array of menu list objects with subpath 1`] = `
+Object {
+  "home": Array [
+    Object {
+      "href": "#TODO",
+      "label": "TODO: defaultMenuLinks.js",
+    },
+  ],
+  "logged-in": Array [
+    Object {
+      "href": "/marketplace/auth/global/en_US/myProfile#landingPage",
+      "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"en\\"}",
+    },
+    Object {
+      "href": "/marketplace/auth/global/en_US/myProfile#settings",
+      "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
+    },
+    Object {
+      "href": "/logout",
+      "label": "header.logout | {\\"lng\\":\\"en\\"}",
+    },
+  ],
+  "minimal": Array [
+    Object {
+      "href": "/login",
+      "label": "header.login",
+    },
+    Object {
+      "href": "https://www.cuidadodesalud.gov/es/tax-tool/",
+      "label": "header.español",
+    },
+  ],
+}
+`;
+
+exports[`MenuList Spanish returns array of menu list objects 1`] = `
+Object {
+  "home": Array [
+    Object {
+      "href": "#TODO",
+      "label": "TODO: defaultMenuLinks.js",
+    },
+  ],
+  "logged-in": Array [
+    Object {
+      "href": "/marketplace/auth/global/es_MX/myProfile#landingPage",
+      "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"es\\"}",
+    },
+    Object {
+      "href": "/marketplace/auth/global/es_MX/myProfile#settings",
+      "label": "header.myProfile | {\\"lng\\":\\"es\\"}",
+    },
+    Object {
+      "href": "/logout",
+      "label": "header.logout | {\\"lng\\":\\"es\\"}",
+    },
+  ],
+  "minimal": Array [
+    Object {
+      "href": "/login",
+      "label": "header.login",
+    },
+    Object {
+      "href": "https://www.healthcare.gov/",
+      "label": "header.english",
+    },
+  ],
+}
+`;
+
+exports[`MenuList Spanish returns array of menu list objects with absolute URLs 1`] = `
+Object {
+  "home": Array [
+    Object {
+      "href": "#TODO",
+      "label": "TODO: defaultMenuLinks.js",
+    },
+  ],
+  "logged-in": Array [
+    Object {
+      "href": "https://www.healthcare.gov/marketplace/auth/global/es_MX/myProfile#landingPage",
+      "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"es\\"}",
+    },
+    Object {
+      "href": "https://www.healthcare.gov/marketplace/auth/global/es_MX/myProfile#settings",
+      "label": "header.myProfile | {\\"lng\\":\\"es\\"}",
+    },
+    Object {
+      "href": "https://www.healthcare.gov/logout",
+      "label": "header.logout | {\\"lng\\":\\"es\\"}",
+    },
+  ],
+  "minimal": Array [
+    Object {
+      "href": "https://www.healthcare.gov/login",
+      "label": "header.login",
+    },
+    Object {
+      "href": "https://www.healthcare.gov/",
+      "label": "header.english",
+    },
+  ],
+}
+`;
+
+exports[`MenuList Spanish returns array of menu list objects with custom locale switch link 1`] = `
+Object {
+  "home": Array [
+    Object {
+      "href": "#TODO",
+      "label": "TODO: defaultMenuLinks.js",
+    },
+  ],
+  "logged-in": Array [
+    Object {
+      "href": "/marketplace/auth/global/es_MX/myProfile#landingPage",
+      "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"es\\"}",
+    },
+    Object {
+      "href": "/marketplace/auth/global/es_MX/myProfile#settings",
+      "label": "header.myProfile | {\\"lng\\":\\"es\\"}",
+    },
+    Object {
+      "href": "/logout",
+      "label": "header.logout | {\\"lng\\":\\"es\\"}",
+    },
+  ],
+  "minimal": Array [
+    Object {
+      "href": "/login",
+      "label": "header.login",
+    },
+    Object {
+      "href": "https://localhelp.healthcare.gov",
+      "label": "header.english",
+    },
+  ],
+}
+`;
+
+exports[`MenuList Spanish returns array of menu list objects with subpath 1`] = `
+Object {
+  "home": Array [
+    Object {
+      "href": "#TODO",
+      "label": "TODO: defaultMenuLinks.js",
+    },
+  ],
+  "logged-in": Array [
+    Object {
+      "href": "/marketplace/auth/global/es_MX/myProfile#landingPage",
+      "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"es\\"}",
+    },
+    Object {
+      "href": "/marketplace/auth/global/es_MX/myProfile#settings",
+      "label": "header.myProfile | {\\"lng\\":\\"es\\"}",
+    },
+    Object {
+      "href": "/logout",
+      "label": "header.logout | {\\"lng\\":\\"es\\"}",
+    },
+  ],
+  "minimal": Array [
+    Object {
+      "href": "/login",
+      "label": "header.login",
+    },
+    Object {
+      "href": "https://www.healthcare.gov/tax-tool/",
+      "label": "header.english",
+    },
+  ],
+}
+`;

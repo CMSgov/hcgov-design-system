@@ -1,0 +1,89 @@
+// The "inverse" header has a blue background and white text
+.hc-c-header--inverse {
+  background-color: $color-primary;
+  color: $color-white;
+
+  .hc-c-logo-link:focus {
+    outline: 2px dashed $color-white;
+  }
+
+  .hc-c-logo__health,
+  .hc-c-logo__care,
+  .hc-c-logo__gov {
+    fill: $color-white;
+  }
+}
+
+.hc-c-logo-link {
+  bottom: -2px; // optically aligns logo
+  display: inline-block;
+  flex-shrink: 1;
+  line-height: 1;
+  position: relative;
+
+  svg {
+    max-width: 100%;
+  }
+}
+
+.hc-c-header__subhead {
+  font-family: $font-serif;
+  font-size: $h4-font-size;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $font-normal;
+  margin: 0;
+}
+
+.hc-c-header__subhead--inline {
+  border-left: 1px solid $color-base;
+  display: none;
+  padding-left: $spacer-2;
+
+  .hc-c-header--inverse & {
+    border-left-color: $color-white;
+  }
+}
+
+.hc-c-action-menu-button {
+  min-width: 8ch; // prevent movement when the label is toggled
+}
+
+.hc-c-logged-out-links__li {
+  border-left: 1px solid $border-color-dark;
+  display: inline-block;
+  margin: 0;
+  padding-left: $spacer-2;
+  padding-right: $spacer-2;
+
+  &:first-child {
+    border-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  .hc-c-header--inverse & {
+    border-left-color: $color-white;
+  }
+}
+
+.hc-c-logged-out-links__link {
+  text-decoration: none;
+
+  .hc-c-header--inverse & {
+    color: $color-base-inverse;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $color-base-inverse;
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}

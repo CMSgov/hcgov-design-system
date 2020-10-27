@@ -1,0 +1,399 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders Direct Enrollment banner 1`] = `
+<header
+  className="hc-c-header hc-c-header--minimal hc-c-header--inverse"
+  role="banner"
+>
+  <SkipNav
+    href="#main"
+  >
+    header.skipNav
+  </SkipNav>
+  <div
+    className="ds-l-container"
+  >
+    <div
+      className="ds-l-row ds-u-align-items--center ds-u-flex-wrap--nowrap ds-u-padding-y--2"
+    >
+      <a
+        className="hc-c-logo-link ds-l-col ds-l-col--auto"
+        href="/"
+      >
+        <Logo
+          locale="en"
+        />
+      </a>
+      <div
+        className="hc-c-header__subhead hc-c-header__subhead--inline ds-u-md-display--block ds-u-display--none"
+      >
+        Verify identity
+      </div>
+      <Component
+        deConsumer={true}
+        inversed={true}
+        locale="en"
+        onMenuToggleClick={[Function]}
+        open={false}
+      />
+    </div>
+  </div>
+  <div
+    className="hc-c-header__subhead ds-l-container ds-u-display--block ds-u-md-display--none ds-u-padding-y--1 ds-u-border-top--1 ds-u-border-color--inverse"
+  >
+    Verify identity
+  </div>
+  <Menu
+    links={
+      Array [
+        Object {
+          "href": "/login?check_de=1",
+          "label": "header.login",
+        },
+        Object {
+          "href": "https://www.cuidadodesalud.gov/es/",
+          "label": "header.español",
+        },
+      ]
+    }
+    open={false}
+  />
+  <Component
+    deBrokerName="Foo"
+  />
+</header>
+`;
+
+exports[`Header renders Spanish header 1`] = `
+<header
+  className="hc-c-header hc-c-header--home"
+  role="banner"
+>
+  <SkipNav
+    href="#main"
+  >
+    header.skipNav
+  </SkipNav>
+  <div
+    className="ds-l-container"
+  >
+    <div
+      className="ds-l-row ds-u-align-items--center ds-u-flex-wrap--nowrap ds-u-padding-y--2"
+    >
+      <a
+        className="hc-c-logo-link ds-l-col ds-l-col--auto"
+        href="/"
+      >
+        <Logo
+          locale="es"
+        />
+      </a>
+      <Component
+        inversed={false}
+        locale="es"
+        onMenuToggleClick={[Function]}
+        open={false}
+      />
+    </div>
+  </div>
+  <Menu
+    links={
+      Array [
+        Object {
+          "href": "#TODO",
+          "label": "TODO: defaultMenuLinks.js",
+        },
+      ]
+    }
+    open={false}
+  />
+</header>
+`;
+
+exports[`Header renders full/homepage header 1`] = `
+<header
+  className="hc-c-header hc-c-header--home"
+  role="banner"
+>
+  <SkipNav
+    href="#main"
+  >
+    header.skipNav
+  </SkipNav>
+  <div
+    className="ds-l-container"
+  >
+    <div
+      className="ds-l-row ds-u-align-items--center ds-u-flex-wrap--nowrap ds-u-padding-y--2"
+    >
+      <a
+        className="hc-c-logo-link ds-l-col ds-l-col--auto"
+        href="/"
+      >
+        <Logo
+          locale="en"
+        />
+      </a>
+      <Component
+        inversed={false}
+        locale="en"
+        onMenuToggleClick={[Function]}
+        open={false}
+      />
+    </div>
+  </div>
+  <Menu
+    links={
+      Array [
+        Object {
+          "href": "#TODO",
+          "label": "TODO: defaultMenuLinks.js",
+        },
+      ]
+    }
+    open={false}
+  />
+</header>
+`;
+
+exports[`Header renders links with absolute URLs if provided a primaryDomain prop 1`] = `
+<header
+  className="hc-c-header hc-c-header--home"
+  role="banner"
+>
+  <SkipNav
+    href="#main"
+  >
+    header.skipNav
+  </SkipNav>
+  <div
+    className="ds-l-container"
+  >
+    <div
+      className="ds-l-row ds-u-align-items--center ds-u-flex-wrap--nowrap ds-u-padding-y--2"
+    >
+      <a
+        className="hc-c-logo-link ds-l-col ds-l-col--auto"
+        href="https://www.healthcare.gov"
+      >
+        <Logo
+          locale="en"
+        />
+      </a>
+      <Component
+        inversed={false}
+        locale="en"
+        onMenuToggleClick={[Function]}
+        open={false}
+        primaryDomain="https://www.healthcare.gov"
+      />
+    </div>
+  </div>
+  <Menu
+    links={
+      Array [
+        Object {
+          "href": "#TODO",
+          "label": "TODO: defaultMenuLinks.js",
+        },
+      ]
+    }
+    open={false}
+    primaryDomain="https://www.healthcare.gov"
+  />
+</header>
+`;
+
+exports[`Header renders logged-in header with firstName 1`] = `
+<header
+  className="hc-c-header hc-c-header--logged-in hc-c-header--inverse"
+  role="banner"
+>
+  <SkipNav
+    href="#main"
+  >
+    header.skipNav
+  </SkipNav>
+  <div
+    className="ds-l-container"
+  >
+    <div
+      className="ds-l-row ds-u-align-items--center ds-u-flex-wrap--nowrap ds-u-padding-y--2"
+    >
+      <a
+        className="hc-c-logo-link ds-l-col ds-l-col--auto"
+        href="/"
+      >
+        <Logo
+          locale="en"
+        />
+      </a>
+      <Component
+        firstName="John"
+        inversed={true}
+        locale="en"
+        loggedIn={true}
+        onMenuToggleClick={[Function]}
+        open={false}
+      />
+    </div>
+  </div>
+  <Menu
+    afterLinks={
+      <a
+        className="hc-c-menu__link ds-u-border-top--1 ds-u-border--dark ds-u-margin-x--1 ds-u-padding-x--0"
+        href="https://www.cuidadodesalud.gov/es/"
+      >
+        header.español
+      </a>
+    }
+    beforeLinks={
+      <div
+        className="ds-u-sm-display--none ds-u-border-bottom--1 ds-u-border--dark ds-u-margin-x--1 ds-u-padding-y--1"
+      >
+        John
+      </div>
+    }
+    links={
+      Array [
+        Object {
+          "href": "/marketplace/auth/global/en_US/myProfile#landingPage",
+          "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"en\\"}",
+        },
+        Object {
+          "href": "/marketplace/auth/global/en_US/myProfile#settings",
+          "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
+        },
+        Object {
+          "href": "/logout",
+          "label": "header.logout | {\\"lng\\":\\"en\\"}",
+        },
+      ]
+    }
+    open={false}
+  />
+</header>
+`;
+
+exports[`Header renders logged-in header without firstName 1`] = `
+<header
+  className="hc-c-header hc-c-header--logged-in hc-c-header--inverse"
+  role="banner"
+>
+  <SkipNav
+    href="#main"
+  >
+    header.skipNav
+  </SkipNav>
+  <div
+    className="ds-l-container"
+  >
+    <div
+      className="ds-l-row ds-u-align-items--center ds-u-flex-wrap--nowrap ds-u-padding-y--2"
+    >
+      <a
+        className="hc-c-logo-link ds-l-col ds-l-col--auto"
+        href="/"
+      >
+        <Logo
+          locale="en"
+        />
+      </a>
+      <Component
+        inversed={true}
+        locale="en"
+        loggedIn={true}
+        onMenuToggleClick={[Function]}
+        open={false}
+      />
+    </div>
+  </div>
+  <Menu
+    afterLinks={
+      <a
+        className="hc-c-menu__link ds-u-border-top--1 ds-u-border--dark ds-u-margin-x--1 ds-u-padding-x--0"
+        href="https://www.cuidadodesalud.gov/es/"
+      >
+        header.español
+      </a>
+    }
+    links={
+      Array [
+        Object {
+          "href": "/marketplace/auth/global/en_US/myProfile#landingPage",
+          "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"en\\"}",
+        },
+        Object {
+          "href": "/marketplace/auth/global/en_US/myProfile#settings",
+          "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
+        },
+        Object {
+          "href": "/logout",
+          "label": "header.logout | {\\"lng\\":\\"en\\"}",
+        },
+      ]
+    }
+    open={false}
+  />
+</header>
+`;
+
+exports[`Header renders minimal/product header 1`] = `
+<header
+  className="hc-c-header hc-c-header--minimal hc-c-header--inverse"
+  role="banner"
+>
+  <SkipNav
+    href="#main"
+  >
+    header.skipNav
+  </SkipNav>
+  <div
+    className="ds-l-container"
+  >
+    <div
+      className="ds-l-row ds-u-align-items--center ds-u-flex-wrap--nowrap ds-u-padding-y--2"
+    >
+      <a
+        className="hc-c-logo-link ds-l-col ds-l-col--auto"
+        href="/"
+      >
+        <Logo
+          locale="en"
+        />
+      </a>
+      <div
+        className="hc-c-header__subhead hc-c-header__subhead--inline ds-u-md-display--block ds-u-display--none"
+      >
+        Tax tools
+      </div>
+      <Component
+        inversed={true}
+        locale="en"
+        onMenuToggleClick={[Function]}
+        open={false}
+      />
+    </div>
+  </div>
+  <div
+    className="hc-c-header__subhead ds-l-container ds-u-display--block ds-u-md-display--none ds-u-padding-y--1 ds-u-border-top--1 ds-u-border-color--inverse"
+  >
+    Tax tools
+  </div>
+  <Menu
+    links={
+      Array [
+        Object {
+          "href": "/login",
+          "label": "header.login",
+        },
+        Object {
+          "href": "https://www.cuidadodesalud.gov/es/",
+          "label": "header.español",
+        },
+      ]
+    }
+    open={false}
+  />
+</header>
+`;
