@@ -2,13 +2,13 @@
 
 [![npm](https://img.shields.io/npm/v/@cmsgov/ds-healthcare-gov.svg?label=@cmsgov%2Fds-healthcare-gov)](https://www.npmjs.com/package/@cmsgov/ds-healthcare-gov)
 
-[>> **View the full documentation site here** <<](https://github.cms.gov/pages/CMS-WDS/ds-healthcare-gov/)
+[>> **View the full documentation site here** <<](https://github.com/CMSgov/hcgov-design-system/)
 
 The _HealthCare.gov Child Design System_ is a standalone design system, built on top of the [CMS Design System](https://design.cms.gov/) (CMSDS), for use in healthcare.gov applications. It is a _child_ of the CMS Design System in that it inherits all of the functionality of its parent while also adding its own features and customizations.
 
 ## Usage
 
-For documentation on installation and usage, please refer to [our documentation site](https://github.cms.gov/pages/CMS-WDS/ds-healthcare-gov/startup/installation/).
+For documentation on installation and usage, please refer to [our documentation site](https://github.com/CMSgov/hcgov-design-system/startup/installation/).
 
 ## Contributing
 

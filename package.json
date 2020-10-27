@@ -5,8 +5,8 @@
     "tag": "latest",
     "access": "public"
   },
-  "description": "A child design system for HealthCare.gov",
-  "repository": "https://github.cms.gov/CMS-WDS/ds-healthcare-gov",
+  "description": "A design system for HealthCare.gov products",
+  "repository": "https://github.com/CMSgov/hcgov-design-system",
   "scripts": {
     "build": "yarn cmsds build-docs --skipLatest",
     "start": "yarn cmsds start --skipLatest",
