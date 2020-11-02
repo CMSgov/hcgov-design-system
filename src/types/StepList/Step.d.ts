@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { SubStepProps } from './SubStep';
 
 // Step Object is used in <Step> and <SubStep>
 export interface StepObject {
@@ -19,8 +18,8 @@ export interface StepObject {
 
 // Substeps can be defined via the `steps` prop
 interface SubSteps {
-  steps?: SubStepProps[];
-};
+  steps?: StepObject[];
+}
 
 export interface StepProps {
   step: StepObject & SubSteps
