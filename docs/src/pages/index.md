@@ -7,13 +7,13 @@ The [HealthCare.gov](https://www.healthcare.gov/) design system is a set of open
 
 The Healthcare.gov design system is built on the CMS Design System and extends it to support additional CSS and React components.
 
-The design system is currently being applied to some pages on HealthCare.gov and project teams are actively working to apply the design system consistently across all of HealthCare.gov. Check out some examples of pages using the design system.
+The design system is currently being applied to some pages on HealthCare.gov and project teams are actively working to apply the design system consistently across all of HealthCare.gov. 
+
+**Applications and websites using the Healthcare.gov design system**
 
 * [Find Local Help](https://localhelp.healthcare.gov/#/)
 * [Tax Tools](https://www.healthcare.gov/tax-tool/#/)
 * [Window Shop](https://healthcare.gov/see-plans)
-
-The design system is open-source, which means it's freely available to use by anyone!
 
 ## Getting started
 
@@ -23,20 +23,16 @@ Developers and engineers are encouraged to use React which allows for more compl
 
 * **Recommended option:** Install the `@cmsgov/ds-healthcare-gov` Node package manager (npm) package if your project uses npm for package management.
 
-    <a href="{{root}}/startup/installation/" class="ds-c-button">install with npm</a>
+    <a href="{{root}}/startup/installation/" class="ds-c-button">Install with npm</a>
 
 
 * If you're unfamiliar with npm and package management, [download the code as a zip file](https://github.com/CMSgov/design-system/releases/latest). 
 
 ### Designers
 
-Design teams at CMS typically uses Sketch as the preferred user interface (UI) design tool. Take advantage of these resources when you're creating UIs that follow HealthCare.gov's Design System.
-
-* **Recommended option:** Install the HealthCare.gov Sketch library so you'll automatically receive updates when new versions of the Sketch Library are released by the HealthCare.gov team.
-
-    Install HealthCare.gov Sketch library (coming soon)
+Design teams using are currently using Figma for creating UIs that follow HealthCare.gov's Design System but will be transitioning to using Sketch in the future. 
 
 
-* You can download the HealthCare.gov Sketch UI kit file locally on your own computer. WARNING! The UI kit won't receive automatic updates.
+<a href="https://www.figma.com/file/JW5p03MknojQR6fVLn2Paj/Healthcare.gov-Child-Design-System?node-id=2%3A52" class="ds-c-button">Access the Figma file</a>
 
-    Download HealthCare.gov Sketch UI kit (coming soon)
+  
