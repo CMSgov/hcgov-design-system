@@ -34,7 +34,7 @@ Developers and engineers are encouraged to use React which allows for more compl
 
 Design teams at CMS typically uses Sketch as the preferred user interface (UI) design tool. Take advantage of these resources when you're creating UIs that follow HealthCare.gov's Design System.
 
-* **Recommended option:** Install the HealthCare.gov Sketch library so we'll automatically receives updates when new versions of the Sketch Library are released by the HealthCare.gov team.
+* **Recommended option:** Install the HealthCare.gov Sketch library so you'll automatically receive updates when new versions of the Sketch Library are released by the HealthCare.gov team.
 
     Install HealthCare.gov Sketch library (coming soon)
 
