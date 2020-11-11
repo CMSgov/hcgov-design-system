@@ -7,14 +7,6 @@ The [HealthCare.gov](https://www.healthcare.gov/) design system is a set of open
 
 The Healthcare.gov design system is built on the CMS Design System and extends it to support additional CSS and React components.
 
-The design system is currently being applied to some pages on HealthCare.gov and project teams are actively working to apply the design system consistently across all of HealthCare.gov. 
-
-**Applications and websites using the Healthcare.gov design system**
-
-* [Find Local Help](https://localhelp.healthcare.gov/#/)
-* [Tax Tools](https://www.healthcare.gov/tax-tool/#/)
-* [Window Shop](https://healthcare.gov/see-plans)
-
 ## Getting started
 
 ### Developers
@@ -35,4 +27,12 @@ Design teams using are currently using Figma for creating UIs that follow Health
 
 <a href="https://www.figma.com/file/JW5p03MknojQR6fVLn2Paj/Healthcare.gov-Child-Design-System?node-id=2%3A52" class="ds-c-button">Access the Figma file</a>
 
+
+## Who's using the Healthcare.gov design system
+
+The design system is currently being applied to some pages on HealthCare.gov and project teams are actively working to apply the design system consistently across all of HealthCare.gov. 
+
+* [Find Local Help](https://localhelp.healthcare.gov/#/)
+* [Tax Tools](https://www.healthcare.gov/tax-tool/#/)
+* [Window Shop](https://healthcare.gov/see-plans)
   
