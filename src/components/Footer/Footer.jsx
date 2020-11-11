@@ -8,7 +8,14 @@ import { translate } from 'react-i18next';
 const _Footer = function (props) {
   const classes = classnames(
     'hc-c-footer ds-u-fill--gray-lightest ds-u-padding-y--5',
-    props.className
+    props.classNamemodule.exports = {
+      meta: { ... },
+      create: function(context) {
+          // declare the state of the rule
+          return {
+              ReturnStatement: function(node) {
+                  // at a ReturnStatement node while going down
+              },
   );
 
   return (
