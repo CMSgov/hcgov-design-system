@@ -5,7 +5,7 @@ weight: -100
 
 The HealthCare.gov Design System is a set of open-source design and front-end development resources for creating usable, accessible (e.g., WCAG/Section 508 compliant), responsive, and consistent HealthCare.gov websites.
 
-The Healthcare.gov design system is built on the CMS Design System and extends it to support additional CSS and React components.
+The Healthcare.gov Design System is built on the CMS Design System and extends it to support additional CSS and React components.
 
 ## Getting started
 
