@@ -22,7 +22,7 @@ Developers and engineers are encouraged to use React which allows for more compl
 
 ### Designers
 
-Design teams using are currently using Figma for creating UIs that follow HealthCare.gov's Design System but will be transitioning to using Sketch in the future. 
+Design teams are currently using Figma for creating UIs that follow HealthCare.gov's Design System but will be transitioning to using Sketch in the future. 
 
 
 <a href="https://www.figma.com/file/JW5p03MknojQR6fVLn2Paj/Healthcare.gov-Child-Design-System?node-id=2%3A52" class="ds-c-button">Access the Figma file</a>
