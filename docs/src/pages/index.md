@@ -18,7 +18,7 @@ Developers and engineers are encouraged to use React which allows for more compl
     <a href="{{root}}/startup/installation/" class="ds-c-button">Install with npm</a>
 
 
-* If you're unfamiliar with npm and package management, [download the code as a zip file](https://github.com/CMSgov/design-system/releases/latest). 
+* If you're unfamiliar with npm and package management, [download the code as a zip file](https://github.com/CMSgov/hcgov-design-system/releases/latest). 
 
 ### Designers
 
