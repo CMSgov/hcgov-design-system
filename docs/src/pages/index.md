@@ -15,10 +15,10 @@ Developers and engineers are encouraged to use React which allows for more compl
 
 * **Recommended option:** Install the `@cmsgov/ds-healthcare-gov` Node package manager (npm) package if your project uses npm for package management.
 
-    <a href="{{root}}/startup/installation/" class="ds-c-button">Install with npm</a>
+    <a href="{{root}}/startup/installation/#install-using-npm" class="ds-c-button">Install with npm</a>
 
 
-* If you're unfamiliar with npm and package management, [download the code as a zip file](https://github.com/CMSgov/hcgov-design-system/releases/latest). 
+* If you're unfamiliar with npm and package management, [download the code as a zip file]({{root}}/startup/installation/#download-zip). 
 
 ### Designers
 
