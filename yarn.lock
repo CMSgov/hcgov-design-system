@@ -942,12 +942,12 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cmsgov/design-system-docs@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-docs/-/design-system-docs-2.1.1.tgz#652eead66f489f223ca142f7dd8537d0d8f82b39"
-  integrity sha512-D3w3JpUFb56lqKld6HpmlBJCWfQClrHOXSRtrAXH+BIdmbY3CR1vJ5CYxIV40TjXvBSsJjbHVazZyS3luxNIKQ==
+"@cmsgov/design-system-docs@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-docs/-/design-system-docs-2.2.0.tgz#6541da8a86e838569edd478168ffd21c154f6885"
+  integrity sha512-U3kxLqnOxwzIMnd82YNv9uCC2A0CUGti36yE1hhrwZxl9kbj6R829i9ppyAOZH9UNURkLisptY1a6NfyBEY3Xw==
   dependencies:
-    "@cmsgov/design-system" "^2.1.1"
+    "@cmsgov/design-system" "^2.2.0"
     classnames "^2.2.5"
     lodash "^4.17.19"
     prismjs "^1.11.0"
@@ -955,10 +955,10 @@
     react-hot-loader "^3.1.3"
     url-join "^4.0.1"
 
-"@cmsgov/design-system-scripts@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-scripts/-/design-system-scripts-2.1.1.tgz#38dd17e4d9671c7aabc579ba342086bb1154c44e"
-  integrity sha512-g+hl1Ttsnou8WXFpO0nAyqVF1tsBVHOglbDG2aBgnb01pQUoxMjRwN1x7cTRKwH/aa+bl5PKh3kQVZcM6LH6ig==
+"@cmsgov/design-system-scripts@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-scripts/-/design-system-scripts-2.2.0.tgz#e905c40b344357be03f1e7ff712391609c4c2b1c"
+  integrity sha512-SThi/eVEHZOv6SI2xUeDCWkvWZPrLwzSnM31ZdRumFhpBR2EXK7Ty5+RzL40+N0wJKhyk05ny19k/Zjed5AOJg==
   dependencies:
     "@babel/core" "^7.8.4"
     "@babel/plugin-transform-object-assign" "^7.10.4"
@@ -1032,10 +1032,10 @@
     webpack-hot-middleware "2.25.0"
     yargs "^11.0.0"
 
-"@cmsgov/design-system@2.1.1", "@cmsgov/design-system@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@cmsgov/design-system/-/design-system-2.1.1.tgz#a103445c96f5ce508de13409111daaf5d388e6d5"
-  integrity sha512-pCRqkPq+60Ko0uEOkKHxYSV3FqiHFPLkPKnZGod4E/DYVaQR73y+cWzeq5J0y0qu5cHZxCjbXkZCniDXw0F5Ig==
+"@cmsgov/design-system@2.2.0", "@cmsgov/design-system@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@cmsgov/design-system/-/design-system-2.2.0.tgz#feac9e82a4245691adfdbaf9982f5f143f0400d2"
+  integrity sha512-I38ltcDOfi6G3tF/QGGnmgrwkw0E5L0YGzehCaXBfryWnOlIuSGtFWg64eWvMJPxmtwdvUl8S1xOAIifxAWXag==
   dependencies:
     "@popperjs/core" "^2.4.4"
     classnames "^2.2.5"
@@ -1046,7 +1046,6 @@
     prop-types "^15.7.2"
     react-aria-modal "^2.11.1"
     react-transition-group "^2.9.0"
-    uswds "^2.8.1"
 
 "@cmsgov/eslint-config-design-system@2.0.0":
   version "2.0.0"
@@ -3307,11 +3306,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classlist-polyfill@^1.0.3:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/classlist-polyfill/-/classlist-polyfill-1.2.0.tgz#935bc2dfd9458a876b279617514638bcaa964a2e"
-  integrity sha1-k1vC39lFiodrJ5YXUUY4vKqWSi4=
-
 classnames@^2.0.0:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
@@ -4460,11 +4454,6 @@ domhandler@^2.3.0:
   dependencies:
     domelementtype "1"
 
-domready@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/domready/-/domready-1.0.8.tgz#91f252e597b65af77e745ae24dd0185d5e26d58c"
-  integrity sha1-kfJS5Ze2Wvd+dFriTdAYXV4m1Yw=
-
 domutils@1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/domutils/-/domutils-1.5.1.tgz#dcd8488a26f563d61079e48c9f7b7e32373682cf"
@@ -4583,16 +4572,6 @@ electron-to-chromium@^1.3.488:
   version "1.3.497"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.497.tgz#de00f2f2f44c258c4577fbfbd5124b94c18bfa44"
   integrity sha512-sPdW5bUDZwiFtoonuZCUwRGzsZmKzcLM0bMVhp6SMCfUG+B3faENLx3cE+o+K0Jl+MPuNA9s9cScyFjOlixZpQ==
-
-elem-dataset@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/elem-dataset/-/elem-dataset-2.0.0.tgz#4ed8b2b0217898bdf78c1a01b4eb722a1c89e799"
-  integrity sha512-e7gieGopWw5dMdEgythH3lUS7nMizutPDTtkzfQW/q2gCvFnACyNnK3ytCncAXKxdBXQWcXeKaYTTODiMnp8mw==
-
-element-closest@^2.0.1:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/element-closest/-/element-closest-2.0.2.tgz#72a740a107453382e28df9ce5dbb5a8df0f966ec"
-  integrity sha1-cqdAoQdFM4LijfnOXbtajfD5Zuw=
 
 elliptic@^6.0.0:
   version "6.4.1"
@@ -8196,11 +8175,6 @@ just-debounce@^1.0.0:
   resolved "https://registry.yarnpkg.com/just-debounce/-/just-debounce-1.0.0.tgz#87fccfaeffc0b68cd19d55f6722943f929ea35ea"
   integrity sha1-h/zPrv/AtozRnVX2cilD+SnqNeo=
 
-keyboardevent-key-polyfill@^1.0.2:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/keyboardevent-key-polyfill/-/keyboardevent-key-polyfill-1.1.0.tgz#8a319d8e45a13172fca56286372f90c1d4c7014c"
-  integrity sha1-ijGdjkWhMXL8pWKGNy+QwdTHAUw=
-
 keyv@^4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.0.3.tgz#4f3aa98de254803cafcd2896734108daa35e4254"
@@ -8493,11 +8467,6 @@ lodash.clonedeep@^4.3.2:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
   integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
-
-lodash.debounce@^4.0.7:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
-  integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
 lodash.escape@^3.0.0:
   version "3.2.0"
@@ -8836,11 +8805,6 @@ matchdep@^2.0.0:
     micromatch "^3.0.4"
     resolve "^1.4.0"
     stack-trace "0.0.10"
-
-matches-selector@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/matches-selector/-/matches-selector-1.2.0.tgz#d1814e7e8f43e69d22ac33c9af727dc884ecf12a"
-  integrity sha512-c4vLwYWyl+Ji+U43eU/G5FwxWd4ZH0ePUsFs5y0uwD9HUEFBXUQ1zUUan+78IpRD+y4pUfG0nAzNM292K7ItvA==
 
 mathml-tag-names@^2.1.3:
   version "2.1.3"
@@ -11248,16 +11212,6 @@ recast@^0.17.3:
     private "^0.1.8"
     source-map "~0.6.1"
 
-receptor@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/receptor/-/receptor-1.0.0.tgz#bf54477e0387e44bebf3855120bbda5adea08f8b"
-  integrity sha1-v1RHfgOH5Evr84VRILvaWt6gj4s=
-  dependencies:
-    element-closest "^2.0.1"
-    keyboardevent-key-polyfill "^1.0.2"
-    matches-selector "^1.0.0"
-    object-assign "^4.1.0"
-
 rechoir@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/rechoir/-/rechoir-0.6.2.tgz#85204b54dba82d5742e28c96756ef43af50e3384"
@@ -11605,11 +11559,6 @@ resolve-from@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-5.0.0.tgz#c35225843df8f776df21c57557bc087e9dfdfc69"
   integrity sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==
-
-resolve-id-refs@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/resolve-id-refs/-/resolve-id-refs-0.1.0.tgz#3126624b887489da8fc0ae889632f8413ac6c3ec"
-  integrity sha1-MSZiS4h0idqPwK6IljL4QTrGw+w=
 
 resolve-options@^1.1.0:
   version "1.1.0"
@@ -13623,20 +13572,6 @@ use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
-
-uswds@^2.8.1:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/uswds/-/uswds-2.9.0.tgz#002089d74582960099b0ee836f89f043cdf6d0bc"
-  integrity sha512-5IMVgMCUUlgWVFrB7Wf1qTvv5L3oDDlSsAgvJ02+/sV2uh4JzO9YPm3493RTaMuHTc+feRCuYyEIloXsEQY0Pg==
-  dependencies:
-    classlist-polyfill "^1.0.3"
-    del "^5.1.0"
-    domready "^1.0.8"
-    elem-dataset "^2.0.0"
-    lodash.debounce "^4.0.7"
-    object-assign "^4.1.1"
-    receptor "^1.0.0"
-    resolve-id-refs "^0.1.0"
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
