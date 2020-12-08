@@ -10,3 +10,7 @@ $error-message-icon-size: 28px;
 	margin-left: -5px;
 	content: ''
 }
+
+.ds-c-field__error-message--inverse::before {
+	background-image: url('#{$image-path}/error-light-red.svg');
+}
