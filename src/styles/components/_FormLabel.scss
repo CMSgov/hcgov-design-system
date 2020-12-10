@@ -1,0 +1,16 @@
+$error-message-icon-size: 28px;
+
+.ds-c-field__error-message::before {
+	background-image: url('#{$image-path}/error-red.svg');
+  background-repeat: no-repeat;
+  background-size: $error-message-icon-size;
+  background-position-y: center;
+  background-position-x: left;
+	padding-right: $error-message-icon-size;
+	margin-left: -5px;
+	content: ''
+}
+
+.ds-c-field__error-message--inverse::before {
+	background-image: url('#{$image-path}/error-light-red.svg');
+}
