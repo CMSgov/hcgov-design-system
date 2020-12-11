@@ -17,6 +17,7 @@ export {
   Review,
   SkipNav,
   Spinner,
+  StepList,
   Table,
   TableBody,
   TableCaption,
@@ -35,4 +36,3 @@ export * from './Button';
 export * from './Footer';
 export * from './Header';
 export * from './Logo';
-export * from './StepList';
