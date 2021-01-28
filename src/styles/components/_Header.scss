@@ -14,7 +14,9 @@
   }
 }
 
-.hc-c-logo-link {
+// Add `a` to give a higher specificity. This fixes the grid utility classes taking precedence
+// over this class, which results in `flex-shrink` not getting applied on small width screen.
+a.hc-c-logo-link {
   bottom: -2px; // optically aligns logo
   display: inline-block;
   flex-shrink: 1;
