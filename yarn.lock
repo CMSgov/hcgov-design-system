@@ -1039,7 +1039,23 @@
     webpack-hot-middleware "2.25.0"
     yargs "^11.0.0"
 
-"@cmsgov/design-system@2.2.1", "@cmsgov/design-system@^2.2.1":
+"@cmsgov/design-system@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@cmsgov/design-system/-/design-system-2.3.0.tgz#d17b795b0987394f37b8de07cab6c0e2fcb02d67"
+  integrity sha512-G1tiEf96Pyk4PVcsZxOQ8uYsxitiOxH5BQoKYiR1UKhI7ow9trZvZYvaKp3ol2kBo9paA7s4NXvATZk6M+hV1A==
+  dependencies:
+    "@popperjs/core" "^2.4.4"
+    classnames "^2.2.5"
+    core-js "^3.6.5"
+    downshift "^3.2.10"
+    ev-emitter "^1.1.1"
+    focus-trap-react "^6.0.0"
+    lodash.uniqueid "^4.0.1"
+    prop-types "^15.7.2"
+    react-aria-modal "^2.11.1"
+    react-transition-group "^2.9.0"
+
+"@cmsgov/design-system@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@cmsgov/design-system/-/design-system-2.2.1.tgz#ec117ab836fdc3d5d6939f7dc419a6ff8e98ca80"
   integrity sha512-19RPkQaR7j1MHhSFqo1JqagUzwbU5LMfDK0FTKP91v7G/9A7h+A+ePo1iC3mP1dEXoDQGfwrcUOSXmu8YFw8PQ==
