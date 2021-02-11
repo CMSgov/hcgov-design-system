@@ -30,4 +30,3 @@ I18nFooter.propTypes = {
 };
 
 export default I18nFooter;
-export { I18nFooter as Footer };

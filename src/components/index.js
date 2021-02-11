@@ -13,7 +13,6 @@ import './Button';
 
 export * from "@cmsgov/design-system";
 
-export * from './Footer/I18nFooter';
-export * from './Header/I18nHeader';
-export * from './Header/defaultMenuLinks';
-export * from './Logo/Logo';
+export * from './Footer';
+export * from './Header';
+export * from './Logo';
