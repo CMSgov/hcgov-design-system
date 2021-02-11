@@ -1,5 +1,4 @@
-import { Choice, ChoiceList } from '@cmsgov/design-system';
-import Header from '@src/components/Header/I18nHeader';
+import { Choice, ChoiceList, Header } from '@design-system';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
