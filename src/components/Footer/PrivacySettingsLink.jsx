@@ -8,7 +8,8 @@ class _PrivacySettingsLink extends React.PureComponent {
     this.state = { showDialog: false };
   }
 
-  openDialog = () => {
+  openDialog = event => {
+    event.preventDefault();
     this.setState({ showDialog: true });
   };
 
@@ -20,8 +21,8 @@ class _PrivacySettingsLink extends React.PureComponent {
     return (
       <>
         <a
-          href="javascript:void(0)"
-          onClick={this.openDialog}
+          href={' '}
+          onClick={event => this.openDialog(event)}
           className="ds-u-display--inline-block"
         >
           {this.props.t('footer.privacySettings')}
