@@ -22,7 +22,7 @@ class _PrivacySettingsLink extends React.PureComponent {
       <>
         <a
           href={' '}
-          onClick={event => this.openDialog(event)}
+          onClick={this.openDialog}
           className="ds-u-display--inline-block"
         >
           {this.props.t('footer.privacySettings')}
