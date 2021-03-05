@@ -1,4 +1,4 @@
-import Footer from '@src/components/Footer/I18nFooter';
+import { Footer } from '@design-system';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import URL from 'url-parse';

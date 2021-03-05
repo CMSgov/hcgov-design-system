@@ -11,9 +11,11 @@
 
 import './Button';
 
-export * from "@cmsgov/design-system";
+// Place error messages under form field across the HCgov DS
+import { setErrorPlacementDefault } from '@cmsgov/design-system';
+setErrorPlacementDefault('bottom');
 
-export * from './Footer/I18nFooter';
-export * from './Header/I18nHeader';
-export * from './Header/defaultMenuLinks';
-export * from './Logo/Logo';
+export * from "@cmsgov/design-system";
+export * from './Footer';
+export * from './Header';
+export * from './Logo';

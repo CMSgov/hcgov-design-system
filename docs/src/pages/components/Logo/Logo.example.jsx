@@ -1,4 +1,4 @@
-import Logo from '@src/components/Logo/Logo';
+import { Logo } from '@design-system';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
