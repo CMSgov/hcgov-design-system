@@ -1,0 +1,19 @@
+/*
+Header
+
+The HealthCare.gov header component varies depending on the user's state (ie. logged-in?) and context (ie. what page is this user on?).
+
+Style guide: patterns.header
+*/
+/*
+`<Header />`
+
+@react-example Header.example.jsx
+
+@react-props Header.jsx
+
+@responsive
+
+Style guide: patterns.header.react
+*/
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGFnZXMvcGF0dGVybnMvSGVhZGVyL0hlYWRlci5kb2NzLmNzcyIsInNvdXJjZXMiOlsicGFnZXMvcGF0dGVybnMvSGVhZGVyL0hlYWRlci5kb2NzLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiLypcbkhlYWRlclxuXG5UaGUgSGVhbHRoQ2FyZS5nb3YgaGVhZGVyIGNvbXBvbmVudCB2YXJpZXMgZGVwZW5kaW5nIG9uIHRoZSB1c2VyJ3Mgc3RhdGUgKGllLiBsb2dnZWQtaW4/KSBhbmQgY29udGV4dCAoaWUuIHdoYXQgcGFnZSBpcyB0aGlzIHVzZXIgb24/KS5cblxuU3R5bGUgZ3VpZGU6IHBhdHRlcm5zLmhlYWRlclxuKi9cbi8qXG5gPEhlYWRlciAvPmBcblxuQHJlYWN0LWV4YW1wbGUgSGVhZGVyLmV4YW1wbGUuanN4XG5cbkByZWFjdC1wcm9wcyBIZWFkZXIuanN4XG5cbkByZXNwb25zaXZlXG5cblN0eWxlIGd1aWRlOiBwYXR0ZXJucy5oZWFkZXIucmVhY3RcbiovXG4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7OztFQU1FO0FBQ0Y7Ozs7Ozs7Ozs7RUFVRSJ9 */

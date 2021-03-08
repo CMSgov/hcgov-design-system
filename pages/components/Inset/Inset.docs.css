@@ -1,0 +1,15 @@
+/**
+ * Inset
+ *
+ * The Inset component is meant to draw attention to important content, or to associate a
+ * block of content with another element. It can be used as part of the [Exposed Within
+ * form pattern]({{root}}/patterns/exposed-within), in a progressive disclosure accordion
+ * (ie. for help text), or on its own as a way to distinguish a block of text from its
+ * surrounding content.
+ *
+ * Markup: inset.example.html
+ *
+ * Style guide: components.inset
+ */
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGFnZXMvY29tcG9uZW50cy9JbnNldC9JbnNldC5kb2NzLmNzcyIsInNvdXJjZXMiOlsicGFnZXMvY29tcG9uZW50cy9JbnNldC9JbnNldC5kb2NzLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBJbnNldFxuICpcbiAqIFRoZSBJbnNldCBjb21wb25lbnQgaXMgbWVhbnQgdG8gZHJhdyBhdHRlbnRpb24gdG8gaW1wb3J0YW50IGNvbnRlbnQsIG9yIHRvIGFzc29jaWF0ZSBhXG4gKiBibG9jayBvZiBjb250ZW50IHdpdGggYW5vdGhlciBlbGVtZW50LiBJdCBjYW4gYmUgdXNlZCBhcyBwYXJ0IG9mIHRoZSBbRXhwb3NlZCBXaXRoaW5cbiAqIGZvcm0gcGF0dGVybl0oe3tyb290fX0vcGF0dGVybnMvZXhwb3NlZC13aXRoaW4pLCBpbiBhIHByb2dyZXNzaXZlIGRpc2Nsb3N1cmUgYWNjb3JkaW9uXG4gKiAoaWUuIGZvciBoZWxwIHRleHQpLCBvciBvbiBpdHMgb3duIGFzIGEgd2F5IHRvIGRpc3Rpbmd1aXNoIGEgYmxvY2sgb2YgdGV4dCBmcm9tIGl0c1xuICogc3Vycm91bmRpbmcgY29udGVudC5cbiAqXG4gKiBNYXJrdXA6IGluc2V0LmV4YW1wbGUuaHRtbFxuICpcbiAqIFN0eWxlIGd1aWRlOiBjb21wb25lbnRzLmluc2V0XG4gKi9cbiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7O0dBWUcifQ== */
