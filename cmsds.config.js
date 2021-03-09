@@ -12,9 +12,4 @@ module.exports = {
   githubUrl: 'https://github.com/CMSgov/hcgov-design-system',
   // The name of your design system NPM package. This replaces the {{npm}} template in documentation content.'
   npmPackage: '@cmsgov/ds-healthcare-gov',
-  // React flag variables
-  flags: {
-    // Set error message placement to below form fields
-    ERROR_PLACEMENT_DEFAULT: 'bottom',
-  },
 };
