@@ -8,19 +8,19 @@
  */
 
 // Settings: Globally-available variables, mixins, functions and config (Sass code that doesn't output CSS)
-@import "settings/index";
-@import "@cmsgov/design-system/dist/scss/settings/index";
+@import 'settings/index';
+@import '@cmsgov/design-system/dist/scss/settings/index';
 // Use default CMSDS font-faces
-@import "@cmsgov/design-system/dist/scss/font";
+@import '@cmsgov/design-system/dist/scss/font';
 
 // Base: HTML elements (i.e. ds-base, ds-h1, ds-text), typography, links, icons
-@import "@cmsgov/design-system/dist/scss/base/index";
+@import '@cmsgov/design-system/dist/scss/base/index';
 //@import "base/index";
 
 // Components: UI component styles (i.e. ds-c-button, ds-c-field)
-@import "@cmsgov/design-system/dist/scss/components/index";
-@import "components/index";
+@import '@cmsgov/design-system/dist/scss/components/index';
+@import 'components/index';
 
 // Utilities: Utility classes for applying specific CSS properties
-@import "@cmsgov/design-system/dist/scss/utilities/index";
+@import '@cmsgov/design-system/dist/scss/utilities/index';
 //@import "utilities/index";

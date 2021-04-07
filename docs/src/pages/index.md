@@ -13,17 +13,14 @@ The Healthcare.gov Design System is built on the CMS Design System and extends i
 
 Developers and engineers are encouraged to use React which allows for more complex, interactive components, and many of our React components have built-in accessibility optimizations.
 
-* **Recommended option:** Install the `@cmsgov/ds-healthcare-gov` Node package manager (npm) package if your project uses npm for package management.
+- **Recommended option:** Install the `@cmsgov/ds-healthcare-gov` Node package manager (npm) package if your project uses npm for package management.
 
-    <a href="{{root}}/startup/installation/#install-using-npm" class="ds-c-button">Install with npm</a>
+  <a href="{{root}}/startup/installation/#install-using-npm" class="ds-c-button">Install with npm</a>
 
-
-* If you're unfamiliar with npm and package management, [download the code as a zip file]({{root}}/startup/installation/#download-zip). 
+- If you're unfamiliar with npm and package management, [download the code as a zip file]({{root}}/startup/installation/#download-zip).
 
 ### Designers
 
-Design teams are currently using Figma for creating UIs that follow HealthCare.gov's Design System but will be transitioning to using Sketch in the future. 
-
+Design teams are currently using Figma for creating UIs that follow HealthCare.gov's Design System but will be transitioning to using Sketch in the future.
 
 <a href="https://www.figma.com/file/JW5p03MknojQR6fVLn2Paj/Healthcare.gov-Child-Design-System?node-id=2%3A52" class="ds-c-button">Access the Figma file</a>
-  

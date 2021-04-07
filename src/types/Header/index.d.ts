@@ -1,10 +1,10 @@
-import React from "react";
-import { Language } from "../index";
+import React from 'react';
+import { Language } from '../index';
 
 interface Link {
-  href: string,
-  label: React.ReactNode,
-  onClick?: (...args: any[]) => any,
+  href: string;
+  label: React.ReactNode;
+  onClick?: (...args: any[]) => any;
 }
 
 export interface HeaderProps {
@@ -44,4 +44,3 @@ export function defaultMenuLinks(
   primaryDomain: string = '',
   switchLocaleLink?: string
 ): DefaultLinks;
-

@@ -46,6 +46,8 @@ LoggedOutLinks.propTypes = {
    * [See `Header.props.subpath`]({{root}}/patterns/header/#patterns.header.react)
    */
   subpath: PropTypes.string,
+  primaryDomain: PropTypes.string,
+  switchLocaleLink: PropTypes.string,
 };
 
 export default LoggedOutLinks;

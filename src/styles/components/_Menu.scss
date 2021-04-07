@@ -78,8 +78,10 @@
  */
 .hc-c-header--logged-in .hc-c-menu__content,
 .hc-c-header--minimal .hc-c-menu__content {
-  background-color: $color-primary-alt-light;
-  color: $color-base;
+  background-color: $color-white;
+  border: 1px solid $color-gray-dark;
+  box-shadow: 7.5px 7.5px 17px 7.5px $color-gray-light;
+  color: $color-primary-darker;
 
   @media (min-width: $width-sm) {
     // Span only part of non-mobile screens

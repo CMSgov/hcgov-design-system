@@ -106,6 +106,8 @@ ActionMenu.propTypes = {
    * [See `Header.props.subpath`]({{root}}/patterns/header/#patterns.header.react)
    */
   subpath: PropTypes.string,
+  primaryDomain: PropTypes.string,
+  switchLocaleLink: PropTypes.string,
 };
 
 LoggedInActionMenu.propTypes = {
@@ -119,12 +121,16 @@ LoggedOutActionMenu.propTypes = {
   open: ActionMenu.propTypes.open,
   deConsumer: ActionMenu.propTypes.deConsumer,
   locale: ActionMenu.propTypes.locale,
+  subpath: ActionMenu.propTypes.subpath,
+  primaryDomain: ActionMenu.propTypes.primaryDomain,
+  switchLocaleLink: ActionMenu.propTypes.switchLocaleLink,
 };
 
 MenuButton.propTypes = {
   onMenuToggleClick: ActionMenu.propTypes.onMenuToggleClick,
   open: ActionMenu.propTypes.open,
   className: PropTypes.string,
+  inversed: ActionMenu.propTypes.inversed,
 };
 
 export default translate()(ActionMenu);

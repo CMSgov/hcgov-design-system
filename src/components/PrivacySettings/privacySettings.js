@@ -12,7 +12,7 @@ export const COOKIE_DOMAIN = getCookieDomain();
 
 // Set a default if we're not on a healthcare.gov/cuidadodesalud.gov environment
 if (!COOKIE_DOMAIN && !cookies.get(COOKIE_KEY)) {
-  setPrivacySettings({ '0': '0', c3: '0', c2: '0', c1: '0', c4: '0' });
+  setPrivacySettings({ 0: '0', c3: '0', c2: '0', c1: '0', c4: '0' });
 }
 
 /**

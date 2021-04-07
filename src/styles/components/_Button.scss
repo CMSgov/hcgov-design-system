@@ -9,15 +9,15 @@
   color: $color-white;
 
   &:hover,
-    &:active,
-    &.ds-c-button--hover,
-    &.ds-c-button--active {
+  &:active,
+  &.ds-c-button--hover,
+  &.ds-c-button--active {
     border-color: transparent;
     color: $color-white;
   }
 
   &:hover,
-  &.ds-c-button--hover  {
+  &.ds-c-button--hover {
     background-color: $hover-color;
   }
 
