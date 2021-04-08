@@ -29,13 +29,13 @@
 }
 
 .hc-c-menu__link {
-  color: $color-primary-darker;
+  color: $color-primary-darker !important;
   padding: $spacer-1;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: $color-primary-darkest;
+    color: $color-primary-darkest !important;
   }
 }
 
