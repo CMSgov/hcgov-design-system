@@ -29,13 +29,13 @@
 }
 
 .hc-c-menu__link {
-  color: $color-primary-darker !important;
+  color: $color-primary-darker;
   padding: $spacer-1;
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: $color-primary-darkest !important;
+    color: $color-primary-darkest;
   }
 }
 
@@ -78,10 +78,8 @@
  */
 .hc-c-header--logged-in .hc-c-menu__content,
 .hc-c-header--minimal .hc-c-menu__content {
-  background-color: $color-white;
-  border: 1px solid $color-gray-dark;
-  box-shadow: 7.5px 7.5px 17px 7.5px $color-gray-light;
-  color: $color-primary-darker;
+  background-color: $color-primary-alt-light;
+  color: $color-base;
 
   @media (min-width: $width-sm) {
     // Span only part of non-mobile screens
