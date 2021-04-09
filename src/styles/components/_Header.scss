@@ -14,8 +14,9 @@
   }
 }
 
-// Add `a` to give a higher specificity. This fixes the grid utility classes taking precedence
-// over this class, which results in `flex-shrink` not getting applied on small width screen.
+// Add `ds-l-col.ds-l-col--auto` to give a higher specificity. This fixes the
+// grid utility classes taking precedence over this class, which results in
+// `flex-shrink` not getting applied on small width screen.
 .hc-c-logo-link.ds-l-col.ds-l-col--auto {
   bottom: -2px; // optically aligns logo
   display: inline-block;
