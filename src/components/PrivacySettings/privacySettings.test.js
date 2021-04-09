@@ -37,7 +37,7 @@ describe('getPrivacySettings', function () {
   it('reads cookie string into settings object', () => {
     const Cookies = require('js-cookie');
     expect(getPrivacySettings()).toEqual({
-      '0': '0',
+      0: '0',
       c3: '1',
       c2: '1',
       c1: '0',
@@ -50,7 +50,7 @@ describe('getPrivacySettings', function () {
 describe('setPrivacySettings', function () {
   it('writes cookie string from settings object', () => {
     setPrivacySettings({
-      '0': '0',
+      0: '0',
       c3: '0',
       c2: '0',
       c1: '0',

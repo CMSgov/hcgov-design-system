@@ -1,5 +1,8 @@
-import { Button as CoreButton } from "@cmsgov/design-system";
-import { ButtonVariation, ButtonProps } from "@cmsgov/design-system/dist/types/Button";
+import { Button as CoreButton } from '@cmsgov/design-system';
+import {
+  ButtonVariation,
+  ButtonProps,
+} from '@cmsgov/design-system/dist/types/Button';
 
 interface Button extends CoreButton {
   variation?: ButtonVariation | 'secondary';

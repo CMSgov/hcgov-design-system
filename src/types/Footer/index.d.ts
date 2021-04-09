@@ -1,4 +1,4 @@
-import { Language } from "../index";
+import { Language } from '../index';
 
 export interface FooterProps {
   className?: string;
