@@ -36,8 +36,6 @@ These scripts can all be run from the root level of the repo:
   - Compiles and processes all the code and assets and copies them to the `dist` directory so that they're ready for distribution and consumption as a package
 - `yarn test`
   - Runs JS unit tests
-- `yarn test:e2e`
-  - Runs end to end tests
 - `yarn update-snapshots`
   - Updates [Jest snapshots](http://facebook.github.io/jest/docs/en/snapshot-testing.html)
 - `yarn lint`
