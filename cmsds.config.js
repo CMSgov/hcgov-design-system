@@ -12,4 +12,6 @@ module.exports = {
   githubUrl: 'https://github.com/CMSgov/hcgov-design-system',
   // The name of your design system NPM package. This replaces the {{npm}} template in documentation content.'
   npmPackage: '@cmsgov/ds-healthcare-gov',
+  // Flag enabling typescript support. When `true`, .ts/.tsx files will be compilied and typescript definition files will be generated. Requires tsconfig.json to be defined.
+  typescript: true
 };
