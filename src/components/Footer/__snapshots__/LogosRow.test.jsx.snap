@@ -23,7 +23,16 @@ exports[`LogosRow renders logos and address 1`] = `
       <p
         className="ds-u-font-size--small ds-u-color--muted ds-u-measure--base ds-u-margin--0"
       >
-        footer.address
+        footer.address1
+        <span
+          className="registered-symbol"
+        >
+          <sup>
+            ®
+          </sup>
+        </span>
+         
+        footer.address2
       </p>
     </div>
     <div
