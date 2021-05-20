@@ -18,13 +18,7 @@ const LogosRow = function (props) {
           </Logo>
         </div>
         <div className="ds-l-col ds-l-col--9 ds-l-sm-col--10 ds-l-md-col--auto">
-          <p className="ds-u-font-size--small ds-u-color--muted ds-u-measure--base ds-u-margin--0">
-            {props.t('footer.address1')}
-            <span className="registered-symbol">
-              <sup>&#174;</sup>
-            </span>{' '}
-            {props.t('footer.address2')}
-          </p>
+        <p className="ds-u-font-size--small ds-u-color--muted ds-u-measure--base ds-u-margin--0" dangerouslySetInnerHTML={{ __html: props.t('footer.address') }} />  
         </div>
         <div className="ds-l-col ds-l-col--12 ds-l-lg-col--auto ds-u-lg-margin-top--0 ds-u-margin-top--2 ds-u-margin-left--auto">
           <Logo
