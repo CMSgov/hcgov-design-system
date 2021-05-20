@@ -22,9 +22,12 @@ exports[`LogosRow renders logos and address 1`] = `
     >
       <p
         className="ds-u-font-size--small ds-u-color--muted ds-u-measure--base ds-u-margin--0"
-      >
-        footer.address
-      </p>
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "footer.address",
+          }
+        }
+      />
     </div>
     <div
       className="ds-l-col ds-l-col--12 ds-l-lg-col--auto ds-u-lg-margin-top--0 ds-u-margin-top--2 ds-u-margin-left--auto"
