@@ -1,6 +1,6 @@
 {
   "name": "@cmsgov/ds-healthcare-gov",
-  "version": "4.9.0",
+  "version": "4.10.0",
   "publishConfig": {
     "tag": "latest",
     "access": "public"
@@ -10,7 +10,9 @@
   "scripts": {
     "build": "yarn cmsds build-docs --skipLatest",
     "start": "yarn cmsds start --skipLatest",
-    "test": "yarn cmsds test ./src",
+    "test": "yarn test:unit && yarn test:e2e",
+    "test:unit": "yarn cmsds test ./src",
+    "test:e2e": "yarn cmsds test:e2e ./src",
     "updateSnapshot": "yarn cmsds test ./src --updateSnapshot",
     "lint": "yarn cmsds lint ./src ./docs",
     "gh-pages": "yarn build && gh-pages -d './docs/dist'",
@@ -25,7 +27,7 @@
     "src"
   ],
   "dependencies": {
-    "@cmsgov/design-system": "^2.6.0",
+    "@cmsgov/design-system": "^2.7.1",
     "classnames": "^2.0.0",
     "i18next": "^14.0.1",
     "js-cookie": "^2.2.0",
@@ -35,8 +37,8 @@
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/plugin-transform-object-assign": "^7.10.4",
-    "@cmsgov/design-system-docs": "^2.6.0",
-    "@cmsgov/design-system-scripts": "^2.6.0",
+    "@cmsgov/design-system-docs": "^2.7.1",
+    "@cmsgov/design-system-scripts": "^2.7.1",
     "@cmsgov/eslint-config-design-system": "2.0.0",
     "@cmsgov/stylelint-config-design-system": "2.0.0",
     "@types/react": "^17.0.5",
