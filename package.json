@@ -26,13 +26,6 @@
     "dist",
     "src"
   ],
-  "dependencies": {
-    "@cmsgov/design-system": "^2.7.1",
-    "classnames": "^2.0.0",
-    "i18next": "^14.0.1",
-    "js-cookie": "^2.2.0",
-    "react-i18next": "^9.0.10"
-  },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
@@ -46,12 +39,39 @@
     "babel-plugin-inline-import": "^3.0.0",
     "eslint": "^6.8.0",
     "gh-pages": "^3.1.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.2.0",
     "stylelint": "^13.3.2",
     "url-parse": "^1.2.0",
     "version-bump-prompt": "^6.1.0"
+  },
+  "dependencies": {
+    "@cmsgov/design-system": "^2.7.1",
+    "classnames": "^2.0.0",
+    "i18next": "^14.0.1",
+    "js-cookie": "^2.2.0",
+    "react-i18next": "^9.0.10"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{md,html}": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write",
+      "stylelint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "browserslist": [
     "> 2%",
