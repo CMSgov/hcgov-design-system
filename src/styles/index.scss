@@ -8,8 +8,8 @@
  */
 
 // Settings: Globally-available variables, mixins, functions and config (Sass code that doesn't output CSS)
-@import 'settings/index';
 @import '@cmsgov/design-system/dist/scss/settings/index';
+@import 'settings/index';
 // Use default CMSDS font-faces
 @import '@cmsgov/design-system/dist/scss/font';
 
