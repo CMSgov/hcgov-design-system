@@ -68,11 +68,6 @@
       "stylelint --fix"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "browserslist": [
     "> 2%",
     "Last 2 versions"
