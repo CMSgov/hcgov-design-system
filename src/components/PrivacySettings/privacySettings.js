@@ -20,6 +20,10 @@ if (!COOKIE_DOMAIN && !cookies.get(COOKIE_KEY)) {
  * those two domains or undefined otherwise.
  */
 export function getCookieDomain() {
+  if (typeof window === 'undefined') {
+    return;
+  }
+
   const parts = window.location.hostname.split('.');
   if (parts.length === 3 && domains.includes(parts[1]) && parts[2] === 'gov') {
     return `.${parts[1]}.${parts[2]}`;
