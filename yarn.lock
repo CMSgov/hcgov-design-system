@@ -1016,12 +1016,12 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cmsgov/design-system-docs@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-docs/-/design-system-docs-2.7.1.tgz#f49284e4b494211328fa6a1d86b7a313c22535db"
-  integrity sha512-Smxw8/wTf9y+i5y1JXUe1FWexUCvMmJhgjFPTMOnyQz2871lXnkQ/6YEHF1IKQqOm+gv0Rm2B7iv5Qs1GUEzKA==
+"@cmsgov/design-system-docs@^2.7.2":
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-docs/-/design-system-docs-2.7.2.tgz#cff63c1958895be7d876e454c226f763c5409de3"
+  integrity sha512-d1rlLPkieF6eJ1WKnlJJsc2e8Dy2UA9aVSRlEYUNUDQdXFGRdMDnXQ2KceMhSe1VeOsp6xgIIlwtu7M4WeUp2g==
   dependencies:
-    "@cmsgov/design-system" "^2.7.1"
+    "@cmsgov/design-system" "^2.7.2"
     classnames "^2.2.5"
     lodash "^4.17.19"
     prismjs "^1.11.0"
@@ -1030,10 +1030,10 @@
     react-hot-loader "^3.1.3"
     url-join "^4.0.1"
 
-"@cmsgov/design-system-scripts@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-scripts/-/design-system-scripts-2.7.1.tgz#bd93b8d3a3389f46265f46fdde99588ce737140c"
-  integrity sha512-1s8eugvkwNYN2MEt/sjRzTkRE0MWb4wiMmS37WA4Q07N29dp/KWrDS1XQu2ucNHfIR49oFdkAV8s9bnnsJmp6A==
+"@cmsgov/design-system-scripts@^2.7.2":
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-scripts/-/design-system-scripts-2.7.2.tgz#29913a0561eae8542d28d70bc78a3b69a7745f17"
+  integrity sha512-mqQSSw/J52ex32VeBTCUlx16noHSBlwiy6r2ja/Ln3hRWzh8q0NifNqpia1pbuDQn8XYB9IkGYPEjoqpbZwaog==
   dependencies:
     "@babel/core" "^7.8.4"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
@@ -1109,7 +1109,7 @@
     webpack-hot-middleware "2.25.0"
     yargs "^11.0.0"
 
-"@cmsgov/design-system@^2.7.1":
+"@cmsgov/design-system@^2.7.2":
   version "2.7.2"
   resolved "https://registry.yarnpkg.com/@cmsgov/design-system/-/design-system-2.7.2.tgz#9aa9a4bad05b50721fc4472bae88a99326dfea87"
   integrity sha512-Xy1ADo4eR+OnZq1heftcevy7z8zLWL8oE8+00XMVmDu6/R8chb8nJSXjkesCYoRcBZttN3nvNionQGkgGLaYyg==
