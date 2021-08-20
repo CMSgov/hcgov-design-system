@@ -1016,12 +1016,12 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cmsgov/design-system-docs@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-docs/-/design-system-docs-2.7.1.tgz#f49284e4b494211328fa6a1d86b7a313c22535db"
-  integrity sha512-Smxw8/wTf9y+i5y1JXUe1FWexUCvMmJhgjFPTMOnyQz2871lXnkQ/6YEHF1IKQqOm+gv0Rm2B7iv5Qs1GUEzKA==
+"@cmsgov/design-system-docs@^2.7.3":
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-docs/-/design-system-docs-2.7.3.tgz#15bfd719f41c6fa5726b5fa3d7cf4069baba0fbe"
+  integrity sha512-BYRn4uPKqGyiUhhec1Ggj8aQeGuVrNi793FnJlfuxqf3rUx9thJZxWAHTvpdn/wKB2iLEg/cBMkOsJcyQ0D6NA==
   dependencies:
-    "@cmsgov/design-system" "^2.7.1"
+    "@cmsgov/design-system" "^2.7.3"
     classnames "^2.2.5"
     lodash "^4.17.19"
     prismjs "^1.11.0"
@@ -1030,10 +1030,10 @@
     react-hot-loader "^3.1.3"
     url-join "^4.0.1"
 
-"@cmsgov/design-system-scripts@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-scripts/-/design-system-scripts-2.7.1.tgz#bd93b8d3a3389f46265f46fdde99588ce737140c"
-  integrity sha512-1s8eugvkwNYN2MEt/sjRzTkRE0MWb4wiMmS37WA4Q07N29dp/KWrDS1XQu2ucNHfIR49oFdkAV8s9bnnsJmp6A==
+"@cmsgov/design-system-scripts@^2.7.3":
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-scripts/-/design-system-scripts-2.7.3.tgz#a5e147f7ae52100ffe740183be4e47442bdf5d6c"
+  integrity sha512-7xONIzKQ7N4DW2z7xNNvyernxlHecEdzmoNhakQ8IgPaoUo7otoZOWjHCpgb5dRfEwPmnWDf0RLunrGmJCPJsw==
   dependencies:
     "@babel/core" "^7.8.4"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
@@ -1091,7 +1091,7 @@
     node-notifier "8.0.1"
     node-sass "4.14.1"
     postcss-import "^11.1.0"
-    prismjs "1.23.0"
+    prismjs "1.24.0"
     react-app-polyfill "^1.0.6"
     react-docgen "4.1.1"
     react-docgen-typescript "^1.18.0"
@@ -1109,10 +1109,10 @@
     webpack-hot-middleware "2.25.0"
     yargs "^11.0.0"
 
-"@cmsgov/design-system@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@cmsgov/design-system/-/design-system-2.7.1.tgz#3808b5be99733c857fcb0fabc6e160d76f969530"
-  integrity sha512-cQ6E/IDg14uz5QSiAB/kOzHrDRW8rVK+G10M37zBN4EA20TOO4VosTb7J4pW+5R+9PlCKKow7l2zntmbFWM2wQ==
+"@cmsgov/design-system@^2.7.3":
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/@cmsgov/design-system/-/design-system-2.7.3.tgz#a2061199ab41a463ae6cc325b71fde06f537befe"
+  integrity sha512-38qhRBkd9pdH2IGzTYQ7zyHmsZQm17uuu7OmvqDtGlZtUshTja3IDVGlOMt8btDWHJXX3x1C0hIelgHIEc5Amw==
   dependencies:
     "@popperjs/core" "^2.4.4"
     classnames "^2.2.5"
@@ -10704,7 +10704,12 @@ pretty-hrtime@^1.0.0:
   resolved "https://registry.yarnpkg.com/pretty-hrtime/-/pretty-hrtime-1.0.3.tgz#b7e3ea42435a4c9b2759d99e0f201eb195802ee1"
   integrity sha1-t+PqQkNaTJsnWdmeDyAesZWALuE=
 
-prismjs@1.23.0, prismjs@^1.11.0:
+prismjs@1.24.0:
+  version "1.24.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.24.0.tgz#0409c30068a6c52c89ef7f1089b3ca4de56be2ac"
+  integrity sha512-SqV5GRsNqnzCL8k5dfAjCNhUrF3pR0A9lTDSCUZeh/LIshheXJEaP0hwLz2t4XHivd2J/v2HR+gRnigzeKe3cQ==
+
+prismjs@^1.11.0:
   version "1.23.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
   integrity sha512-c29LVsqOaLbBHuIbsTxaKENh1N2EQBOHaWv7gkHN4dgRbxSREqDnDbtFJYdpPauS4YCplMSNCABQ6Eeor69bAA==
