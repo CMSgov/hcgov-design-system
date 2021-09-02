@@ -1,6 +1,6 @@
 {
   "name": "@cmsgov/ds-healthcare-gov",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "publishConfig": {
     "tag": "latest",
     "access": "public"
