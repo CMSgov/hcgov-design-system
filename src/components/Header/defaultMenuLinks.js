@@ -44,10 +44,6 @@ export function defaultMenuLinks(
         label: t('header.myProfile', i18nOptions),
         href: `${primaryDomain}/marketplace/auth/global/${ffmLocalePath}/myProfile#settings`,
       },
-      {
-        label: t('header.logout', i18nOptions),
-        href: `${primaryDomain}/logout`,
-      },
     ],
   };
 }

@@ -1,13 +1,5 @@
-// The "inverse" header has a blue background and white text
-.hc-c-header--inverse {
-  background-color: $color-primary;
-  color: $color-white;
-
-  .hc-c-logo__health,
-  .hc-c-logo__care,
-  .hc-c-logo__gov {
-    fill: $color-white;
-  }
+.hc-c-header {
+  box-shadow: 0 0 10px 0 $color-gray-light;
 }
 
 // Add `ds-l-col.ds-l-col--auto` to give a higher specificity. This fixes the
@@ -45,7 +37,17 @@
 }
 
 .hc-c-action-menu-button {
+  border-width: 1px;
   min-width: 8ch; // prevent movement when the label is toggled
+
+  svg {
+    height: 15px;
+    width: 15px;
+  }
+}
+
+.hc-c-header__close-icon {
+  height: 100%;
 }
 
 .hc-c-logged-out-links__li {
@@ -66,6 +68,10 @@
   .hc-c-header--inverse & {
     border-left-color: $color-white;
   }
+}
+
+.hc-c-header__name {
+  color: $color-base;
 }
 
 .hc-c-logged-out-links__link {

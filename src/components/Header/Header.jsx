@@ -9,6 +9,9 @@ import classnames from 'classnames';
 import defaultMenuLinks from './defaultMenuLinks';
 import localeLink from './localeLink';
 import { translate } from 'react-i18next';
+import { translate as translateWrapper } from '../i18n';
+
+export const LOGGED_IN_VAL = 'logged-in';
 
 /**
  * The top-level component, responsible for maintaining the
@@ -22,24 +25,25 @@ export class _Header extends React.Component {
     this.state = { openMenu: false };
   }
 
+  isLoggedIn() {
+    return this.variation() === LOGGED_IN_VAL;
+  }
+
   /**
    * Content rendered within <Menu>, after the list of links
    * @returns {Node}
    */
   afterMenuLinks() {
-    if (this.variation() === 'logged-in') {
-      const locale = localeLink(
-        this.props.t,
-        this.props.initialLanguage,
-        this.props.subpath,
-        this.props.switchLocaleLink
-      );
+    if (this.isLoggedIn()) {
+      const { initialLanguage = 'en', primaryDomain } = this.props;
+      const i18nOptions = { lng: initialLanguage };
+
       return (
         <a
-          className="hc-c-menu__link ds-u-border-top--1 ds-u-border--dark ds-u-margin-x--1 ds-u-padding-x--0"
-          href={locale.href}
+          className="hc-c-menu__link ds-u-border-top--1 ds-u-margin-x--1 ds-u-padding-x--0"
+          href={`${primaryDomain}/logout`}
         >
-          {locale.label}
+          {translateWrapper('header.logout', i18nOptions)}
         </a>
       );
     }
@@ -50,9 +54,9 @@ export class _Header extends React.Component {
    * @returns {Node}
    */
   beforeMenuLinks() {
-    if (this.variation() === 'logged-in' && this.props.firstName) {
+    if (this.isLoggedIn() && this.props.firstName) {
       return (
-        <div className="ds-u-sm-display--none ds-u-border-bottom--1 ds-u-border--dark ds-u-margin-x--1 ds-u-padding-y--1">
+        <div className="ds-u-sm-display--none ds-u-border-bottom--1 ds-u-margin-x--1 ds-u-padding-y--1 hc-c-header__name">
           {this.props.firstName}
         </div>
       );
@@ -75,7 +79,7 @@ export class _Header extends React.Component {
   variation() {
     if (this.props.loggedIn) {
       // Logged-in state, with minimal navigation
-      return 'logged-in';
+      return LOGGED_IN_VAL;
     } else if (this.props.subhead) {
       // Product, with minimal navigation and a subheading
       return 'minimal';
@@ -84,14 +88,25 @@ export class _Header extends React.Component {
     return 'home';
   }
 
+  // if header is in authenticated state, add language link to the end of other links
+  // if unauthenticated, return original link list
+  getLinksWithLocale(links) {
+    if (this.isLoggedIn()) {
+      const localeLinkItem = localeLink(
+        this.props.t,
+        this.props.initialLanguage,
+        this.props.subpath,
+        this.props.switchLocaleLink
+      );
+
+      return [...links, localeLinkItem];
+    }
+    return links;
+  }
+
   render() {
-    // TODO: Remove once we've fully deprecated `inverse`. It defaults to
-    // `true`, so set to false if either version of the prop is `false`
-    const inversedPropValue = this.props.inverse && this.props.inversed;
-    const inversed = inversedPropValue && this.variation() !== 'home';
     const classes = classnames(
       `hc-c-header hc-c-header--${this.variation()}`,
-      { 'hc-c-header--inverse': inversed },
       this.props.className
     );
 
@@ -104,13 +119,11 @@ export class _Header extends React.Component {
         this.props.primaryDomain,
         this.props.switchLocaleLink
       )[this.variation()];
+    const linksWithLocale = this.getLinksWithLocale(links);
 
     return (
       <header className={classes} role="banner">
-        <SkipNav
-          href={this.props.skipNavHref}
-          onClick={this.props.onSkipNavClick}
-        >
+        <SkipNav href={this.props.skipNavHref} onClick={this.props.onSkipNavClick}>
           {this.props.t('header.skipNav')}
         </SkipNav>
 
@@ -130,7 +143,6 @@ export class _Header extends React.Component {
             )}
 
             <ActionMenu
-              inversed={inversed}
               firstName={this.props.firstName}
               onMenuToggleClick={this.handleMenuToggleClick}
               locale={this.props.initialLanguage}
@@ -153,22 +165,18 @@ export class _Header extends React.Component {
         <Menu
           afterLinks={this.afterMenuLinks()}
           beforeLinks={this.beforeMenuLinks()}
-          links={links}
+          links={linksWithLocale}
           open={this.state.openMenu}
           primaryDomain={this.props.primaryDomain}
         />
 
-        {this.props.deConsumer && (
-          <DeConsumerMessage deBrokerName={this.props.deBrokerName} />
-        )}
+        {this.props.deConsumer && <DeConsumerMessage deBrokerName={this.props.deBrokerName} />}
       </header>
     );
   }
 }
 
 _Header.defaultProps = {
-  inverse: true,
-  inversed: true,
   initialLanguage: 'en',
   skipNavHref: '#main',
 };
@@ -179,10 +187,6 @@ _Header.propTypes = {
    * Additional classes to be added to the root `<header>` element.
    */
   className: PropTypes.string,
-  /** @hide-prop [Deprecated] Use inversed instead */
-  inverse: PropTypes.bool,
-  /** Applies the inverse theme styling */
-  inversed: PropTypes.bool,
   /**
    * The language the header will render as.
    */

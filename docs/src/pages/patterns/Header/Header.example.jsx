@@ -1,4 +1,4 @@
-import { Choice, ChoiceList, Header } from '@design-system';
+import { ChoiceList, Header } from '@design-system';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -22,12 +22,11 @@ class HeaderExample extends React.PureComponent {
     this.state = {
       locale: 'en',
       variation: 'logged-in',
-      inversed: true,
     };
   }
 
   renderHeaderToggles() {
-    const { locale, variation, inversed } = this.state;
+    const { locale, variation } = this.state;
 
     const variations = variationChoices.map((choice) => ({
       ...choice,
@@ -54,27 +53,12 @@ class HeaderExample extends React.PureComponent {
           onChange={(event) => this.setState({ locale: event.target.value })}
           type="radio"
         />
-
-        <fieldset className="ds-c-fieldset">
-          <legend className="ds-c-label">Change theme</legend>
-          <Choice
-            name="inversed"
-            value="inversed"
-            onChange={(event) =>
-              this.setState({ inversed: event.target.checked })
-            }
-            checked={inversed}
-            type="checkbox"
-          >
-            Inverse header
-          </Choice>
-        </fieldset>
       </div>
     );
   }
 
   render() {
-    const { locale, variation, inversed } = this.state;
+    const { locale, variation } = this.state;
     const headerProps = {
       home: {},
       product: { subhead: 'Tax Tools', subpath: 'tax-tool/' },
@@ -90,19 +74,12 @@ class HeaderExample extends React.PureComponent {
         deBrokerName: 'Acme Co.',
       },
     };
-    let wrapperClassNames = 'ds-u-padding--1';
-    if (!inversed) {
-      wrapperClassNames += ' ds-base--inverse';
-    }
+    const wrapperClassNames = 'ds-u-padding--1';
 
     return (
       // Add min-height so the options don't get cut off when switching to product-de
       <div style={{ minHeight: 679 }}>
-        <Header
-          {...headerProps[variation]}
-          initialLanguage={locale}
-          inversed={inversed}
-        />
+        <Header {...headerProps[variation]} initialLanguage={locale} />
         <div className={wrapperClassNames}>{this.renderHeaderToggles()}</div>
       </div>
     );

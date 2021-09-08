@@ -1,6 +1,8 @@
 /* eslint-disable react/no-multi-comp, jsx-a11y/no-redundant-roles */
 import { Button } from '@cmsgov/design-system';
+import CloseSvg from './CloseIcon';
 import LoggedOutLinks from './LoggedOutLinks';
+import MenuSvg from './MenuIcon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
@@ -23,11 +25,7 @@ const ActionMenu = function (props) {
       className="hc-c-header__actions ds-l-col ds-l-col--auto ds-u-margin-left--auto ds-u-font-weight--bold"
       role="navigation"
     >
-      {props.loggedIn ? (
-        <LoggedInActionMenu {...props} />
-      ) : (
-        <LoggedOutActionMenu {...props} />
-      )}
+      {props.loggedIn ? <LoggedInActionMenu {...props} /> : <LoggedOutActionMenu {...props} />}
     </nav>
   );
 };
@@ -36,9 +34,7 @@ function LoggedInActionMenu(props) {
   return (
     <div>
       {props.firstName && (
-        <span className="ds-u-display--none ds-u-sm-display--inline-block">
-          {props.firstName}
-        </span>
+        <span className="ds-u-display--none ds-u-sm-display--inline-block">{props.firstName}</span>
       )}
       <MenuButton {...props} />
     </div>
@@ -55,10 +51,7 @@ function LoggedOutActionMenu(props) {
         primaryDomain={props.primaryDomain}
         switchLocaleLink={props.switchLocaleLink}
       />
-      <MenuButton
-        {...props}
-        className="ds-u-display--inline-block ds-u-sm-display--none"
-      />
+      <MenuButton {...props} className="ds-u-display--inline-block ds-u-sm-display--none" />
     </div>
   );
 }
@@ -66,13 +59,11 @@ function LoggedOutActionMenu(props) {
 function MenuButton({ t, open, ...props }) {
   const className = classnames(
     'hc-c-action-menu-button',
-    'ds-u-font-weight--bold',
     'ds-u-sm-margin-left--2',
     props.className
   );
   return (
     <Button
-      inversed={props.inversed}
       aria-controls={menuId}
       aria-expanded={!!open}
       aria-label={open ? t('header.closeMenu') : t('header.openMenu')}
@@ -80,14 +71,18 @@ function MenuButton({ t, open, ...props }) {
       onClick={props.onMenuToggleClick}
       size="small"
     >
-      {open ? t('header.close') : t('header.menu')}
+      {open ? (
+        <CloseSvg className="ds-u-margin-right--1" />
+      ) : (
+        <MenuSvg className="ds-u-margin-right--1" />
+      )}
+      {t('header.menu')}
     </Button>
   );
 }
 
 ActionMenu.propTypes = {
   /** Applies the inverse theme styling */
-  inversed: PropTypes.bool,
   firstName: PropTypes.string,
   locale: PropTypes.string.isRequired,
   loggedIn: PropTypes.bool,
@@ -130,7 +125,6 @@ MenuButton.propTypes = {
   onMenuToggleClick: ActionMenu.propTypes.onMenuToggleClick,
   open: ActionMenu.propTypes.open,
   className: PropTypes.string,
-  inversed: ActionMenu.propTypes.inversed,
 };
 
 export default translate()(ActionMenu);

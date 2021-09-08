@@ -8,6 +8,11 @@
     // Allow us to align hc-c-menu__content with the "Menu" button
     position: relative;
   }
+
+  .ds-u-border-bottom,
+  .ds-u-border-top {
+    border-color: $color-gray-light;
+  }
 }
 
 .hc-c-menu--open {
@@ -29,13 +34,14 @@
 }
 
 .hc-c-menu__link {
-  color: $color-primary-darker !important;
   padding: $spacer-1;
   text-decoration: none;
 
   &:hover,
   &:focus {
+    // stylelint-disable declaration-no-important
     color: $color-primary-darkest !important;
+    // stylelint-enable declaration-no-important
   }
 }
 
@@ -79,8 +85,8 @@
 .hc-c-header--logged-in .hc-c-menu__content,
 .hc-c-header--minimal .hc-c-menu__content {
   background-color: $color-white;
-  border: 1px solid $color-gray-dark;
-  box-shadow: 7.5px 7.5px 17px 7.5px $color-gray-light;
+  border: 1px solid $color-gray-light;
+  box-shadow: 0 0 17 0 $color-gray-light;
   color: $color-primary-darker;
 
   @media (min-width: $width-sm) {
