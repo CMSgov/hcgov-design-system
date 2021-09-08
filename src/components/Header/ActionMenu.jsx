@@ -1,8 +1,8 @@
 /* eslint-disable react/no-multi-comp, jsx-a11y/no-redundant-roles */
 import { Button } from '@cmsgov/design-system';
-import CloseSvg from './CloseIcon';
+import { ClearIcon } from '@cmsgov/design-system/dist/components/ClearIcon';
 import LoggedOutLinks from './LoggedOutLinks';
-import MenuSvg from './MenuIcon';
+import MenuIcon from './MenuIcon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
@@ -71,11 +71,7 @@ function MenuButton({ t, open, ...props }) {
       onClick={props.onMenuToggleClick}
       size="small"
     >
-      {open ? (
-        <CloseSvg className="ds-u-margin-right--1" />
-      ) : (
-        <MenuSvg className="ds-u-margin-right--1" />
-      )}
+      {open ? <ClearIcon /> : <MenuIcon className="ds-u-margin-right--1" />}
       {t('header.menu')}
     </Button>
   );

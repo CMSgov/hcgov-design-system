@@ -40,9 +40,8 @@
   border-width: 1px;
   min-width: 8ch; // prevent movement when the label is toggled
 
-  svg {
-    height: 15px;
-    width: 15px;
+  .ds-c-clear-icon {
+    margin-right: 8px;
   }
 }
 
