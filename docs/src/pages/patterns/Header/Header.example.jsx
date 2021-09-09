@@ -1,4 +1,4 @@
-import { ChoiceList, Header } from '@design-system';
+import { Choice, ChoiceList, Header } from '@design-system';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -43,23 +43,25 @@ class HeaderExample extends React.PureComponent {
     return (
       // Add min-height so the options don't get cut off when switching to product-de
       <div style={{ minHeight: 679 }}>
+        <h6 className="preview__label">Header minimal</h6>
+        <Header initialLanguage={locale} hideLoginLink={true} hideLanguageSwitch={true} />
         <h6 className="preview__label">Header home</h6>
         <Header initialLanguage={locale} />
         <h6 className="preview__label">Header product</h6>
         <Header subhead="Tax Tools" subpath="tax-tool/" initialLanguage={locale} />
         <h6 className="preview__label">Header logged in</h6>
-        <Header loggedIn="true" firstName="Maximiliano-Longname" initialLanguage={locale} />
+        <Header loggedIn={true} firstName="Maximiliano-Longname" initialLanguage={locale} />
         <h6 className="preview__label">(Direct Enrollment) Header product </h6>
         <Header
           subhead="Verify your identity"
-          deConsumer="true"
+          deConsumer={true}
           deBrokerName="Acme Co."
           initialLanguage={locale}
         />
         <h6 className="preview__label">(Direct Enrollment) Header logged in</h6>
         <Header
-          loggedIn="true"
-          deConsumer="true"
+          loggedIn={true}
+          deConsumer={true}
           deBrokerName="Acme Co."
           initialLanguage={locale}
         />

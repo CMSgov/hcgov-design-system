@@ -50,6 +50,8 @@ function LoggedOutActionMenu(props) {
         subpath={props.subpath}
         primaryDomain={props.primaryDomain}
         switchLocaleLink={props.switchLocaleLink}
+        hideLoginLink={props.hideLoginLink}
+        hideLanguageSwitch={props.hideLanguageSwitch}
       />
       <MenuButton {...props} className="ds-u-display--inline-block ds-u-sm-display--none" />
     </div>
@@ -82,6 +84,8 @@ ActionMenu.propTypes = {
   firstName: PropTypes.string,
   locale: PropTypes.string.isRequired,
   loggedIn: PropTypes.bool,
+  hideLoginLink: PropTypes.bool,
+  hideLanguageSwitch: PropTypes.bool,
   onMenuToggleClick: PropTypes.func.isRequired,
   /**
    * Indicates the menu is open, which influences the label
@@ -115,6 +119,8 @@ LoggedOutActionMenu.propTypes = {
   subpath: ActionMenu.propTypes.subpath,
   primaryDomain: ActionMenu.propTypes.primaryDomain,
   switchLocaleLink: ActionMenu.propTypes.switchLocaleLink,
+  hideLoginLink: ActionMenu.propTypes.hideLoginLink,
+  hideLanguageSwitch: ActionMenu.propTypes.hideLanguageSwitch,
 };
 
 MenuButton.propTypes = {

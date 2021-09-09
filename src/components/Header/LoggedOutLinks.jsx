@@ -12,13 +12,17 @@ const LoggedOutLinks = ({
   subpath,
   primaryDomain,
   switchLocaleLink,
+  hideLoginLink,
+  hideLanguageSwitch,
 }) => {
   const links = defaultMenuLinks(
     locale,
     deConsumer,
     subpath,
     primaryDomain,
-    switchLocaleLink
+    switchLocaleLink,
+    hideLoginLink,
+    hideLanguageSwitch
   ).minimal;
   return (
     <ul className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block">
@@ -45,6 +49,8 @@ LoggedOutLinks.propTypes = {
   /**
    * [See `Header.props.subpath`]({{root}}/patterns/header/#patterns.header.react)
    */
+  hideLoginLink: PropTypes.bool,
+  hideLanguageSwitch: PropTypes.bool,
   subpath: PropTypes.string,
   primaryDomain: PropTypes.string,
   switchLocaleLink: PropTypes.string,

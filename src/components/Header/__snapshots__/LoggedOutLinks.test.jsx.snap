@@ -1,5 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LoggedOutLinks does not render the language switch if hideLanguageSwitch is set to true 1`] = `
+<ul
+  className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block"
+>
+  <li
+    className="hc-c-logged-out-links__li"
+    key="/login"
+  >
+    <a
+      className="hc-c-logged-out-links__link"
+      href="/login"
+    >
+      header.login
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`LoggedOutLinks does not render the login link if the flag hideLoginLink is set to true 1`] = `
+<ul
+  className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block"
+>
+  <li
+    className="hc-c-logged-out-links__li"
+    key="https://www.cuidadodesalud.gov/es/"
+  >
+    <a
+      className="hc-c-logged-out-links__link"
+      href="https://www.cuidadodesalud.gov/es/"
+    >
+      header.español
+    </a>
+  </li>
+</ul>
+`;
+
 exports[`LoggedOutLinks renders custom locale switch link 1`] = `
 <ul
   className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block"

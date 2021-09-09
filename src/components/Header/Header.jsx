@@ -22,7 +22,11 @@ export class _Header extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { openMenu: false };
+    this.state = {
+      openMenu: false,
+      hideLoginLink: false,
+      hideLanguageSwitch: false,
+    };
   }
 
   isLoggedIn() {
@@ -117,7 +121,9 @@ export class _Header extends React.Component {
         this.props.deConsumer,
         this.props.subpath,
         this.props.primaryDomain,
-        this.props.switchLocaleLink
+        this.props.switchLocaleLink,
+        this.props.hideLoginLink,
+        this.props.hideLanguageSwitch
       )[this.variation()];
     const linksWithLocale = this.getLinksWithLocale(links);
 
@@ -147,6 +153,8 @@ export class _Header extends React.Component {
               onMenuToggleClick={this.handleMenuToggleClick}
               locale={this.props.initialLanguage}
               loggedIn={this.props.loggedIn}
+              hideLoginLink={this.props.hideLoginLink}
+              hideLanguageSwitch={this.props.hideLanguageSwitch}
               open={this.state.openMenu}
               deConsumer={this.props.deConsumer}
               subpath={this.props.subpath}
@@ -203,6 +211,15 @@ _Header.propTypes = {
    * Indicate that a user is logged-in.
    */
   loggedIn: PropTypes.bool,
+  /**
+   * When set to true, do not display the Login text in the upper right of the
+   * header
+   */
+  hideLoginLink: PropTypes.bool,
+  /**
+   * When set to true, do not display the the switch locale link
+   */
+  hideLanguageSwitch: PropTypes.bool,
   /**
    * For logged-in users, pass in their first name to display in the header
    */

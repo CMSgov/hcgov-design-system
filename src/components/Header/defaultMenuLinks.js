@@ -12,6 +12,8 @@ import { translate } from '../i18n';
  * @param {String} subpath
  * @param {String} primaryDomain
  * @param {String} switchLocaleLink
+ * @param {boolean} hideLoginLink
+ * @param {boolean} hideLanguageSwitch
  * @returns {Object}
  */
 export function defaultMenuLinks(
@@ -19,7 +21,9 @@ export function defaultMenuLinks(
   deConsumer,
   subpath,
   primaryDomain = '',
-  switchLocaleLink
+  switchLocaleLink,
+  hideLoginLink,
+  hideLanguageSwitch
 ) {
   const isSpanish = locale === 'es';
   const ffmLocalePath = isSpanish ? 'es_MX' : 'en_US';
@@ -29,12 +33,14 @@ export function defaultMenuLinks(
   const t = translate;
   const i18nOptions = { lng: locale };
 
+  const minimal = [];
+  if (!hideLoginLink) minimal.push(loginLink(t, deConsumer, primaryDomain));
+
+  if (!hideLanguageSwitch) minimal.push(localeLink(t, locale, subpath, switchLocaleLink));
+
   return {
     home: [{ label: 'TODO: defaultMenuLinks.js', href: '#TODO' }],
-    minimal: [
-      loginLink(t, deConsumer, primaryDomain),
-      localeLink(t, locale, subpath, switchLocaleLink),
-    ],
+    minimal: minimal,
     'logged-in': [
       {
         label: t('header.myApplicationsAndCoverage', i18nOptions),
