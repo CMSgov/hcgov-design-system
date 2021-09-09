@@ -17,6 +17,7 @@
   }
 }
 
+/* Header subheading */
 .hc-c-header__subhead {
   font-family: $font-serif;
   font-size: $h4-font-size;
@@ -37,9 +38,7 @@
 }
 
 .hc-c-action-menu-button {
-  border-width: 1px;
-  min-width: 8ch; // prevent movement when the label is toggled
-
+  // We should add the ability to add a className to the ClearIcon like we are doing for Menu Icon. This would need to be done at the core design system
   .ds-c-clear-icon {
     margin-right: 8px;
   }
@@ -74,13 +73,10 @@
 }
 
 .hc-c-logged-out-links__link {
-  text-decoration: none;
-
   .hc-c-header--inverse & {
     color: $color-base-inverse;
 
     &:active,
-    &:focus,
     &:hover {
       color: $color-base-inverse;
       opacity: 0.8;
@@ -89,5 +85,85 @@
     &:active {
       opacity: 0.6;
     }
+  }
+}
+
+/*
+----------------------------------------
+Homepage header
+----------------------------------------
+*/
+.hc-c-header--home .hc-c-menu {
+  background-color: $color-primary;
+}
+
+@media (min-width: $width-sm) {
+  .hc-c-header--home {
+    // On non-mobile screens, the homepage menu is always visible
+    .hc-c-menu {
+      display: block;
+    }
+
+    .hc-c-menu__content {
+      position: static;
+    }
+
+    .hc-c-menu__links li {
+      display: inline-block;
+    }
+  }
+}
+
+/*
+----------------------------------------
+Logged-in and Product headers
+----------------------------------------
+*/
+.hc-c-header--logged-in .hc-c-menu__content,
+.hc-c-header--minimal .hc-c-menu__content {
+  background-color: $color-white;
+  border: 1px solid $color-gray-light;
+  box-shadow: 0 7px 10px -5px $color-gray-light;
+  color: $color-primary-darker;
+
+  @media (min-width: $width-sm) {
+    // Span only part of non-mobile screens
+    left: auto;
+    max-width: 30ch;
+    min-width: 20ch;
+  }
+}
+
+/*
+----------------------------------------
+Header dropdown menu - Shared across header variations
+----------------------------------------
+*/
+.hc-c-menu {
+  display: none;
+
+  .ds-l-row {
+    // Allow us to align hc-c-menu__content with the "Menu" button
+    position: relative;
+  }
+}
+
+.hc-c-menu--open {
+  // Ensure the menu is open when its visibility is toggled on
+  display: block !important; // stylelint-disable-line
+}
+
+// Position the menu below the "Menu" toggle button
+.hc-c-menu__content {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  .hc-c-menu__link {
+    display: block;
+    padding: $spacer-1;
+    text-decoration: none;
   }
 }
