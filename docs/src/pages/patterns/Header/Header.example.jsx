@@ -48,18 +48,18 @@ class HeaderExample extends React.PureComponent {
         <h6 className="preview__label">Header product</h6>
         <Header subhead="Tax Tools" subpath="tax-tool/" initialLanguage={locale} />
         <h6 className="preview__label">Header logged in</h6>
-        <Header loggedIn="true" firstName="Maximiliano-Longname" initialLanguage={locale} />
+        <Header loggedIn firstName="Maximiliano-Longname" initialLanguage={locale} />
         <h6 className="preview__label">(Direct Enrollment) Header product </h6>
         <Header
           subhead="Verify your identity"
-          deConsumer="true"
+          deConsumer
           deBrokerName="Acme Co."
           initialLanguage={locale}
         />
         <h6 className="preview__label">(Direct Enrollment) Header logged in</h6>
         <Header
-          loggedIn="true"
-          deConsumer="true"
+          loggedIn
+          deConsumer
           deBrokerName="Acme Co."
           initialLanguage={locale}
         />
