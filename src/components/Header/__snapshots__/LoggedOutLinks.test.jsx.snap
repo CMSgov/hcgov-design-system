@@ -42,17 +42,6 @@ exports[`LoggedOutLinks renders custom locale switch link 1`] = `
 >
   <li
     className="hc-c-logged-out-links__li"
-    key="/login"
-  >
-    <a
-      className="hc-c-logged-out-links__link"
-      href="/login"
-    >
-      header.login
-    </a>
-  </li>
-  <li
-    className="hc-c-logged-out-links__li"
     key="https://ayudalocal.cuidadodesalud.gov/es"
   >
     <a
@@ -60,6 +49,17 @@ exports[`LoggedOutLinks renders custom locale switch link 1`] = `
       href="https://ayudalocal.cuidadodesalud.gov/es"
     >
       header.español
+    </a>
+  </li>
+  <li
+    className="hc-c-logged-out-links__li"
+    key="/login"
+  >
+    <a
+      className="hc-c-logged-out-links__link"
+      href="/login"
+    >
+      header.login
     </a>
   </li>
 </ul>
@@ -71,17 +71,6 @@ exports[`LoggedOutLinks renders logged out links 1`] = `
 >
   <li
     className="hc-c-logged-out-links__li"
-    key="/login"
-  >
-    <a
-      className="hc-c-logged-out-links__link"
-      href="/login"
-    >
-      header.login
-    </a>
-  </li>
-  <li
-    className="hc-c-logged-out-links__li"
     key="https://www.cuidadodesalud.gov/es/"
   >
     <a
@@ -89,6 +78,17 @@ exports[`LoggedOutLinks renders logged out links 1`] = `
       href="https://www.cuidadodesalud.gov/es/"
     >
       header.español
+    </a>
+  </li>
+  <li
+    className="hc-c-logged-out-links__li"
+    key="/login"
+  >
+    <a
+      className="hc-c-logged-out-links__link"
+      href="/login"
+    >
+      header.login
     </a>
   </li>
 </ul>
@@ -100,17 +100,6 @@ exports[`LoggedOutLinks renders logged out links for Direct Enrollment 1`] = `
 >
   <li
     className="hc-c-logged-out-links__li"
-    key="/login?check_de=1"
-  >
-    <a
-      className="hc-c-logged-out-links__link"
-      href="/login?check_de=1"
-    >
-      header.login
-    </a>
-  </li>
-  <li
-    className="hc-c-logged-out-links__li"
     key="https://www.cuidadodesalud.gov/es/"
   >
     <a
@@ -118,6 +107,17 @@ exports[`LoggedOutLinks renders logged out links for Direct Enrollment 1`] = `
       href="https://www.cuidadodesalud.gov/es/"
     >
       header.español
+    </a>
+  </li>
+  <li
+    className="hc-c-logged-out-links__li"
+    key="/login?check_de=1"
+  >
+    <a
+      className="hc-c-logged-out-links__link"
+      href="/login?check_de=1"
+    >
+      header.login
     </a>
   </li>
 </ul>
@@ -129,17 +129,6 @@ exports[`LoggedOutLinks renders logged out links with absolute URLs 1`] = `
 >
   <li
     className="hc-c-logged-out-links__li"
-    key="https://www.healthcare.gov/login"
-  >
-    <a
-      className="hc-c-logged-out-links__link"
-      href="https://www.healthcare.gov/login"
-    >
-      header.login
-    </a>
-  </li>
-  <li
-    className="hc-c-logged-out-links__li"
     key="https://www.cuidadodesalud.gov/es/"
   >
     <a
@@ -147,6 +136,17 @@ exports[`LoggedOutLinks renders logged out links with absolute URLs 1`] = `
       href="https://www.cuidadodesalud.gov/es/"
     >
       header.español
+    </a>
+  </li>
+  <li
+    className="hc-c-logged-out-links__li"
+    key="https://www.healthcare.gov/login"
+  >
+    <a
+      className="hc-c-logged-out-links__link"
+      href="https://www.healthcare.gov/login"
+    >
+      header.login
     </a>
   </li>
 </ul>

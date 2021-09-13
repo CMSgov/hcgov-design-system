@@ -42,6 +42,7 @@ function LoggedInActionMenu(props) {
 }
 
 function LoggedOutActionMenu(props) {
+  const showMenuButton = !(props.hideLoginLink && props.hideLanguageSwitch);
   return (
     <div>
       <LoggedOutLinks
@@ -53,7 +54,9 @@ function LoggedOutActionMenu(props) {
         hideLoginLink={props.hideLoginLink}
         hideLanguageSwitch={props.hideLanguageSwitch}
       />
-      <MenuButton {...props} className="ds-u-display--inline-block ds-u-sm-display--none" />
+      {showMenuButton && (
+        <MenuButton {...props} className="ds-u-display--inline-block ds-u-sm-display--none" />
+      )}
     </div>
   );
 }

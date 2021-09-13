@@ -34,13 +34,11 @@ export function defaultMenuLinks(
   const i18nOptions = { lng: locale };
 
   const minimal = [];
+  if (!hideLanguageSwitch) minimal.push(localeLink(t, locale, subpath, switchLocaleLink));
   if (!hideLoginLink) minimal.push(loginLink(t, deConsumer, primaryDomain));
 
-  if (!hideLanguageSwitch) minimal.push(localeLink(t, locale, subpath, switchLocaleLink));
-
   return {
-    home: [{ label: 'TODO: defaultMenuLinks.js', href: '#TODO' }],
-    minimal: minimal,
+    'logged-out': minimal,
     'logged-in': [
       {
         label: t('header.myApplicationsAndCoverage', i18nOptions),

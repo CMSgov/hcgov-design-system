@@ -1,4 +1,3 @@
-import ActionMenu from './ActionMenu';
 import { _Header as Header } from './Header';
 import React from 'react';
 import { SkipNav } from '@cmsgov/design-system';
@@ -70,18 +69,6 @@ describe('Header', function () {
     });
   });
 
-  it('passes inverse to ActionMenu', () => {
-    const wrapper = render({ inverse: false });
-    const actionMenu = wrapper.find(ActionMenu);
-    expect(actionMenu.props().inversed).toBe(false);
-  });
-
-  it('passes inversed to ActionMenu', () => {
-    const wrapper = render({ inversed: false });
-    const actionMenu = wrapper.find(ActionMenu);
-    expect(actionMenu.props().inversed).toBe(false);
-  });
-
   it('re-renders with updated links', () => {
     const props = { loggedIn: true };
     const wrapper = render(props);
@@ -92,12 +79,10 @@ describe('Header', function () {
     wrapper.setProps({ links: [{ href: '/foo', label: 'Foo' }] });
     menu = wrapper.find('Menu');
 
-    expect(menu.prop('links').length).toBe(1);
+    expect(menu.prop('links').length).toBe(2);
   });
 
   it('renders links with absolute URLs if provided a primaryDomain prop', () => {
-    expect(
-      render({ primaryDomain: 'https://www.healthcare.gov' })
-    ).toMatchSnapshot();
+    expect(render({ primaryDomain: 'https://www.healthcare.gov' })).toMatchSnapshot();
   });
 });

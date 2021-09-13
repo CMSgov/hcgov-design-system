@@ -12,6 +12,7 @@ import { translate } from 'react-i18next';
 import { translate as translateWrapper } from '../i18n';
 
 export const LOGGED_IN_VAL = 'logged-in';
+export const LOGGED_OUT_VAL = 'logged-out';
 
 /**
  * The top-level component, responsible for maintaining the
@@ -84,12 +85,10 @@ export class _Header extends React.Component {
     if (this.props.loggedIn) {
       // Logged-in state, with minimal navigation
       return LOGGED_IN_VAL;
-    } else if (this.props.subhead) {
-      // Product, with minimal navigation and a subheading
-      return 'minimal';
+    } else {
+      // Logged-out state, either Learn or Product
+      return LOGGED_OUT_VAL;
     }
-
-    return 'home';
   }
 
   // if header is in authenticated state, add language link to the end of other links
@@ -176,6 +175,8 @@ export class _Header extends React.Component {
           links={linksWithLocale}
           open={this.state.openMenu}
           primaryDomain={this.props.primaryDomain}
+          submenuTop={this.props.submenuTop}
+          submenuBottom={this.props.submenuBottom}
         />
 
         {this.props.deConsumer && <DeConsumerMessage deBrokerName={this.props.deBrokerName} />}
@@ -285,6 +286,19 @@ _Header.propTypes = {
       onClick: PropTypes.func,
     })
   ),
+  /**
+   * Optionally pass a React component to render within the menu. Useful for
+   * when you need more control over what appears in the menu than what's
+   * provided by the `links` prop, e.g. a search input. Will appear *above* any
+   * links provided by the `defaultMenuLinks` method or the links provided by
+   * the `links` prop.
+   */
+  submenuTop: PropTypes.node,
+  /**
+   * Same as `submenuTop`, except it will appear *below* any links provided by
+   * the `defaultMenuLinks` method or the links provided by the `links` prop.
+   */
+  submenuBottom: PropTypes.node,
 };
 
 export const Header = translate()(_Header);

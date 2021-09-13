@@ -23,7 +23,7 @@ const LoggedOutLinks = ({
     switchLocaleLink,
     hideLoginLink,
     hideLanguageSwitch
-  ).minimal;
+  )['logged-out'];
   return (
     <ul className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block">
       {links.map((link) => {

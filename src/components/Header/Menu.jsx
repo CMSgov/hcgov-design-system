@@ -14,6 +14,7 @@ const Menu = function (props) {
       <div className="ds-l-container">
         <div className="ds-l-row">
           <div className="hc-c-menu__content ds-u-padding--1 ds-u-font-weight--bold">
+            {props.submenuTop}
             {props.beforeLinks}
             {props.links && (
               <div className="ds-l-col ds-l-col--auto ds-u-padding-x--0">
@@ -21,6 +22,7 @@ const Menu = function (props) {
               </div>
             )}
             {props.afterLinks}
+            {props.submenuBottom}
           </div>
         </div>
       </div>
@@ -36,6 +38,8 @@ Menu.propTypes = {
       onClick: PropTypes.func,
     })
   ),
+  submenuTop: PropTypes.node,
+  submenuBottom: PropTypes.node,
   /**
    * Nodes to be rendered before the links column
    */
