@@ -55,7 +55,7 @@ class HeaderExample extends React.PureComponent {
         <h6 className="preview__label">Minimal</h6>
         <Header initialLanguage={locale} hideLoginLink hideLanguageSwitch />
         <h6 className="preview__label">Product</h6>
-        <Header subpath="tax-tool/" initialLanguage={locale} />
+        <Header subhead="Tax Tools" subpath="tax-tool/" initialLanguage={locale} />
         <h6 className="preview__label">Homepage / Learn</h6>
         <Header initialLanguage={locale} submenuTop={<SampleLearnSubmenu />} />
         <h6 className="preview__label">Logged-In</h6>
@@ -68,12 +68,7 @@ class HeaderExample extends React.PureComponent {
           initialLanguage={locale}
         />
         <h6 className="preview__label">Direct Enrollment - Logged-In</h6>
-        <Header
-          loggedIn
-          deConsumer
-          deBrokerName="Acme Co."
-          initialLanguage={locale}
-        />
+        <Header loggedIn deConsumer deBrokerName="Acme Co." initialLanguage={locale} />
         <div className={wrapperClassNames}>{this.renderHeaderToggles()}</div>
       </div>
     );
