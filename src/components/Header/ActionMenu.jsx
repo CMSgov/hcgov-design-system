@@ -1,6 +1,6 @@
 /* eslint-disable react/no-multi-comp, jsx-a11y/no-redundant-roles */
 import { Button } from '@cmsgov/design-system';
-import { ClearIcon } from '@cmsgov/design-system/dist/components/ClearIcon';
+import ClearIcon from '@cmsgov/design-system/dist/components/FilterChip/ClearIconAlternate';
 import LoggedOutLinks from './LoggedOutLinks';
 import MenuIcon from './MenuIcon';
 import PropTypes from 'prop-types';
