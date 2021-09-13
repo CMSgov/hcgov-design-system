@@ -43,7 +43,7 @@ exports[`ActionMenu logged-in version renders logged-in version 1`] = `
               aria-controls="hc-c-menu"
               aria-expanded={false}
               aria-label="header.openMenu"
-              className="hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2"
+              className="hc-c-action-menu-button ds-u-sm-margin-left--2"
               component="button"
               onClick={[MockFunction]}
               size="small"
@@ -53,10 +53,27 @@ exports[`ActionMenu logged-in version renders logged-in version 1`] = `
                 aria-controls="hc-c-menu"
                 aria-expanded={false}
                 aria-label="header.openMenu"
-                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2"
+                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-sm-margin-left--2"
                 onClick={[Function]}
                 type="button"
               >
+                <MenuIcon
+                  className="ds-u-margin-right--1"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-bars fa-w-14 ds-u-margin-right--1"
+                    data-icon="bars"
+                    data-prefix="fas"
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </MenuIcon>
                 header.menu
               </button>
             </Button>
@@ -115,7 +132,7 @@ exports[`ActionMenu logged-in version set aria-expanded to true 1`] = `
               aria-controls="hc-c-menu"
               aria-expanded={true}
               aria-label="header.closeMenu"
-              className="hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2"
+              className="hc-c-action-menu-button ds-u-sm-margin-left--2"
               component="button"
               onClick={[MockFunction]}
               size="small"
@@ -125,11 +142,24 @@ exports[`ActionMenu logged-in version set aria-expanded to true 1`] = `
                 aria-controls="hc-c-menu"
                 aria-expanded={true}
                 aria-label="header.closeMenu"
-                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2"
+                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-sm-margin-left--2"
                 onClick={[Function]}
                 type="button"
               >
-                header.close
+                <ClearIconAlternate>
+                  <svg
+                    className="ds-c-clear-icon"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    width="14"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m8.6002309 7 5.2573243-5.25732429c.1899264-.1899264.1899264-.49704142 0-.68696782l-.9132631-.91326309c-.1899264-.1899264-.4970414-.1899264-.6869678 0l-5.2573243 5.2573243-5.25732429-5.2573243c-.1899264-.1899264-.49704142-.1899264-.68696782 0l-.91326309.91326309c-.1899264.1899264-.1899264.49704142 0 .68696782l5.2573243 5.25732429-5.2573243 5.2573243c-.1899264.1899264-.1899264.4970414 0 .6869678l.91326309.9132631c.1899264.1899264.49704142.1899264.68696782 0l5.25732429-5.2573243 5.2573243 5.2573243c.1899264.1899264.4970414.1899264.6869678 0l.9132631-.9132631c.1899264-.1899264.1899264-.4970414 0-.6869678z"
+                    />
+                  </svg>
+                </ClearIconAlternate>
+                header.menu
               </button>
             </Button>
           </MenuButton>
@@ -210,7 +240,7 @@ exports[`ActionMenu logged-out version renders custom locale switch link 1`] = `
               aria-controls="hc-c-menu"
               aria-expanded={false}
               aria-label="header.openMenu"
-              className="hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
+              className="hc-c-action-menu-button ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
               component="button"
               onClick={[MockFunction]}
               size="small"
@@ -220,10 +250,27 @@ exports[`ActionMenu logged-out version renders custom locale switch link 1`] = `
                 aria-controls="hc-c-menu"
                 aria-expanded={false}
                 aria-label="header.openMenu"
-                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
+                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
                 onClick={[Function]}
                 type="button"
               >
+                <MenuIcon
+                  className="ds-u-margin-right--1"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-bars fa-w-14 ds-u-margin-right--1"
+                    data-icon="bars"
+                    data-prefix="fas"
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </MenuIcon>
                 header.menu
               </button>
             </Button>
@@ -305,7 +352,7 @@ exports[`ActionMenu logged-out version renders links with absolute URLs 1`] = `
               aria-controls="hc-c-menu"
               aria-expanded={false}
               aria-label="header.openMenu"
-              className="hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
+              className="hc-c-action-menu-button ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
               component="button"
               onClick={[MockFunction]}
               size="small"
@@ -315,10 +362,27 @@ exports[`ActionMenu logged-out version renders links with absolute URLs 1`] = `
                 aria-controls="hc-c-menu"
                 aria-expanded={false}
                 aria-label="header.openMenu"
-                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
+                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
                 onClick={[Function]}
                 type="button"
               >
+                <MenuIcon
+                  className="ds-u-margin-right--1"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-bars fa-w-14 ds-u-margin-right--1"
+                    data-icon="bars"
+                    data-prefix="fas"
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </MenuIcon>
                 header.menu
               </button>
             </Button>
@@ -395,7 +459,7 @@ exports[`ActionMenu logged-out version renders logged-out version 1`] = `
               aria-controls="hc-c-menu"
               aria-expanded={false}
               aria-label="header.openMenu"
-              className="hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
+              className="hc-c-action-menu-button ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
               component="button"
               onClick={[MockFunction]}
               size="small"
@@ -405,10 +469,27 @@ exports[`ActionMenu logged-out version renders logged-out version 1`] = `
                 aria-controls="hc-c-menu"
                 aria-expanded={false}
                 aria-label="header.openMenu"
-                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-font-weight--bold ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
+                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
                 onClick={[Function]}
                 type="button"
               >
+                <MenuIcon
+                  className="ds-u-margin-right--1"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-bars fa-w-14 ds-u-margin-right--1"
+                    data-icon="bars"
+                    data-prefix="fas"
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </MenuIcon>
                 header.menu
               </button>
             </Button>

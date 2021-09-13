@@ -2,7 +2,7 @@
 
 exports[`Header renders Direct Enrollment banner 1`] = `
 <header
-  className="hc-c-header hc-c-header--minimal hc-c-header--inverse"
+  className="hc-c-header hc-c-header--minimal"
   role="banner"
 >
   <SkipNav
@@ -31,7 +31,6 @@ exports[`Header renders Direct Enrollment banner 1`] = `
       </div>
       <Component
         deConsumer={true}
-        inversed={true}
         locale="en"
         onMenuToggleClick={[Function]}
         open={false}
@@ -89,7 +88,6 @@ exports[`Header renders Spanish header 1`] = `
         />
       </a>
       <Component
-        inversed={false}
         locale="es"
         onMenuToggleClick={[Function]}
         open={false}
@@ -135,7 +133,6 @@ exports[`Header renders full/homepage header 1`] = `
         />
       </a>
       <Component
-        inversed={false}
         locale="en"
         onMenuToggleClick={[Function]}
         open={false}
@@ -181,7 +178,6 @@ exports[`Header renders links with absolute URLs if provided a primaryDomain pro
         />
       </a>
       <Component
-        inversed={false}
         locale="en"
         onMenuToggleClick={[Function]}
         open={false}
@@ -206,7 +202,7 @@ exports[`Header renders links with absolute URLs if provided a primaryDomain pro
 
 exports[`Header renders logged-in header with firstName 1`] = `
 <header
-  className="hc-c-header hc-c-header--logged-in hc-c-header--inverse"
+  className="hc-c-header hc-c-header--logged-in"
   role="banner"
 >
   <SkipNav
@@ -230,7 +226,6 @@ exports[`Header renders logged-in header with firstName 1`] = `
       </a>
       <Component
         firstName="John"
-        inversed={true}
         locale="en"
         loggedIn={true}
         onMenuToggleClick={[Function]}
@@ -241,15 +236,15 @@ exports[`Header renders logged-in header with firstName 1`] = `
   <Menu
     afterLinks={
       <a
-        className="hc-c-menu__link ds-u-border-top--1 ds-u-border--dark ds-u-margin-x--1 ds-u-padding-x--0"
-        href="https://www.cuidadodesalud.gov/es/"
+        className="hc-c-menu__link ds-u-border-top--1 ds-u-margin-x--1 ds-u-padding-x--0"
+        href="/logout"
       >
-        header.español
+        header.logout
       </a>
     }
     beforeLinks={
       <div
-        className="ds-u-sm-display--none ds-u-border-bottom--1 ds-u-border--dark ds-u-margin-x--1 ds-u-padding-y--1"
+        className="ds-u-sm-display--none ds-u-border-bottom--1 ds-u-margin-x--1 ds-u-padding-y--1 hc-c-header__name"
       >
         John
       </div>
@@ -258,15 +253,15 @@ exports[`Header renders logged-in header with firstName 1`] = `
       Array [
         Object {
           "href": "/marketplace/auth/global/en_US/myProfile#landingPage",
-          "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"en\\"}",
+          "label": "header.myApplicationsAndCoverage",
         },
         Object {
           "href": "/marketplace/auth/global/en_US/myProfile#settings",
-          "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
+          "label": "header.myProfile",
         },
         Object {
-          "href": "/logout",
-          "label": "header.logout | {\\"lng\\":\\"en\\"}",
+          "href": "https://www.cuidadodesalud.gov/es/",
+          "label": "header.español",
         },
       ]
     }
@@ -277,7 +272,7 @@ exports[`Header renders logged-in header with firstName 1`] = `
 
 exports[`Header renders logged-in header without firstName 1`] = `
 <header
-  className="hc-c-header hc-c-header--logged-in hc-c-header--inverse"
+  className="hc-c-header hc-c-header--logged-in"
   role="banner"
 >
   <SkipNav
@@ -300,7 +295,6 @@ exports[`Header renders logged-in header without firstName 1`] = `
         />
       </a>
       <Component
-        inversed={true}
         locale="en"
         loggedIn={true}
         onMenuToggleClick={[Function]}
@@ -311,25 +305,25 @@ exports[`Header renders logged-in header without firstName 1`] = `
   <Menu
     afterLinks={
       <a
-        className="hc-c-menu__link ds-u-border-top--1 ds-u-border--dark ds-u-margin-x--1 ds-u-padding-x--0"
-        href="https://www.cuidadodesalud.gov/es/"
+        className="hc-c-menu__link ds-u-border-top--1 ds-u-margin-x--1 ds-u-padding-x--0"
+        href="/logout"
       >
-        header.español
+        header.logout
       </a>
     }
     links={
       Array [
         Object {
           "href": "/marketplace/auth/global/en_US/myProfile#landingPage",
-          "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"en\\"}",
+          "label": "header.myApplicationsAndCoverage",
         },
         Object {
           "href": "/marketplace/auth/global/en_US/myProfile#settings",
-          "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
+          "label": "header.myProfile",
         },
         Object {
-          "href": "/logout",
-          "label": "header.logout | {\\"lng\\":\\"en\\"}",
+          "href": "https://www.cuidadodesalud.gov/es/",
+          "label": "header.español",
         },
       ]
     }
@@ -340,7 +334,7 @@ exports[`Header renders logged-in header without firstName 1`] = `
 
 exports[`Header renders minimal/product header 1`] = `
 <header
-  className="hc-c-header hc-c-header--minimal hc-c-header--inverse"
+  className="hc-c-header hc-c-header--minimal"
   role="banner"
 >
   <SkipNav
@@ -368,7 +362,6 @@ exports[`Header renders minimal/product header 1`] = `
         Tax tools
       </div>
       <Component
-        inversed={true}
         locale="en"
         onMenuToggleClick={[Function]}
         open={false}

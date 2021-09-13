@@ -41,7 +41,7 @@ export class _Header extends React.Component {
       return (
         <a
           className="hc-c-menu__link ds-u-border-top--1 ds-u-margin-x--1 ds-u-padding-x--0"
-          href={`${primaryDomain}/logout`}
+          href={`${primaryDomain || ''}/logout`}
         >
           {translateWrapper('header.logout', i18nOptions)}
         </a>

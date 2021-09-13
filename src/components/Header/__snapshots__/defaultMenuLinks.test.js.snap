@@ -17,10 +17,6 @@ Object {
       "href": "/marketplace/auth/global/en_US/myProfile#settings",
       "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
     },
-    Object {
-      "href": "/logout",
-      "label": "header.logout | {\\"lng\\":\\"en\\"}",
-    },
   ],
   "minimal": Array [
     Object {
@@ -51,10 +47,6 @@ Object {
     Object {
       "href": "https://www.healthcare.gov/marketplace/auth/global/en_US/myProfile#settings",
       "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
-    },
-    Object {
-      "href": "https://www.healthcare.gov/logout",
-      "label": "header.logout | {\\"lng\\":\\"en\\"}",
     },
   ],
   "minimal": Array [
@@ -87,10 +79,6 @@ Object {
       "href": "/marketplace/auth/global/en_US/myProfile#settings",
       "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
     },
-    Object {
-      "href": "/logout",
-      "label": "header.logout | {\\"lng\\":\\"en\\"}",
-    },
   ],
   "minimal": Array [
     Object {
@@ -121,10 +109,6 @@ Object {
     Object {
       "href": "/marketplace/auth/global/en_US/myProfile#settings",
       "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
-    },
-    Object {
-      "href": "/logout",
-      "label": "header.logout | {\\"lng\\":\\"en\\"}",
     },
   ],
   "minimal": Array [
@@ -157,10 +141,6 @@ Object {
       "href": "/marketplace/auth/global/es_MX/myProfile#settings",
       "label": "header.myProfile | {\\"lng\\":\\"es\\"}",
     },
-    Object {
-      "href": "/logout",
-      "label": "header.logout | {\\"lng\\":\\"es\\"}",
-    },
   ],
   "minimal": Array [
     Object {
@@ -191,10 +171,6 @@ Object {
     Object {
       "href": "https://www.healthcare.gov/marketplace/auth/global/es_MX/myProfile#settings",
       "label": "header.myProfile | {\\"lng\\":\\"es\\"}",
-    },
-    Object {
-      "href": "https://www.healthcare.gov/logout",
-      "label": "header.logout | {\\"lng\\":\\"es\\"}",
     },
   ],
   "minimal": Array [
@@ -227,10 +203,6 @@ Object {
       "href": "/marketplace/auth/global/es_MX/myProfile#settings",
       "label": "header.myProfile | {\\"lng\\":\\"es\\"}",
     },
-    Object {
-      "href": "/logout",
-      "label": "header.logout | {\\"lng\\":\\"es\\"}",
-    },
   ],
   "minimal": Array [
     Object {
@@ -261,10 +233,6 @@ Object {
     Object {
       "href": "/marketplace/auth/global/es_MX/myProfile#settings",
       "label": "header.myProfile | {\\"lng\\":\\"es\\"}",
-    },
-    Object {
-      "href": "/logout",
-      "label": "header.logout | {\\"lng\\":\\"es\\"}",
     },
   ],
   "minimal": Array [
