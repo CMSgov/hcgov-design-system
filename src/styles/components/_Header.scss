@@ -114,6 +114,21 @@ Homepage header
   }
 }
 
+@media (max-width: $width-sm) {
+  // On small screens, the logo padding was creating a wonky focus style
+  .hc-c-header {
+    .ds-l-row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .hc-c-logo-link {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
 /*
 ----------------------------------------
 Logged-in and Product headers
