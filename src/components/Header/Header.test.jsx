@@ -78,12 +78,12 @@ describe('Header', function () {
     const wrapper = render(props);
 
     let menu = wrapper.find('Menu');
-    expect(menu.prop('links').length).toBe(3);
+    expect(menu.prop('links').length).toBe(4);
 
     wrapper.setProps({ links: [{ href: '/foo', label: 'Foo' }] });
     menu = wrapper.find('Menu');
 
-    expect(menu.prop('links').length).toBe(2);
+    expect(menu.prop('links').length).toBe(1);
   });
 
   it('should add spanish toggle if logged in', () => {
@@ -91,13 +91,13 @@ describe('Header', function () {
     const wrapper = render(props);
 
     const menu = wrapper.find('Menu');
-    expect(menu.prop('links').length).toBe(3);
+    expect(menu.prop('links').length).toBe(4);
 
     expect(menu.prop('links')[2].label).toEqual('header.español');
   });
 
-  it('should not add Spanish toggle when logged out', () => {
-    const props = {};
+  it('should not add Spanish toggle when hideLanguageSwitch set', () => {
+    const props = { hideLanguageSwitch: true };
     const wrapper = render(props);
 
     const menu = wrapper.find('Menu');
