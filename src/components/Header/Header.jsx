@@ -9,7 +9,6 @@ import classnames from 'classnames';
 import defaultMenuLinks from './defaultMenuLinks';
 import localeLink from './localeLink';
 import { translate } from 'react-i18next';
-import { translate as translateWrapper } from '../i18n';
 
 export const LOGGED_IN_VAL = 'logged-in';
 export const LOGGED_OUT_VAL = 'logged-out';
@@ -38,21 +37,7 @@ export class _Header extends React.Component {
    * Content rendered within <Menu>, after the list of links
    * @returns {Node}
    */
-  afterMenuLinks() {
-    if (this.isLoggedIn()) {
-      const { initialLanguage = 'en', primaryDomain } = this.props;
-      const i18nOptions = { lng: initialLanguage };
-
-      return (
-        <a
-          className="hc-c-menu__link ds-u-border-top--1 ds-u-margin-x--1 ds-u-padding-x--0"
-          href={`${primaryDomain}/logout`}
-        >
-          {translateWrapper('header.logout', i18nOptions)}
-        </a>
-      );
-    }
-  }
+  afterMenuLinks() {}
 
   /**
    * Content rendered within <Menu>, before the list of links
@@ -134,12 +119,14 @@ export class _Header extends React.Component {
 
         <div className="ds-l-container">
           <div className="ds-l-row ds-u-align-items--center ds-u-flex-wrap--nowrap ds-u-padding-y--2">
-            <a
-              href={this.props.primaryDomain ? this.props.primaryDomain : '/'}
-              className="hc-c-logo-link ds-l-col ds-l-col--auto"
-            >
-              <Logo locale={this.props.initialLanguage} />
-            </a>
+            <div className="ds-l-col ds-l-col--auto">
+              <a
+                href={this.props.primaryDomain ? this.props.primaryDomain : '/'}
+                className="hc-c-logo-link"
+              >
+                <Logo locale={this.props.initialLanguage} />
+              </a>
+            </div>
 
             {this.props.subhead && (
               <div className="hc-c-header__subhead hc-c-header__subhead--inline ds-u-md-display--block ds-u-display--none">
@@ -152,13 +139,8 @@ export class _Header extends React.Component {
               onMenuToggleClick={this.handleMenuToggleClick}
               locale={this.props.initialLanguage}
               loggedIn={this.props.loggedIn}
-              hideLoginLink={this.props.hideLoginLink}
-              hideLanguageSwitch={this.props.hideLanguageSwitch}
               open={this.state.openMenu}
-              deConsumer={this.props.deConsumer}
-              subpath={this.props.subpath}
-              primaryDomain={this.props.primaryDomain}
-              switchLocaleLink={this.props.switchLocaleLink}
+              links={links}
             />
           </div>
         </div>

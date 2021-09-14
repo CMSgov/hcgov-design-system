@@ -43,7 +43,12 @@ class HeaderExample extends React.PureComponent {
     const SampleLearnSubmenu = () => (
       <div className="ds-u-display--flex">
         <div className="ds-u-margin-right--1" style={{ flex: 1 }}>
-          <TextField fieldClassName="ds-u-margin-y--0" labelClassName="ds-u-display--none" />
+          <TextField
+            fieldClassName="ds-u-margin-y--0"
+            labelClassName="ds-u-display--none"
+            label="Search"
+            name="SubmenuSearch"
+          />
         </div>
         <Button>Search</Button>
       </div>

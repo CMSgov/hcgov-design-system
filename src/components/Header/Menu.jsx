@@ -33,6 +33,7 @@ const Menu = function (props) {
 Menu.propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({
+      identifier: PropTypes.string,
       href: PropTypes.string.isRequired,
       label: PropTypes.node.isRequired,
       onClick: PropTypes.func,

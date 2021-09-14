@@ -35,7 +35,10 @@ export function defaultMenuLinks(
 
   const minimal = [];
   if (!hideLanguageSwitch) minimal.push(localeLink(t, locale, subpath, switchLocaleLink));
-  if (!hideLoginLink) minimal.push(loginLink(t, deConsumer, primaryDomain));
+  if (!hideLoginLink)
+    minimal.push(
+      Object.assign({ identifier: LINK_IDENTIFIERS.LOGIN }, loginLink(t, deConsumer, primaryDomain))
+    );
 
   return {
     'logged-out': minimal,
@@ -48,8 +51,18 @@ export function defaultMenuLinks(
         label: t('header.myProfile', i18nOptions),
         href: `${primaryDomain}/marketplace/auth/global/${ffmLocalePath}/myProfile#settings`,
       },
+      {
+        identifier: LINK_IDENTIFIERS.logout,
+        label: t('header.logout', i18nOptions),
+        href: `${primaryDomain}/logout`,
+      },
     ],
   };
 }
+
+export const LINK_IDENTIFIERS = {
+  LOGIN: 'login',
+  LOGOUT: 'logout',
+};
 
 export default defaultMenuLinks;
