@@ -54,7 +54,7 @@ export function defaultMenuLinks(
       {
         identifier: LINK_IDENTIFIERS.logout,
         label: t('header.logout', i18nOptions),
-        href: `${primaryDomain}/logout`,
+        href: `${primaryDomain || ''}/logout`,
       },
     ],
   };

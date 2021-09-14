@@ -81,6 +81,67 @@
 
 /*
 ----------------------------------------
+Homepage header
+----------------------------------------
+*/
+.hc-c-header--home .hc-c-menu {
+  background-color: $color-primary;
+}
+
+@media (min-width: $width-sm) {
+  .hc-c-header--home {
+    // On non-mobile screens, the homepage menu is always visible
+    .hc-c-menu {
+      display: block;
+    }
+
+    .hc-c-menu__content {
+      position: static;
+    }
+
+    .hc-c-menu__links li {
+      display: inline-block;
+    }
+  }
+}
+
+@media (max-width: $width-sm) {
+  // On small screens, the logo padding was creating a wonky focus style
+  .hc-c-header {
+    .ds-l-row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .hc-c-logo-link {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+/*
+----------------------------------------
+Logged-in and Product headers
+----------------------------------------
+*/
+.hc-c-header--logged-in .hc-c-menu__content,
+.hc-c-header--minimal .hc-c-menu__content {
+  background-color: $color-white;
+  border: 1px solid $color-gray-light;
+  box-shadow: 0 7px 10px -5px $color-gray-light;
+  color: $color-primary-darker;
+
+  @media (min-width: $width-sm) {
+    // Span only part of non-mobile screens
+    left: auto;
+    max-width: 30ch;
+    min-width: 20ch;
+  }
+}
+
+/*
+----------------------------------------
 Header dropdown menu - Shared across header variations
 ----------------------------------------
 */

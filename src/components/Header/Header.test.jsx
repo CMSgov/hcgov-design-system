@@ -3,6 +3,10 @@ import React from 'react';
 import { SkipNav } from '@cmsgov/design-system';
 import { shallow } from 'enzyme';
 
+jest.mock('../i18n', () => ({
+  translate: (text) => text,
+}));
+
 function render(props) {
   props = Object.assign(
     {
@@ -80,6 +84,37 @@ describe('Header', function () {
     menu = wrapper.find('Menu');
 
     expect(menu.prop('links').length).toBe(2);
+  });
+
+  it('should add spanish toggle if logged in', () => {
+    const props = { loggedIn: true };
+    const wrapper = render(props);
+
+    const menu = wrapper.find('Menu');
+    expect(menu.prop('links').length).toBe(3);
+
+    expect(menu.prop('links')[2].label).toEqual('header.español');
+  });
+
+  it('should not add Spanish toggle when logged out', () => {
+    const props = {};
+    const wrapper = render(props);
+
+    const menu = wrapper.find('Menu');
+    expect(menu.prop('links').length).toBe(1);
+
+    expect(menu.prop('links')[0].label).not.toEqual('header.español');
+  });
+
+  it('should have "logout" as last item when logged in', () => {
+    const props = { loggedIn: true };
+    const wrapper = render(props);
+
+    const menu = wrapper.find('Menu');
+    const lastLink = menu.dive().find('a').last();
+
+    expect(lastLink).toBeDefined();
+    expect(lastLink.text()).toEqual('header.logout');
   });
 
   it('renders links with absolute URLs if provided a primaryDomain prop', () => {

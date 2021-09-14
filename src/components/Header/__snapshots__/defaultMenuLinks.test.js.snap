@@ -17,11 +17,6 @@ Object {
       "href": "https://www.cuidadodesalud.gov/es/",
       "label": "header.español",
     },
-    Object {
-      "href": "/login",
-      "label": "header.login",
-    },
-  ],
 }
 `;
 
@@ -42,11 +37,6 @@ Object {
       "href": "https://www.cuidadodesalud.gov/es/",
       "label": "header.español",
     },
-    Object {
-      "href": "https://www.healthcare.gov/login",
-      "label": "header.login",
-    },
-  ],
 }
 `;
 
@@ -67,11 +57,6 @@ Object {
       "href": "https://ayudalocal.cuidadodesalud.gov/es",
       "label": "header.español",
     },
-    Object {
-      "href": "/login",
-      "label": "header.login",
-    },
-  ],
 }
 `;
 
@@ -92,11 +77,6 @@ Object {
       "href": "https://www.cuidadodesalud.gov/es/tax-tool/",
       "label": "header.español",
     },
-    Object {
-      "href": "/login",
-      "label": "header.login",
-    },
-  ],
 }
 `;
 
@@ -117,11 +97,6 @@ Object {
       "href": "https://www.healthcare.gov/",
       "label": "header.english",
     },
-    Object {
-      "href": "/login",
-      "label": "header.login",
-    },
-  ],
 }
 `;
 
@@ -142,11 +117,6 @@ Object {
       "href": "https://www.healthcare.gov/",
       "label": "header.english",
     },
-    Object {
-      "href": "https://www.healthcare.gov/login",
-      "label": "header.login",
-    },
-  ],
 }
 `;
 
@@ -167,11 +137,6 @@ Object {
       "href": "https://localhelp.healthcare.gov",
       "label": "header.english",
     },
-    Object {
-      "href": "/login",
-      "label": "header.login",
-    },
-  ],
 }
 `;
 
@@ -192,10 +157,5 @@ Object {
       "href": "https://www.healthcare.gov/tax-tool/",
       "label": "header.english",
     },
-    Object {
-      "href": "/login",
-      "label": "header.login",
-    },
-  ],
 }
 `;

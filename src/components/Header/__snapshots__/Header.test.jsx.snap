@@ -249,9 +249,9 @@ exports[`Header renders logged-in header with firstName 1`] = `
     afterLinks={
       <a
         className="hc-c-menu__link ds-u-border-top--1 ds-u-margin-x--1 ds-u-padding-x--0"
-        href="undefined/logout"
+        href="/logout"
       >
-        header.logout | {"lng":"en"}
+        header.logout
       </a>
     }
     beforeLinks={
@@ -265,11 +265,11 @@ exports[`Header renders logged-in header with firstName 1`] = `
       Array [
         Object {
           "href": "/marketplace/auth/global/en_US/myProfile#landingPage",
-          "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"en\\"}",
+          "label": "header.myApplicationsAndCoverage",
         },
         Object {
           "href": "/marketplace/auth/global/en_US/myProfile#settings",
-          "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
+          "label": "header.myProfile",
         },
         Object {
           "href": "https://www.cuidadodesalud.gov/es/",
@@ -318,20 +318,20 @@ exports[`Header renders logged-in header without firstName 1`] = `
     afterLinks={
       <a
         className="hc-c-menu__link ds-u-border-top--1 ds-u-margin-x--1 ds-u-padding-x--0"
-        href="undefined/logout"
+        href="/logout"
       >
-        header.logout | {"lng":"en"}
+        header.logout
       </a>
     }
     links={
       Array [
         Object {
           "href": "/marketplace/auth/global/en_US/myProfile#landingPage",
-          "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"en\\"}",
+          "label": "header.myApplicationsAndCoverage",
         },
         Object {
           "href": "/marketplace/auth/global/en_US/myProfile#settings",
-          "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
+          "label": "header.myProfile",
         },
         Object {
           "href": "https://www.cuidadodesalud.gov/es/",

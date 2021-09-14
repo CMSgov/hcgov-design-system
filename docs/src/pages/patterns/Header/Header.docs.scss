@@ -1,10 +1,13 @@
 /*
 Header
 
-The HealthCare.gov header component varies depending on the user's state (ie. logged-in?) and context (ie. what page is this user on?).
+The HealthCare.gov header component varies depending on the user's state (ie. logged-in) and context (ie. what page the user is on).
+
+<strong>Note: as part of the header unification effort, the 'inverse' header variation has been removed.</strong>
 
 Style guide: patterns.header
 */
+
 /*
 `<Header />`
 

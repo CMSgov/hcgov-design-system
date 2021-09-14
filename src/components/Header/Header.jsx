@@ -119,14 +119,12 @@ export class _Header extends React.Component {
 
         <div className="ds-l-container">
           <div className="ds-l-row ds-u-align-items--center ds-u-flex-wrap--nowrap ds-u-padding-y--2">
-            <div className="ds-l-col ds-l-col--auto">
-              <a
-                href={this.props.primaryDomain ? this.props.primaryDomain : '/'}
-                className="hc-c-logo-link"
-              >
-                <Logo locale={this.props.initialLanguage} />
-              </a>
-            </div>
+            <a
+              href={this.props.primaryDomain ? this.props.primaryDomain : '/'}
+              className="hc-c-logo-link ds-l-col ds-l-col--auto"
+            >
+              <Logo locale={this.props.initialLanguage} />
+            </a>
 
             {this.props.subhead && (
               <div className="hc-c-header__subhead hc-c-header__subhead--inline ds-u-md-display--block ds-u-display--none">
