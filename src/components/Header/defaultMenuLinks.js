@@ -1,3 +1,4 @@
+import { VARIATION_NAMES } from './Header';
 import localeLink from './localeLink';
 import loginLink from './loginLink';
 import { translate } from '../i18n';
@@ -33,31 +34,41 @@ export function defaultMenuLinks(
   const t = translate;
   const i18nOptions = { lng: locale };
 
-  const minimal = [];
-  if (!hideLanguageSwitch) minimal.push(localeLink(t, locale, subpath, switchLocaleLink));
-  if (!hideLoginLink)
-    minimal.push(
-      Object.assign({ identifier: LINK_IDENTIFIERS.LOGIN }, loginLink(t, deConsumer, primaryDomain))
-    );
+  // NOTE: order matters here and links will be displayed in order added to the arrays
+  const loggedOut = [];
+  const loggedIn = [
+    {
+      label: t('header.myApplicationsAndCoverage', i18nOptions),
+      href: `${primaryDomain}/marketplace/auth/global/${ffmLocalePath}/myProfile#landingPage`,
+    },
+    {
+      label: t('header.myProfile', i18nOptions),
+      href: `${primaryDomain}/marketplace/auth/global/${ffmLocalePath}/myProfile#settings`,
+    },
+  ];
 
-  return {
-    'logged-out': minimal,
-    'logged-in': [
-      {
-        label: t('header.myApplicationsAndCoverage', i18nOptions),
-        href: `${primaryDomain}/marketplace/auth/global/${ffmLocalePath}/myProfile#landingPage`,
-      },
-      {
-        label: t('header.myProfile', i18nOptions),
-        href: `${primaryDomain}/marketplace/auth/global/${ffmLocalePath}/myProfile#settings`,
-      },
-      {
-        identifier: LINK_IDENTIFIERS.logout,
-        label: t('header.logout', i18nOptions),
-        href: `${primaryDomain || ''}/logout`,
-      },
-    ],
-  };
+  if (!hideLanguageSwitch) {
+    const locLink = localeLink(t, locale, subpath, switchLocaleLink);
+    loggedOut.push(locLink);
+    loggedIn.push(locLink);
+  }
+
+  if (!hideLoginLink) {
+    const logLink = loginLink(t, deConsumer, primaryDomain);
+    loggedOut.push(Object.assign({ identifier: LINK_IDENTIFIERS.LOGIN }, logLink));
+  }
+
+  loggedIn.push({
+    identifier: LINK_IDENTIFIERS.LOGOUT,
+    label: t('header.logout', i18nOptions),
+    href: `${primaryDomain || ''}/logout`,
+  });
+
+  const links = {};
+  links[VARIATION_NAMES.LOGGED_OUT] = loggedOut;
+  links[VARIATION_NAMES.LOGGED_IN] = loggedIn;
+
+  return links;
 }
 
 export const LINK_IDENTIFIERS = {

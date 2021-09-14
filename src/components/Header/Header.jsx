@@ -7,11 +7,12 @@ import React from 'react';
 import { SkipNav } from '@cmsgov/design-system';
 import classnames from 'classnames';
 import defaultMenuLinks from './defaultMenuLinks';
-import localeLink from './localeLink';
 import { translate } from 'react-i18next';
 
-export const LOGGED_IN_VAL = 'logged-in';
-export const LOGGED_OUT_VAL = 'logged-out';
+export const VARIATION_NAMES = {
+  LOGGED_IN: 'logged-in',
+  LOGGED_OUT: 'logged-out',
+};
 
 /**
  * The top-level component, responsible for maintaining the
@@ -30,7 +31,7 @@ export class _Header extends React.Component {
   }
 
   isLoggedIn() {
-    return this.variation() === LOGGED_IN_VAL;
+    return this.variation() === VARIATION_NAMES.LOGGED_IN;
   }
 
   /**
@@ -69,27 +70,11 @@ export class _Header extends React.Component {
   variation() {
     if (this.props.loggedIn) {
       // Logged-in state, with minimal navigation
-      return LOGGED_IN_VAL;
+      return VARIATION_NAMES.LOGGED_IN;
     } else {
       // Logged-out state, either Learn or Product
-      return LOGGED_OUT_VAL;
+      return VARIATION_NAMES.LOGGED_OUT;
     }
-  }
-
-  // if header is in authenticated state, add language link to the end of other links
-  // if unauthenticated, return original link list
-  getLinksWithLocale(links) {
-    if (this.isLoggedIn()) {
-      const localeLinkItem = localeLink(
-        this.props.t,
-        this.props.initialLanguage,
-        this.props.subpath,
-        this.props.switchLocaleLink
-      );
-
-      return [...links, localeLinkItem];
-    }
-    return links;
   }
 
   render() {
@@ -109,7 +94,6 @@ export class _Header extends React.Component {
         this.props.hideLoginLink,
         this.props.hideLanguageSwitch
       )[this.variation()];
-    const linksWithLocale = this.getLinksWithLocale(links);
 
     return (
       <header className={classes} role="banner">
@@ -152,7 +136,7 @@ export class _Header extends React.Component {
         <Menu
           afterLinks={this.afterMenuLinks()}
           beforeLinks={this.beforeMenuLinks()}
-          links={linksWithLocale}
+          links={links}
           open={this.state.openMenu}
           primaryDomain={this.props.primaryDomain}
           submenuTop={this.props.submenuTop}
