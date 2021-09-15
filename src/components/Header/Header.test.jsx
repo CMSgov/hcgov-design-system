@@ -83,7 +83,9 @@ describe('Header', function () {
     wrapper.setProps({ links: [{ href: '/foo', label: 'Foo' }] });
     menu = wrapper.find('Menu');
 
-    expect(menu.prop('links').length).toBe(1);
+    // You always get the logout link and locale link with any custom links unless you
+    // explicitly disable them
+    expect(menu.prop('links').length).toBe(3);
   });
 
   it('should add spanish toggle if logged in', () => {
@@ -114,6 +116,16 @@ describe('Header', function () {
     expect(menu.prop('links').length).toBe(1);
 
     expect(menu.prop('links')[0].label).not.toEqual('header.login');
+  });
+
+  it('should not add Logout Link when hideLogoutLink set', () => {
+    const props = { loggedIn: true, hideLogoutLink: true, links: [] };
+    const wrapper = render(props);
+
+    const menu = wrapper.find('Menu');
+    expect(menu.prop('links').length).toBe(1);
+
+    expect(menu.prop('links')[0].label).not.toEqual('header.logout');
   });
 
   it('should have "logout" as last item when logged in', () => {

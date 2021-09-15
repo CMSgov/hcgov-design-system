@@ -75,17 +75,22 @@ export class _Header extends React.Component {
       this.props.className
     );
 
-    const links =
-      this.props.links ||
-      defaultMenuLinks(
-        this.props.initialLanguage,
-        this.props.deConsumer,
-        this.props.subpath,
-        this.props.primaryDomain,
-        this.props.switchLocaleLink,
-        this.props.hideLoginLink,
-        this.props.hideLanguageSwitch
-      )[this.variation()];
+    const hasCustomLinks = !!this.props.links;
+    const defaultLinksForVariation = defaultMenuLinks(
+      this.props.initialLanguage,
+      this.props.deConsumer,
+      this.props.subpath,
+      this.props.primaryDomain,
+      this.props.switchLocaleLink,
+      this.props.hideLoginLink,
+      this.props.hideLogoutLink,
+      this.props.hideLanguageSwitch,
+      hasCustomLinks
+    )[this.variation()];
+
+    const links = hasCustomLinks
+      ? this.props.links.concat(defaultLinksForVariation)
+      : defaultLinksForVariation;
 
     return (
       <header className={classes} role="banner">
@@ -172,6 +177,10 @@ _Header.propTypes = {
    * header
    */
   hideLoginLink: PropTypes.bool,
+  /**
+   * When set to true, even if logged in the Logout link will not render
+   */
+  hideLogoutLink: PropTypes.bool,
   /**
    * When set to true, do not display the the switch locale link
    */

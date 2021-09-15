@@ -307,7 +307,7 @@ Object {
 }
 `;
 
-exports[`MenuList leaves out login links if hideLoginLink true 1`] = `
+exports[`MenuList leaves out login link if hideLoginLink true 1`] = `
 Object {
   "logged-in": Array [
     Object {
@@ -332,6 +332,63 @@ Object {
     Object {
       "href": "https://www.cuidadodesalud.gov/es/",
       "label": "header.español",
+    },
+  ],
+}
+`;
+
+exports[`MenuList leaves out logout link if hideLogoutLink true 1`] = `
+Object {
+  "logged-in": Array [
+    Object {
+      "href": "/marketplace/auth/global/en_US/myProfile#landingPage",
+      "label": "header.myApplicationsAndCoverage | {\\"lng\\":\\"en\\"}",
+    },
+    Object {
+      "href": "/marketplace/auth/global/en_US/myProfile#settings",
+      "label": "header.myProfile | {\\"lng\\":\\"en\\"}",
+    },
+    Object {
+      "href": "https://www.cuidadodesalud.gov/es/",
+      "label": "header.español",
+    },
+  ],
+  "logged-out": Array [
+    Object {
+      "href": "https://www.cuidadodesalud.gov/es/",
+      "label": "header.español",
+    },
+    Object {
+      "href": "/login",
+      "identifier": "login",
+      "label": "header.login",
+    },
+  ],
+}
+`;
+
+exports[`MenuList leaves out the myProfile and myApplicationsAndCoverage when customLinksPassedIn is true 1`] = `
+Object {
+  "logged-in": Array [
+    Object {
+      "href": "https://www.cuidadodesalud.gov/es/",
+      "label": "header.español",
+    },
+    Object {
+      "href": "/logout",
+      "identifier": "logout",
+      "label": "header.logout | {\\"lng\\":\\"en\\"}",
+    },
+  ],
+  "logged-out": Array [
+    Object {
+      "href": "https://www.cuidadodesalud.gov/es/",
+      "label": "header.español",
+    },
+    Object {
+      "href": "/login",
+      "identifier": "login",
+      "label": "header.login",
     },
   ],
 }

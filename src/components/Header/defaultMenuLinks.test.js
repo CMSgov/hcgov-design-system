@@ -8,15 +8,46 @@ describe('MenuList', function () {
     expect(typeof namedExportDefaultMenuLinks).toBe('function');
   });
 
-  it('leaves out login links if hideLoginLink true', () => {
+  it('leaves out login link if hideLoginLink true', () => {
     expect(
       defaultMenuLinks(undefined, undefined, undefined, undefined, undefined, true)
     ).toMatchSnapshot();
   });
 
-  it('leaves out locale links if hideLanguageSwitch true', () => {
+  it('leaves out logout link if hideLogoutLink true', () => {
     expect(
       defaultMenuLinks(undefined, undefined, undefined, undefined, undefined, undefined, true)
+    ).toMatchSnapshot();
+  });
+
+  it('leaves out locale links if hideLanguageSwitch true', () => {
+    expect(
+      defaultMenuLinks(
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        true
+      )
+    ).toMatchSnapshot();
+  });
+
+  it('leaves out the myProfile and myApplicationsAndCoverage when customLinksPassedIn is true', () => {
+    expect(
+      defaultMenuLinks(
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        true
+      )
     ).toMatchSnapshot();
   });
 
