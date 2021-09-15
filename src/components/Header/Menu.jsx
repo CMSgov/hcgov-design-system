@@ -21,7 +21,6 @@ const Menu = function (props) {
                 <MenuLinks links={props.links} />
               </div>
             )}
-            {props.afterLinks}
             {props.submenuBottom}
           </div>
         </div>
@@ -45,10 +44,6 @@ Menu.propTypes = {
    * Nodes to be rendered before the links column
    */
   beforeLinks: PropTypes.node,
-  /**
-   * Nodes to be rendered after the links column
-   */
-  afterLinks: PropTypes.node,
   /**
    * When the menu is collapsed, passing in "open" will
    * expand it and make it visible.

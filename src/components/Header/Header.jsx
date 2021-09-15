@@ -33,12 +33,6 @@ export class _Header extends React.Component {
   }
 
   /**
-   * Content rendered within <Menu>, after the list of links
-   * @returns {Node}
-   */
-  afterMenuLinks() {}
-
-  /**
    * Content rendered within <Menu>, before the list of links
    * @returns {Node}
    */
@@ -132,7 +126,6 @@ export class _Header extends React.Component {
         )}
 
         <Menu
-          afterLinks={this.afterMenuLinks()}
           beforeLinks={this.beforeMenuLinks()}
           links={links}
           open={this.state.openMenu}
