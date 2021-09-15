@@ -111,7 +111,8 @@ describe('Header', function () {
     const wrapper = render(props);
 
     const menu = wrapper.find('Menu');
-    const lastLink = menu.dive().find('a').last();
+    const menuLinks = menu.dive().find('MenuLinks');
+    const lastLink = menuLinks.dive().find('a').last();
 
     expect(lastLink).toBeDefined();
     expect(lastLink.text()).toEqual('header.logout');
