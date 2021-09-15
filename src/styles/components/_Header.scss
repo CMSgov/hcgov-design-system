@@ -108,11 +108,8 @@ Homepage header
 @media (max-width: $width-sm) {
   // On small screens, the logo padding was creating a wonky focus style
   .hc-c-header {
-    .ds-l-row {
-      margin-left: 0;
-    }
-
     .hc-c-logo-link {
+      margin-left: 8px;
       padding-left: 0;
       padding-right: 8px;
     }
@@ -127,8 +124,8 @@ Logged-in and Product headers
 .hc-c-header--logged-in .hc-c-menu__content,
 .hc-c-header--minimal .hc-c-menu__content {
   background-color: $color-white;
-  border: 1px solid $color-gray-light;
-  box-shadow: 0 7px 10px -5px $color-gray-light;
+  border: 1px solid $color-gray-lighter;
+  box-shadow: 0 7px 10px -5px $color-gray-lighter;
   color: $color-primary-darker;
 
   @media (min-width: $width-sm) {
