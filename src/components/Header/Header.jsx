@@ -25,8 +25,6 @@ export class _Header extends React.Component {
 
     this.state = {
       openMenu: false,
-      hideLoginLink: false,
-      hideLanguageSwitch: false,
     };
   }
 
