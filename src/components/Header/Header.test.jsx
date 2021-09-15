@@ -106,6 +106,16 @@ describe('Header', function () {
     expect(menu.prop('links')[0].label).not.toEqual('header.español');
   });
 
+  it('should not add Login Link when hideLoginLink set', () => {
+    const props = { hideLoginLink: true };
+    const wrapper = render(props);
+
+    const menu = wrapper.find('Menu');
+    expect(menu.prop('links').length).toBe(1);
+
+    expect(menu.prop('links')[0].label).not.toEqual('header.login');
+  });
+
   it('should have "logout" as last item when logged in', () => {
     const props = { loggedIn: true };
     const wrapper = render(props);

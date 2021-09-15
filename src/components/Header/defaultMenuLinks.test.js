@@ -8,6 +8,18 @@ describe('MenuList', function () {
     expect(typeof namedExportDefaultMenuLinks).toBe('function');
   });
 
+  it('leaves out login links if hideLoginLink true', () => {
+    expect(
+      defaultMenuLinks(undefined, undefined, undefined, undefined, undefined, true)
+    ).toMatchSnapshot();
+  });
+
+  it('leaves out locale links if hideLanguageSwitch true', () => {
+    expect(
+      defaultMenuLinks(undefined, undefined, undefined, undefined, undefined, undefined, true)
+    ).toMatchSnapshot();
+  });
+
   describe('English', () => {
     it('returns array of menu list objects', () => {
       expect(defaultMenuLinks()).toMatchSnapshot();
