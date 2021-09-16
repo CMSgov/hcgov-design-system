@@ -78,12 +78,14 @@ describe('Header', function () {
     const wrapper = render(props);
 
     let menu = wrapper.find('Menu');
-    expect(menu.prop('links').length).toBe(3);
+    expect(menu.prop('links').length).toBe(4);
 
     wrapper.setProps({ links: [{ href: '/foo', label: 'Foo' }] });
     menu = wrapper.find('Menu');
 
-    expect(menu.prop('links').length).toBe(2);
+    // You always get the logout link and locale link with any custom links unless you
+    // explicitly disable them
+    expect(menu.prop('links').length).toBe(3);
   });
 
   it('should add spanish toggle if logged in', () => {
@@ -91,13 +93,13 @@ describe('Header', function () {
     const wrapper = render(props);
 
     const menu = wrapper.find('Menu');
-    expect(menu.prop('links').length).toBe(3);
+    expect(menu.prop('links').length).toBe(4);
 
     expect(menu.prop('links')[2].label).toEqual('header.español');
   });
 
-  it('should not add Spanish toggle when logged out', () => {
-    const props = {};
+  it('should not add Spanish toggle when hideLanguageSwitch set', () => {
+    const props = { hideLanguageSwitch: true };
     const wrapper = render(props);
 
     const menu = wrapper.find('Menu');
@@ -106,12 +108,33 @@ describe('Header', function () {
     expect(menu.prop('links')[0].label).not.toEqual('header.español');
   });
 
+  it('should not add Login Link when hideLoginLink set', () => {
+    const props = { hideLoginLink: true };
+    const wrapper = render(props);
+
+    const menu = wrapper.find('Menu');
+    expect(menu.prop('links').length).toBe(1);
+
+    expect(menu.prop('links')[0].label).not.toEqual('header.login');
+  });
+
+  it('should not add Logout Link when hideLogoutLink set', () => {
+    const props = { loggedIn: true, hideLogoutLink: true, links: [] };
+    const wrapper = render(props);
+
+    const menu = wrapper.find('Menu');
+    expect(menu.prop('links').length).toBe(1);
+
+    expect(menu.prop('links')[0].label).not.toEqual('header.logout');
+  });
+
   it('should have "logout" as last item when logged in', () => {
     const props = { loggedIn: true };
     const wrapper = render(props);
 
     const menu = wrapper.find('Menu');
-    const lastLink = menu.dive().find('a').last();
+    const menuLinks = menu.dive().find('MenuLinks');
+    const lastLink = menuLinks.dive().find('a').last();
 
     expect(lastLink).toBeDefined();
     expect(lastLink.text()).toEqual('header.logout');

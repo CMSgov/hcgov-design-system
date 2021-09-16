@@ -3,13 +3,13 @@
 exports[`ActionMenu logged-in version renders logged-in version 1`] = `
 <Component
   firstName="John"
-  locale="en"
+  links={Array []}
   loggedIn={true}
   onMenuToggleClick={[MockFunction]}
 >
   <ActionMenu
     firstName="John"
-    locale="en"
+    links={Array []}
     loggedIn={true}
     onMenuToggleClick={[MockFunction]}
     t={[Function]}
@@ -21,7 +21,7 @@ exports[`ActionMenu logged-in version renders logged-in version 1`] = `
     >
       <LoggedInActionMenu
         firstName="John"
-        locale="en"
+        links={Array []}
         loggedIn={true}
         onMenuToggleClick={[MockFunction]}
         t={[Function]}
@@ -34,7 +34,7 @@ exports[`ActionMenu logged-in version renders logged-in version 1`] = `
           </span>
           <MenuButton
             firstName="John"
-            locale="en"
+            links={Array []}
             loggedIn={true}
             onMenuToggleClick={[MockFunction]}
             t={[Function]}
@@ -88,14 +88,14 @@ exports[`ActionMenu logged-in version renders logged-in version 1`] = `
 exports[`ActionMenu logged-in version set aria-expanded to true 1`] = `
 <Component
   firstName="John"
-  locale="en"
+  links={Array []}
   loggedIn={true}
   onMenuToggleClick={[MockFunction]}
   open={true}
 >
   <ActionMenu
     firstName="John"
-    locale="en"
+    links={Array []}
     loggedIn={true}
     onMenuToggleClick={[MockFunction]}
     open={true}
@@ -108,7 +108,7 @@ exports[`ActionMenu logged-in version set aria-expanded to true 1`] = `
     >
       <LoggedInActionMenu
         firstName="John"
-        locale="en"
+        links={Array []}
         loggedIn={true}
         onMenuToggleClick={[MockFunction]}
         open={true}
@@ -122,7 +122,7 @@ exports[`ActionMenu logged-in version set aria-expanded to true 1`] = `
           </span>
           <MenuButton
             firstName="John"
-            locale="en"
+            links={Array []}
             loggedIn={true}
             onMenuToggleClick={[MockFunction]}
             open={true}
@@ -170,237 +170,29 @@ exports[`ActionMenu logged-in version set aria-expanded to true 1`] = `
 </Component>
 `;
 
-exports[`ActionMenu logged-out version renders custom locale switch link 1`] = `
-<Component
-  locale="en"
-  loggedIn={false}
-  onMenuToggleClick={[MockFunction]}
-  switchLocaleLink="https://ayudalocal.cuidadodesalud.gov/es"
->
-  <ActionMenu
-    locale="en"
-    loggedIn={false}
-    onMenuToggleClick={[MockFunction]}
-    switchLocaleLink="https://ayudalocal.cuidadodesalud.gov/es"
-    t={[Function]}
-  >
-    <nav
-      className="hc-c-header__actions ds-l-col ds-l-col--auto ds-u-margin-left--auto ds-u-font-weight--bold"
-      id="hc-c-header__actions"
-      role="navigation"
-    >
-      <LoggedOutActionMenu
-        locale="en"
-        loggedIn={false}
-        onMenuToggleClick={[MockFunction]}
-        switchLocaleLink="https://ayudalocal.cuidadodesalud.gov/es"
-        t={[Function]}
-      >
-        <div>
-          <LoggedOutLinks
-            locale="en"
-            switchLocaleLink="https://ayudalocal.cuidadodesalud.gov/es"
-          >
-            <ul
-              className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block"
-            >
-              <li
-                className="hc-c-logged-out-links__li"
-                key="/login"
-              >
-                <a
-                  className="hc-c-logged-out-links__link"
-                  href="/login"
-                >
-                  header.login
-                </a>
-              </li>
-              <li
-                className="hc-c-logged-out-links__li"
-                key="https://ayudalocal.cuidadodesalud.gov/es"
-              >
-                <a
-                  className="hc-c-logged-out-links__link"
-                  href="https://ayudalocal.cuidadodesalud.gov/es"
-                >
-                  header.español
-                </a>
-              </li>
-            </ul>
-          </LoggedOutLinks>
-          <MenuButton
-            className="ds-u-display--inline-block ds-u-sm-display--none"
-            locale="en"
-            loggedIn={false}
-            onMenuToggleClick={[MockFunction]}
-            switchLocaleLink="https://ayudalocal.cuidadodesalud.gov/es"
-            t={[Function]}
-          >
-            <Button
-              aria-controls="hc-c-menu"
-              aria-expanded={false}
-              aria-label="header.openMenu"
-              className="hc-c-action-menu-button ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
-              component="button"
-              onClick={[MockFunction]}
-              size="small"
-              type="button"
-            >
-              <button
-                aria-controls="hc-c-menu"
-                aria-expanded={false}
-                aria-label="header.openMenu"
-                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
-                onClick={[Function]}
-                type="button"
-              >
-                <MenuIcon
-                  className="ds-u-margin-right--1"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="svg-inline--fa fa-bars fa-w-14 ds-u-margin-right--1"
-                    data-icon="bars"
-                    data-prefix="fas"
-                    viewBox="0 0 448 512"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </MenuIcon>
-                header.menu
-              </button>
-            </Button>
-          </MenuButton>
-        </div>
-      </LoggedOutActionMenu>
-    </nav>
-  </ActionMenu>
-</Component>
-`;
-
-exports[`ActionMenu logged-out version renders links with absolute URLs 1`] = `
-<Component
-  locale="en"
-  loggedIn={false}
-  onMenuToggleClick={[MockFunction]}
-  primaryDomain="https://www.healthcare.gov"
->
-  <ActionMenu
-    locale="en"
-    loggedIn={false}
-    onMenuToggleClick={[MockFunction]}
-    primaryDomain="https://www.healthcare.gov"
-    t={[Function]}
-  >
-    <nav
-      className="hc-c-header__actions ds-l-col ds-l-col--auto ds-u-margin-left--auto ds-u-font-weight--bold"
-      id="hc-c-header__actions"
-      role="navigation"
-    >
-      <LoggedOutActionMenu
-        locale="en"
-        loggedIn={false}
-        onMenuToggleClick={[MockFunction]}
-        primaryDomain="https://www.healthcare.gov"
-        t={[Function]}
-      >
-        <div>
-          <LoggedOutLinks
-            locale="en"
-            primaryDomain="https://www.healthcare.gov"
-          >
-            <ul
-              className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block"
-            >
-              <li
-                className="hc-c-logged-out-links__li"
-                key="https://www.healthcare.gov/login"
-              >
-                <a
-                  className="hc-c-logged-out-links__link"
-                  href="https://www.healthcare.gov/login"
-                >
-                  header.login
-                </a>
-              </li>
-              <li
-                className="hc-c-logged-out-links__li"
-                key="https://www.cuidadodesalud.gov/es/"
-              >
-                <a
-                  className="hc-c-logged-out-links__link"
-                  href="https://www.cuidadodesalud.gov/es/"
-                >
-                  header.español
-                </a>
-              </li>
-            </ul>
-          </LoggedOutLinks>
-          <MenuButton
-            className="ds-u-display--inline-block ds-u-sm-display--none"
-            locale="en"
-            loggedIn={false}
-            onMenuToggleClick={[MockFunction]}
-            primaryDomain="https://www.healthcare.gov"
-            t={[Function]}
-          >
-            <Button
-              aria-controls="hc-c-menu"
-              aria-expanded={false}
-              aria-label="header.openMenu"
-              className="hc-c-action-menu-button ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
-              component="button"
-              onClick={[MockFunction]}
-              size="small"
-              type="button"
-            >
-              <button
-                aria-controls="hc-c-menu"
-                aria-expanded={false}
-                aria-label="header.openMenu"
-                className="ds-c-button ds-c-button--small hc-c-action-menu-button ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
-                onClick={[Function]}
-                type="button"
-              >
-                <MenuIcon
-                  className="ds-u-margin-right--1"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="svg-inline--fa fa-bars fa-w-14 ds-u-margin-right--1"
-                    data-icon="bars"
-                    data-prefix="fas"
-                    viewBox="0 0 448 512"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </MenuIcon>
-                header.menu
-              </button>
-            </Button>
-          </MenuButton>
-        </div>
-      </LoggedOutActionMenu>
-    </nav>
-  </ActionMenu>
-</Component>
-`;
-
 exports[`ActionMenu logged-out version renders logged-out version 1`] = `
 <Component
+  links={
+    Array [
+      Object {
+        "href": "href",
+        "label": "label",
+      },
+    ]
+  }
   locale="en"
   loggedIn={false}
   onMenuToggleClick={[MockFunction]}
 >
   <ActionMenu
+    links={
+      Array [
+        Object {
+          "href": "href",
+          "label": "label",
+        },
+      ]
+    }
     locale="en"
     loggedIn={false}
     onMenuToggleClick={[MockFunction]}
@@ -412,44 +204,45 @@ exports[`ActionMenu logged-out version renders logged-out version 1`] = `
       role="navigation"
     >
       <LoggedOutActionMenu
+        links={
+          Array [
+            Object {
+              "href": "href",
+              "label": "label",
+            },
+          ]
+        }
         locale="en"
         loggedIn={false}
         onMenuToggleClick={[MockFunction]}
         t={[Function]}
       >
         <div>
-          <LoggedOutLinks
-            locale="en"
+          <ul
+            className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block"
           >
-            <ul
-              className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block"
+            <li
+              className="hc-c-logged-out-links__li"
+              key="href"
             >
-              <li
-                className="hc-c-logged-out-links__li"
-                key="/login"
+              <a
+                className="hc-c-logged-out-links__link"
+                href="href"
               >
-                <a
-                  className="hc-c-logged-out-links__link"
-                  href="/login"
-                >
-                  header.login
-                </a>
-              </li>
-              <li
-                className="hc-c-logged-out-links__li"
-                key="https://www.cuidadodesalud.gov/es/"
-              >
-                <a
-                  className="hc-c-logged-out-links__link"
-                  href="https://www.cuidadodesalud.gov/es/"
-                >
-                  header.español
-                </a>
-              </li>
-            </ul>
-          </LoggedOutLinks>
+                label
+              </a>
+            </li>
+          </ul>
           <MenuButton
             className="ds-u-display--inline-block ds-u-sm-display--none"
+            links={
+              Array [
+                Object {
+                  "href": "href",
+                  "label": "label",
+                },
+              ]
+            }
             locale="en"
             loggedIn={false}
             onMenuToggleClick={[MockFunction]}

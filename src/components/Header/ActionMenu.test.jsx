@@ -14,9 +14,9 @@ describe('ActionMenu', function () {
       return (
         <ActionMenu
           loggedIn
-          locale="en"
           firstName="John"
           onMenuToggleClick={handleMenuToggleClick}
+          links={[]}
           {...props}
         />
       );
@@ -47,6 +47,12 @@ describe('ActionMenu', function () {
           loggedIn={false}
           locale="en"
           onMenuToggleClick={handleMenuToggleClick}
+          links={[
+            {
+              label: 'label',
+              href: 'href',
+            },
+          ]}
           {...props}
         />
       );
@@ -55,22 +61,6 @@ describe('ActionMenu', function () {
 
     it('renders logged-out version', () => {
       expect(mount(component())).toMatchSnapshot();
-    });
-
-    it('renders links with absolute URLs', () => {
-      expect(
-        mount(component({ primaryDomain: 'https://www.healthcare.gov' }))
-      ).toMatchSnapshot();
-    });
-
-    it('renders custom locale switch link', () => {
-      expect(
-        mount(
-          component({
-            switchLocaleLink: 'https://ayudalocal.cuidadodesalud.gov/es',
-          })
-        )
-      ).toMatchSnapshot();
     });
   });
 });

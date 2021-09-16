@@ -7,11 +7,12 @@ import React from 'react';
 import { SkipNav } from '@cmsgov/design-system';
 import classnames from 'classnames';
 import defaultMenuLinks from './defaultMenuLinks';
-import localeLink from './localeLink';
 import { translate } from 'react-i18next';
-import { translate as translateWrapper } from '../i18n';
 
-export const LOGGED_IN_VAL = 'logged-in';
+export const VARIATION_NAMES = {
+  LOGGED_IN: 'logged-in',
+  LOGGED_OUT: 'logged-out',
+};
 
 /**
  * The top-level component, responsible for maintaining the
@@ -22,31 +23,13 @@ export class _Header extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { openMenu: false };
+    this.state = {
+      openMenu: false,
+    };
   }
 
   isLoggedIn() {
-    return this.variation() === LOGGED_IN_VAL;
-  }
-
-  /**
-   * Content rendered within <Menu>, after the list of links
-   * @returns {Node}
-   */
-  afterMenuLinks() {
-    if (this.isLoggedIn()) {
-      const { initialLanguage = 'en', primaryDomain } = this.props;
-      const i18nOptions = { lng: initialLanguage };
-
-      return (
-        <a
-          className="hc-c-menu__link ds-u-border-top--1 ds-u-margin-x--1 ds-u-padding-x--0"
-          href={`${primaryDomain || ''}/logout`}
-        >
-          {translateWrapper('header.logout', i18nOptions)}
-        </a>
-      );
-    }
+    return this.variation() === VARIATION_NAMES.LOGGED_IN;
   }
 
   /**
@@ -79,29 +62,11 @@ export class _Header extends React.Component {
   variation() {
     if (this.props.loggedIn) {
       // Logged-in state, with minimal navigation
-      return LOGGED_IN_VAL;
-    } else if (this.props.subhead) {
-      // Product, with minimal navigation and a subheading
-      return 'minimal';
+      return VARIATION_NAMES.LOGGED_IN;
+    } else {
+      // Logged-out state, either Learn or Product
+      return VARIATION_NAMES.LOGGED_OUT;
     }
-
-    return 'home';
-  }
-
-  // if header is in authenticated state, add language link to the end of other links
-  // if unauthenticated, return original link list
-  getLinksWithLocale(links) {
-    if (this.isLoggedIn()) {
-      const localeLinkItem = localeLink(
-        this.props.t,
-        this.props.initialLanguage,
-        this.props.subpath,
-        this.props.switchLocaleLink
-      );
-
-      return [...links, localeLinkItem];
-    }
-    return links;
   }
 
   render() {
@@ -110,16 +75,22 @@ export class _Header extends React.Component {
       this.props.className
     );
 
-    const links =
-      this.props.links ||
-      defaultMenuLinks(
-        this.props.initialLanguage,
-        this.props.deConsumer,
-        this.props.subpath,
-        this.props.primaryDomain,
-        this.props.switchLocaleLink
-      )[this.variation()];
-    const linksWithLocale = this.getLinksWithLocale(links);
+    const hasCustomLinks = !!this.props.links;
+    const defaultLinksForVariation = defaultMenuLinks(
+      this.props.initialLanguage,
+      this.props.deConsumer,
+      this.props.subpath,
+      this.props.primaryDomain,
+      this.props.switchLocaleLink,
+      this.props.hideLoginLink,
+      this.props.hideLogoutLink,
+      this.props.hideLanguageSwitch,
+      hasCustomLinks
+    )[this.variation()];
+
+    const links = hasCustomLinks
+      ? this.props.links.concat(defaultLinksForVariation)
+      : defaultLinksForVariation;
 
     return (
       <header className={classes} role="banner">
@@ -148,10 +119,7 @@ export class _Header extends React.Component {
               locale={this.props.initialLanguage}
               loggedIn={this.props.loggedIn}
               open={this.state.openMenu}
-              deConsumer={this.props.deConsumer}
-              subpath={this.props.subpath}
-              primaryDomain={this.props.primaryDomain}
-              switchLocaleLink={this.props.switchLocaleLink}
+              links={links}
             />
           </div>
         </div>
@@ -163,11 +131,12 @@ export class _Header extends React.Component {
         )}
 
         <Menu
-          afterLinks={this.afterMenuLinks()}
           beforeLinks={this.beforeMenuLinks()}
-          links={linksWithLocale}
+          links={links}
           open={this.state.openMenu}
           primaryDomain={this.props.primaryDomain}
+          submenuTop={this.props.submenuTop}
+          submenuBottom={this.props.submenuBottom}
         />
 
         {this.props.deConsumer && <DeConsumerMessage deBrokerName={this.props.deBrokerName} />}
@@ -203,6 +172,19 @@ _Header.propTypes = {
    * Indicate that a user is logged-in.
    */
   loggedIn: PropTypes.bool,
+  /**
+   * When set to true, do not display the Login text in the upper right of the
+   * header
+   */
+  hideLoginLink: PropTypes.bool,
+  /**
+   * When set to true, even if logged in the Logout link will not render
+   */
+  hideLogoutLink: PropTypes.bool,
+  /**
+   * When set to true, do not display the the switch locale link
+   */
+  hideLanguageSwitch: PropTypes.bool,
   /**
    * For logged-in users, pass in their first name to display in the header
    */
@@ -268,6 +250,19 @@ _Header.propTypes = {
       onClick: PropTypes.func,
     })
   ),
+  /**
+   * Optionally pass a React component to render within the menu. Useful for
+   * when you need more control over what appears in the menu than what's
+   * provided by the `links` prop, e.g. a search input. Will appear *above* any
+   * links provided by the `defaultMenuLinks` method or the links provided by
+   * the `links` prop.
+   */
+  submenuTop: PropTypes.node,
+  /**
+   * Same as `submenuTop`, except it will appear *below* any links provided by
+   * the `defaultMenuLinks` method or the links provided by the `links` prop.
+   */
+  submenuBottom: PropTypes.node,
 };
 
 export const Header = translate()(_Header);
