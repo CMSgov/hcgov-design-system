@@ -138,12 +138,4 @@ describe('Header', function () {
   it('renders links with absolute URLs if provided a primaryDomain prop', () => {
     expect(render({ primaryDomain: 'https://www.healthcare.gov' })).toMatchSnapshot();
   });
-
-  describe('analytics', () => {
-    beforeEach(() => {
-      window.utag = {
-        link: jest.fn(),
-      };
-    });
-  });
 });

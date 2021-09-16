@@ -19,7 +19,9 @@ const MenuLinks = function (props) {
             link.identifier === LINK_IDENTIFIERS.LOGOUT);
         function onClick(event) {
           sendHeaderEvent(link.label, link.href);
-          link.onClick(event);
+          if (link.onClick) {
+            return link.onClick(event);
+          }
         }
         return (
           <li

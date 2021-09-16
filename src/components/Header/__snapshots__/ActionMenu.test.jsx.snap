@@ -45,7 +45,7 @@ exports[`ActionMenu logged-in version renders logged-in version 1`] = `
               aria-label="header.openMenu"
               className="hc-c-action-menu-button ds-u-sm-margin-left--2"
               component="button"
-              onClick={[MockFunction]}
+              onClick={[Function]}
               size="small"
               type="button"
             >
@@ -134,7 +134,7 @@ exports[`ActionMenu logged-in version set aria-expanded to true 1`] = `
               aria-label="header.closeMenu"
               className="hc-c-action-menu-button ds-u-sm-margin-left--2"
               component="button"
-              onClick={[MockFunction]}
+              onClick={[Function]}
               size="small"
               type="button"
             >
@@ -228,6 +228,7 @@ exports[`ActionMenu logged-out version renders logged-out version 1`] = `
               <a
                 className="hc-c-logged-out-links__link"
                 href="href"
+                onClick={[Function]}
               >
                 label
               </a>
@@ -254,7 +255,7 @@ exports[`ActionMenu logged-out version renders logged-out version 1`] = `
               aria-label="header.openMenu"
               className="hc-c-action-menu-button ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
               component="button"
-              onClick={[MockFunction]}
+              onClick={[Function]}
               size="small"
               type="button"
             >
