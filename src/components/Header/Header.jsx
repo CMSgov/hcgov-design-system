@@ -80,12 +80,9 @@ export class _Header extends React.Component {
     if (this.props.loggedIn) {
       // Logged-in state, with minimal navigation
       return LOGGED_IN_VAL;
-    } else if (this.props.subhead) {
-      // Product, with minimal navigation and a subheading
-      return 'minimal';
     }
 
-    return 'home';
+    return 'minimal';
   }
 
   // if header is in authenticated state, add language link to the end of other links
@@ -136,12 +133,6 @@ export class _Header extends React.Component {
               <Logo locale={this.props.initialLanguage} />
             </a>
 
-            {this.props.subhead && (
-              <div className="hc-c-header__subhead hc-c-header__subhead--inline ds-u-md-display--block ds-u-display--none">
-                {this.props.subhead}
-              </div>
-            )}
-
             <ActionMenu
               firstName={this.props.firstName}
               onMenuToggleClick={this.handleMenuToggleClick}
@@ -155,12 +146,6 @@ export class _Header extends React.Component {
             />
           </div>
         </div>
-
-        {this.props.subhead && (
-          <div className="hc-c-header__subhead ds-l-container ds-u-display--block ds-u-md-display--none ds-u-padding-y--1 ds-u-border-top--1 ds-u-border-color--inverse">
-            {this.props.subhead}
-          </div>
-        )}
 
         <Menu
           afterLinks={this.afterMenuLinks()}
@@ -207,10 +192,6 @@ _Header.propTypes = {
    * For logged-in users, pass in their first name to display in the header
    */
   firstName: PropTypes.node,
-  /**
-   * For product headers, pass in the product name to display next to the logo.
-   */
-  subhead: PropTypes.node,
   /**
    * For applications hosted at paths other than the root `healthcare.gov`/
    * `cuidadodesalud.gov`. This string will be appended to the end of the

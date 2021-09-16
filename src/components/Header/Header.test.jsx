@@ -23,16 +23,11 @@ describe('Header', function () {
     expect(render()).toMatchSnapshot();
   });
 
-  it('renders minimal/product header', () => {
-    expect(render({ subhead: 'Tax tools' })).toMatchSnapshot();
-  });
-
   it('renders Direct Enrollment banner', () => {
     expect(
       render({
         deConsumer: true,
         deBrokerName: 'Foo',
-        subhead: 'Verify identity',
       })
     ).toMatchSnapshot();
   });

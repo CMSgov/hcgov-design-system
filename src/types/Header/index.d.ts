@@ -15,7 +15,6 @@ export interface HeaderProps {
   switchLocaleLink?: string;
   loggedIn?: boolean;
   firstName?: React.ReactNode;
-  subhead?: React.ReactNode;
   subpath?: string;
   primaryDomain?: string;
   skipNavHref?: string;

@@ -17,26 +17,6 @@
   }
 }
 
-/* Header subheading */
-.hc-c-header__subhead {
-  font-family: $font-serif;
-  font-size: $h4-font-size;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-weight: $font-normal;
-  margin: 0;
-}
-
-.hc-c-header__subhead--inline {
-  border-left: 1px solid $color-base;
-  display: none;
-  padding-left: $spacer-2;
-
-  .hc-c-header--inverse & {
-    border-left-color: $color-white;
-  }
-}
-
 .hc-c-action-menu-button {
   // We should add the ability to add a className to the ClearIcon like we are doing for Menu Icon. This would need to be done at the core design system
   .ds-c-clear-icon {
