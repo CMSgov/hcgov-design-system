@@ -7,6 +7,7 @@ import React from 'react';
 import { SkipNav } from '@cmsgov/design-system';
 import classnames from 'classnames';
 import defaultMenuLinks from './defaultMenuLinks';
+import { sendHeaderEvent } from './analytics';
 import { translate } from 'react-i18next';
 
 export const VARIATION_NAMES = {
@@ -51,6 +52,7 @@ export class _Header extends React.Component {
    * within ActionMenu is clicked.
    */
   handleMenuToggleClick = () => {
+    sendHeaderEvent('hello world');
     this.setState({ openMenu: !this.state.openMenu });
   };
 

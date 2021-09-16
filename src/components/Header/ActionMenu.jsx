@@ -5,6 +5,7 @@ import MenuIcon from './MenuIcon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
+import { sendHeaderEvent } from './analytics';
 import { translate } from 'react-i18next';
 
 const menuId = 'hc-c-menu';
@@ -49,7 +50,11 @@ function LoggedOutActionMenu(props) {
         {props.links.map((link) => {
           return (
             <li key={link.href} className="hc-c-logged-out-links__li">
-              <a href={link.href} className="hc-c-logged-out-links__link">
+              <a
+                href={link.href}
+                onClick={() => sendHeaderEvent(link.label, link.href)}
+                className="hc-c-logged-out-links__link"
+              >
                 {link.label}
               </a>
             </li>
@@ -67,17 +72,24 @@ function MenuButton({ t, open, ...props }) {
     'ds-u-sm-margin-left--2',
     props.className
   );
+  const text = t('header.menu');
+
+  function onClick(event) {
+    sendHeaderEvent(text);
+    props.onMenuToggleClick(event);
+  }
+
   return (
     <Button
       aria-controls={menuId}
       aria-expanded={!!open}
       aria-label={open ? t('header.closeMenu') : t('header.openMenu')}
       className={className}
-      onClick={props.onMenuToggleClick}
+      onClick={onClick}
       size="small"
     >
       {open ? <ClearIcon /> : <MenuIcon className="ds-u-margin-right--1" />}
-      {t('header.menu')}
+      {text}
     </Button>
   );
 }

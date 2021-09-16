@@ -1,6 +1,7 @@
 import { LINK_IDENTIFIERS } from './defaultMenuLinks';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { sendHeaderEvent } from './analytics';
 
 /**
  * The primary list of menu links. This ensures a consistent styling
@@ -16,12 +17,16 @@ const MenuLinks = function (props) {
           link.identifier &&
           (link.identifier === LINK_IDENTIFIERS.LOGIN ||
             link.identifier === LINK_IDENTIFIERS.LOGOUT);
+        function onClick(event) {
+          sendHeaderEvent(link.label, link.href);
+          link.onClick(event);
+        }
         return (
           <li
             key={link.href}
             className={`ds-u-margin--0 ${isLoginLogoutLink ? 'ds-u-border-top--1' : ''}`}
           >
-            <a href={link.href} onClick={link.onClick} className="hc-c-menu__link">
+            <a href={link.href} onClick={onClick} className="hc-c-menu__link">
               {link.label}
             </a>
           </li>
