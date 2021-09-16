@@ -24,11 +24,6 @@ exports[`Header renders Direct Enrollment banner 1`] = `
           locale="en"
         />
       </a>
-      <div
-        className="hc-c-header__subhead hc-c-header__subhead--inline ds-u-md-display--block ds-u-display--none"
-      >
-        Verify identity
-      </div>
       <Component
         links={
           Array [
@@ -48,11 +43,6 @@ exports[`Header renders Direct Enrollment banner 1`] = `
         open={false}
       />
     </div>
-  </div>
-  <div
-    className="hc-c-header__subhead ds-l-container ds-u-display--block ds-u-md-display--none ds-u-padding-y--1 ds-u-border-top--1 ds-u-border-color--inverse"
-  >
-    Verify identity
   </div>
   <Menu
     links={
@@ -426,79 +416,6 @@ exports[`Header renders logged-in header without firstName 1`] = `
           "href": "/logout",
           "identifier": "logout",
           "label": "header.logout",
-        },
-      ]
-    }
-    open={false}
-  />
-</header>
-`;
-
-exports[`Header renders minimal/product header 1`] = `
-<header
-  className="hc-c-header hc-c-header--logged-out"
-  role="banner"
->
-  <SkipNav
-    href="#main"
-  >
-    header.skipNav
-  </SkipNav>
-  <div
-    className="ds-l-container"
-  >
-    <div
-      className="ds-l-row ds-u-align-items--center ds-u-flex-wrap--nowrap ds-u-padding-y--2"
-    >
-      <a
-        className="hc-c-logo-link ds-l-col ds-l-col--auto"
-        href="/"
-      >
-        <Logo
-          locale="en"
-        />
-      </a>
-      <div
-        className="hc-c-header__subhead hc-c-header__subhead--inline ds-u-md-display--block ds-u-display--none"
-      >
-        Tax tools
-      </div>
-      <Component
-        links={
-          Array [
-            Object {
-              "href": "https://www.cuidadodesalud.gov/es/",
-              "label": "header.español",
-            },
-            Object {
-              "href": "/login",
-              "identifier": "login",
-              "label": "header.login",
-            },
-          ]
-        }
-        locale="en"
-        onMenuToggleClick={[Function]}
-        open={false}
-      />
-    </div>
-  </div>
-  <div
-    className="hc-c-header__subhead ds-l-container ds-u-display--block ds-u-md-display--none ds-u-padding-y--1 ds-u-border-top--1 ds-u-border-color--inverse"
-  >
-    Tax tools
-  </div>
-  <Menu
-    links={
-      Array [
-        Object {
-          "href": "https://www.cuidadodesalud.gov/es/",
-          "label": "header.español",
-        },
-        Object {
-          "href": "/login",
-          "identifier": "login",
-          "label": "header.login",
         },
       ]
     }
