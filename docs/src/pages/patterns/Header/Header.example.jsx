@@ -7,6 +7,12 @@ const localeChoices = [
   { value: 'es', label: 'Español' },
 ];
 
+const customLinks = [
+  { label: 'Custom Link 1', href: '#customLink1' },
+  { label: 'Custom Link 2', href: '#customLink2' },
+  { label: 'Custom Link 3', href: '#customLink3' },
+];
+
 class HeaderExample extends React.PureComponent {
   constructor() {
     super();
@@ -63,8 +69,14 @@ class HeaderExample extends React.PureComponent {
         <Header initialLanguage={locale} submenuTop={<SampleLearnSubmenu />} />
         <h6 className="preview__label">Logged-In</h6>
         <Header loggedIn firstName="Maximiliano-Longname" initialLanguage={locale} />
-        <h6 className="preview__label">Direct Enrollment - Logged-In</h6>
-        <Header loggedIn deConsumer deBrokerName="Acme Co." initialLanguage={locale} />
+        <h6 className="preview__label">Direct Enrollment - Logged-In with Custom Links</h6>
+        <Header
+          loggedIn
+          deConsumer
+          deBrokerName="Acme Co."
+          initialLanguage={locale}
+          links={customLinks}
+        />
         <div className={wrapperClassNames}>{this.renderHeaderToggles()}</div>
       </div>
     );
