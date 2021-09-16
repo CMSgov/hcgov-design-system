@@ -1,8 +1,11 @@
-import ActionMenu from './ActionMenu';
 import { _Header as Header } from './Header';
 import React from 'react';
 import { SkipNav } from '@cmsgov/design-system';
 import { shallow } from 'enzyme';
+
+jest.mock('../i18n', () => ({
+  translate: (text) => text,
+}));
 
 function render(props) {
   props = Object.assign(
@@ -20,16 +23,11 @@ describe('Header', function () {
     expect(render()).toMatchSnapshot();
   });
 
-  it('renders minimal/product header', () => {
-    expect(render({ subhead: 'Tax tools' })).toMatchSnapshot();
-  });
-
   it('renders Direct Enrollment banner', () => {
     expect(
       render({
         deConsumer: true,
         deBrokerName: 'Foo',
-        subhead: 'Verify identity',
       })
     ).toMatchSnapshot();
   });
@@ -70,34 +68,74 @@ describe('Header', function () {
     });
   });
 
-  it('passes inverse to ActionMenu', () => {
-    const wrapper = render({ inverse: false });
-    const actionMenu = wrapper.find(ActionMenu);
-    expect(actionMenu.props().inversed).toBe(false);
-  });
-
-  it('passes inversed to ActionMenu', () => {
-    const wrapper = render({ inversed: false });
-    const actionMenu = wrapper.find(ActionMenu);
-    expect(actionMenu.props().inversed).toBe(false);
-  });
-
   it('re-renders with updated links', () => {
     const props = { loggedIn: true };
     const wrapper = render(props);
 
     let menu = wrapper.find('Menu');
-    expect(menu.prop('links').length).toBe(3);
+    expect(menu.prop('links').length).toBe(4);
 
     wrapper.setProps({ links: [{ href: '/foo', label: 'Foo' }] });
     menu = wrapper.find('Menu');
 
+    // You always get the logout link and locale link with any custom links unless you
+    // explicitly disable them
+    expect(menu.prop('links').length).toBe(3);
+  });
+
+  it('should add spanish toggle if logged in', () => {
+    const props = { loggedIn: true };
+    const wrapper = render(props);
+
+    const menu = wrapper.find('Menu');
+    expect(menu.prop('links').length).toBe(4);
+
+    expect(menu.prop('links')[2].label).toEqual('header.español');
+  });
+
+  it('should not add Spanish toggle when hideLanguageSwitch set', () => {
+    const props = { hideLanguageSwitch: true };
+    const wrapper = render(props);
+
+    const menu = wrapper.find('Menu');
     expect(menu.prop('links').length).toBe(1);
+
+    expect(menu.prop('links')[0].label).not.toEqual('header.español');
+  });
+
+  it('should not add Login Link when hideLoginLink set', () => {
+    const props = { hideLoginLink: true };
+    const wrapper = render(props);
+
+    const menu = wrapper.find('Menu');
+    expect(menu.prop('links').length).toBe(1);
+
+    expect(menu.prop('links')[0].label).not.toEqual('header.login');
+  });
+
+  it('should not add Logout Link when hideLogoutLink set', () => {
+    const props = { loggedIn: true, hideLogoutLink: true, links: [] };
+    const wrapper = render(props);
+
+    const menu = wrapper.find('Menu');
+    expect(menu.prop('links').length).toBe(1);
+
+    expect(menu.prop('links')[0].label).not.toEqual('header.logout');
+  });
+
+  it('should have "logout" as last item when logged in', () => {
+    const props = { loggedIn: true };
+    const wrapper = render(props);
+
+    const menu = wrapper.find('Menu');
+    const menuLinks = menu.dive().find('MenuLinks');
+    const lastLink = menuLinks.dive().find('a').last();
+
+    expect(lastLink).toBeDefined();
+    expect(lastLink.text()).toEqual('header.logout');
   });
 
   it('renders links with absolute URLs if provided a primaryDomain prop', () => {
-    expect(
-      render({ primaryDomain: 'https://www.healthcare.gov' })
-    ).toMatchSnapshot();
+    expect(render({ primaryDomain: 'https://www.healthcare.gov' })).toMatchSnapshot();
   });
 });

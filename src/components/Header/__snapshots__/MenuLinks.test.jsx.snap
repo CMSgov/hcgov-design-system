@@ -5,7 +5,7 @@ exports[`MenuLinks renders list of links 1`] = `
   className="hc-c-menu__links ds-c-list ds-c-list--bare"
 >
   <li
-    className="ds-u-margin--0"
+    className="ds-u-margin--0 "
     key="#foo"
   >
     <a
@@ -16,7 +16,7 @@ exports[`MenuLinks renders list of links 1`] = `
     </a>
   </li>
   <li
-    className="ds-u-margin--0"
+    className="ds-u-margin--0 "
     key="#bar"
   >
     <a
@@ -27,7 +27,7 @@ exports[`MenuLinks renders list of links 1`] = `
     </a>
   </li>
   <li
-    className="ds-u-margin--0"
+    className="ds-u-margin--0 "
     key="#baz"
   >
     <a
