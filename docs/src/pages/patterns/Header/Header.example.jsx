@@ -1,4 +1,4 @@
-import { ChoiceList, Header } from '@design-system';
+import { Button, ChoiceList, Header, TextField } from '@design-system';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -40,18 +40,30 @@ class HeaderExample extends React.PureComponent {
     const { locale } = this.state;
     const wrapperClassNames = 'ds-u-padding--1';
 
+    const SampleLearnSubmenu = () => (
+      <div className="ds-u-display--flex">
+        <div className="ds-u-margin-right--1" style={{ flex: 1 }}>
+          <TextField
+            fieldClassName="ds-u-margin-y--0"
+            labelClassName="ds-u-display--none"
+            label="Search"
+            name="SubmenuSearch"
+          />
+        </div>
+        <Button>Search</Button>
+      </div>
+    );
+
     return (
       // Add min-height so the options don't get cut off when switching to product-de
       <div style={{ minHeight: 679 }}>
-        <h6 className="preview__label">Header home</h6>
-        <Header initialLanguage={locale} />
-        <h6 className="preview__label">Header product</h6>
-        <Header subpath="tax-tool/" initialLanguage={locale} />
-        <h6 className="preview__label">Header logged in</h6>
+        <h6 className="preview__label">Minimal</h6>
+        <Header initialLanguage={locale} hideLoginLink hideLanguageSwitch />
+        <h6 className="preview__label">Logged-Out</h6>
+        <Header initialLanguage={locale} submenuTop={<SampleLearnSubmenu />} />
+        <h6 className="preview__label">Logged-In</h6>
         <Header loggedIn firstName="Maximiliano-Longname" initialLanguage={locale} />
-        <h6 className="preview__label">(Direct Enrollment) Header product </h6>
-        <Header deConsumer deBrokerName="Acme Co." initialLanguage={locale} />
-        <h6 className="preview__label">(Direct Enrollment) Header logged in</h6>
+        <h6 className="preview__label">Direct Enrollment - Logged-In</h6>
         <Header loggedIn deConsumer deBrokerName="Acme Co." initialLanguage={locale} />
         <div className={wrapperClassNames}>{this.renderHeaderToggles()}</div>
       </div>

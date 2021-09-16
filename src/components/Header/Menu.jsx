@@ -14,13 +14,14 @@ const Menu = function (props) {
       <div className="ds-l-container">
         <div className="ds-l-row">
           <div className="hc-c-menu__content ds-u-padding--1 ds-u-font-weight--bold">
+            {props.submenuTop}
             {props.beforeLinks}
             {props.links && (
               <div className="ds-l-col ds-l-col--auto ds-u-padding-x--0">
                 <MenuLinks links={props.links} />
               </div>
             )}
-            {props.afterLinks}
+            {props.submenuBottom}
           </div>
         </div>
       </div>
@@ -31,19 +32,18 @@ const Menu = function (props) {
 Menu.propTypes = {
   links: PropTypes.arrayOf(
     PropTypes.shape({
+      identifier: PropTypes.string,
       href: PropTypes.string.isRequired,
       label: PropTypes.node.isRequired,
       onClick: PropTypes.func,
     })
   ),
+  submenuTop: PropTypes.node,
+  submenuBottom: PropTypes.node,
   /**
    * Nodes to be rendered before the links column
    */
   beforeLinks: PropTypes.node,
-  /**
-   * Nodes to be rendered after the links column
-   */
-  afterLinks: PropTypes.node,
   /**
    * When the menu is collapsed, passing in "open" will
    * expand it and make it visible.

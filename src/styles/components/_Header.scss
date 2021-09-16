@@ -29,22 +29,13 @@
 }
 
 .hc-c-logged-out-links__li {
-  border-left: 1px solid $border-color-dark;
   display: inline-block;
   margin: 0;
   padding-left: $spacer-2;
   padding-right: $spacer-2;
 
-  &:first-child {
-    border-left: 0;
-  }
-
   &:last-child {
     padding-right: 0;
-  }
-
-  .hc-c-header--inverse & {
-    border-left-color: $color-white;
   }
 }
 
@@ -146,11 +137,21 @@ Header dropdown menu - Shared across header variations
 
 // Position the menu below the "Menu" toggle button
 .hc-c-menu__content {
+  background-color: $color-white;
+  border: 1px solid $color-gray-light;
+  box-shadow: 0 7px 10px -5px $color-gray-light;
+  color: $color-primary-darker;
   left: 0;
   position: absolute;
   right: 0;
   top: 0;
   z-index: 1;
+  @media (min-width: $width-sm) {
+    // Span only part of non-mobile screens
+    left: auto;
+    max-width: 30ch;
+    min-width: 20ch;
+  }
 
   .hc-c-menu__link {
     display: block;
