@@ -1,5 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ActionMenu analytics sends analytics event when logged-in menu closed 1`] = `
+Object {
+  "category": "consistent header",
+  "event_name": "header_click",
+  "event_type": "ui interaction",
+  "ga_eventAction": "click",
+  "ga_eventCategory": "consistent header",
+  "ga_eventLabel": "menu closed",
+  "ga_eventType": "cmsds",
+  "ga_eventValue": "",
+  "text": "menu closed",
+}
+`;
+
+exports[`ActionMenu analytics sends analytics event when logged-in menu opened 1`] = `
+Object {
+  "category": "consistent header",
+  "event_name": "header_click",
+  "event_type": "ui interaction",
+  "ga_eventAction": "click",
+  "ga_eventCategory": "consistent header",
+  "ga_eventLabel": "menu opened",
+  "ga_eventType": "cmsds",
+  "ga_eventValue": "",
+  "text": "menu opened",
+}
+`;
+
+exports[`ActionMenu analytics sends analytics event when logged-out action menu link clicked 1`] = `
+Object {
+  "category": "consistent header",
+  "event_name": "header_click",
+  "event_type": "ui interaction",
+  "ga_eventAction": "click",
+  "ga_eventCategory": "consistent header",
+  "ga_eventLabel": "ZOMBO",
+  "ga_eventType": "cmsds",
+  "ga_eventValue": "",
+  "link_url": "https://www.zombo.com",
+  "text": "ZOMBO",
+}
+`;
+
+exports[`ActionMenu analytics sends analytics event when logged-out menu closed 1`] = `
+Object {
+  "category": "consistent header",
+  "event_name": "header_click",
+  "event_type": "ui interaction",
+  "ga_eventAction": "click",
+  "ga_eventCategory": "consistent header",
+  "ga_eventLabel": "menu closed",
+  "ga_eventType": "cmsds",
+  "ga_eventValue": "",
+  "text": "menu closed",
+}
+`;
+
+exports[`ActionMenu analytics sends analytics event when logged-out menu opened 1`] = `
+Object {
+  "category": "consistent header",
+  "event_name": "header_click",
+  "event_type": "ui interaction",
+  "ga_eventAction": "click",
+  "ga_eventCategory": "consistent header",
+  "ga_eventLabel": "menu opened",
+  "ga_eventType": "cmsds",
+  "ga_eventValue": "",
+  "text": "menu opened",
+}
+`;
+
 exports[`ActionMenu logged-in version renders logged-in version 1`] = `
 <Component
   firstName="John"
@@ -45,7 +116,7 @@ exports[`ActionMenu logged-in version renders logged-in version 1`] = `
               aria-label="header.openMenu"
               className="hc-c-action-menu-button ds-u-sm-margin-left--2"
               component="button"
-              onClick={[MockFunction]}
+              onClick={[Function]}
               size="small"
               type="button"
             >
@@ -134,7 +205,7 @@ exports[`ActionMenu logged-in version set aria-expanded to true 1`] = `
               aria-label="header.closeMenu"
               className="hc-c-action-menu-button ds-u-sm-margin-left--2"
               component="button"
-              onClick={[MockFunction]}
+              onClick={[Function]}
               size="small"
               type="button"
             >
@@ -228,6 +299,7 @@ exports[`ActionMenu logged-out version renders logged-out version 1`] = `
               <a
                 className="hc-c-logged-out-links__link"
                 href="href"
+                onClick={[Function]}
               >
                 label
               </a>
@@ -254,7 +326,7 @@ exports[`ActionMenu logged-out version renders logged-out version 1`] = `
               aria-label="header.openMenu"
               className="hc-c-action-menu-button ds-u-sm-margin-left--2 ds-u-display--inline-block ds-u-sm-display--none"
               component="button"
-              onClick={[MockFunction]}
+              onClick={[Function]}
               size="small"
               type="button"
             >
