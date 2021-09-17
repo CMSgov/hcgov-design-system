@@ -72,10 +72,9 @@ function MenuButton({ t, open, ...props }) {
     'ds-u-sm-margin-left--2',
     props.className
   );
-  const text = t('header.menu');
 
   function onClick(event) {
-    sendHeaderEvent(text);
+    sendHeaderEvent(open ? 'menu closed' : 'menu opened');
     props.onMenuToggleClick(event);
   }
 
@@ -89,7 +88,7 @@ function MenuButton({ t, open, ...props }) {
       size="small"
     >
       {open ? <ClearIcon /> : <MenuIcon className="ds-u-margin-right--1" />}
-      {text}
+      {t('header.menu')}
     </Button>
   );
 }
