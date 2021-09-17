@@ -23,8 +23,8 @@ export interface HeaderProps {
   deConsumer?: boolean;
   deBrokerName?: string;
   links?: Link[];
-  submenuTop: React.ReactNode;
-  submenuBottom: React.ReactNode;
+  submenuTop?: React.ReactNode;
+  submenuBottom?: React.ReactNode;
 }
 
 export class Header extends React.Component<HeaderProps, any> {
