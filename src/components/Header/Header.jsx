@@ -7,8 +7,12 @@ import React from 'react';
 import { SkipNav } from '@cmsgov/design-system';
 import classnames from 'classnames';
 import defaultMenuLinks from './defaultMenuLinks';
-import localeLink from './localeLink';
 import { translate } from 'react-i18next';
+
+export const VARIATION_NAMES = {
+  LOGGED_IN: 'logged-in',
+  LOGGED_OUT: 'logged-out',
+};
 
 /**
  * The top-level component, responsible for maintaining the
@@ -19,30 +23,13 @@ export class _Header extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { openMenu: false };
+    this.state = {
+      openMenu: false,
+    };
   }
 
-  /**
-   * Content rendered within <Menu>, after the list of links
-   * @returns {Node}
-   */
-  afterMenuLinks() {
-    if (this.variation() === 'logged-in') {
-      const locale = localeLink(
-        this.props.t,
-        this.props.initialLanguage,
-        this.props.subpath,
-        this.props.switchLocaleLink
-      );
-      return (
-        <a
-          className="hc-c-menu__link ds-u-border-top--1 ds-u-border--dark ds-u-margin-x--1 ds-u-padding-x--0"
-          href={locale.href}
-        >
-          {locale.label}
-        </a>
-      );
-    }
+  isLoggedIn() {
+    return this.variation() === VARIATION_NAMES.LOGGED_IN;
   }
 
   /**
@@ -50,9 +37,9 @@ export class _Header extends React.Component {
    * @returns {Node}
    */
   beforeMenuLinks() {
-    if (this.variation() === 'logged-in' && this.props.firstName) {
+    if (this.isLoggedIn() && this.props.firstName) {
       return (
-        <div className="ds-u-sm-display--none ds-u-border-bottom--1 ds-u-border--dark ds-u-margin-x--1 ds-u-padding-y--1">
+        <div className="ds-u-sm-display--none ds-u-border-bottom--1 ds-u-margin-x--1 ds-u-padding-y--1 hc-c-header__name">
           {this.props.firstName}
         </div>
       );
@@ -75,42 +62,39 @@ export class _Header extends React.Component {
   variation() {
     if (this.props.loggedIn) {
       // Logged-in state, with minimal navigation
-      return 'logged-in';
-    } else if (this.props.subhead) {
-      // Product, with minimal navigation and a subheading
-      return 'minimal';
+      return VARIATION_NAMES.LOGGED_IN;
+    } else {
+      // Logged-out state, either Learn or Product
+      return VARIATION_NAMES.LOGGED_OUT;
     }
-
-    return 'home';
   }
 
   render() {
-    // TODO: Remove once we've fully deprecated `inverse`. It defaults to
-    // `true`, so set to false if either version of the prop is `false`
-    const inversedPropValue = this.props.inverse && this.props.inversed;
-    const inversed = inversedPropValue && this.variation() !== 'home';
     const classes = classnames(
       `hc-c-header hc-c-header--${this.variation()}`,
-      { 'hc-c-header--inverse': inversed },
       this.props.className
     );
 
-    const links =
-      this.props.links ||
-      defaultMenuLinks(
-        this.props.initialLanguage,
-        this.props.deConsumer,
-        this.props.subpath,
-        this.props.primaryDomain,
-        this.props.switchLocaleLink
-      )[this.variation()];
+    const hasCustomLinks = !!this.props.links;
+    const defaultLinksForVariation = defaultMenuLinks(
+      this.props.initialLanguage,
+      this.props.deConsumer,
+      this.props.subpath,
+      this.props.primaryDomain,
+      this.props.switchLocaleLink,
+      this.props.hideLoginLink,
+      this.props.hideLogoutLink,
+      this.props.hideLanguageSwitch,
+      hasCustomLinks
+    )[this.variation()];
+
+    const links = hasCustomLinks
+      ? this.props.links.concat(defaultLinksForVariation)
+      : defaultLinksForVariation;
 
     return (
       <header className={classes} role="banner">
-        <SkipNav
-          href={this.props.skipNavHref}
-          onClick={this.props.onSkipNavClick}
-        >
+        <SkipNav href={this.props.skipNavHref} onClick={this.props.onSkipNavClick}>
           {this.props.t('header.skipNav')}
         </SkipNav>
 
@@ -123,52 +107,33 @@ export class _Header extends React.Component {
               <Logo locale={this.props.initialLanguage} />
             </a>
 
-            {this.props.subhead && (
-              <div className="hc-c-header__subhead hc-c-header__subhead--inline ds-u-md-display--block ds-u-display--none">
-                {this.props.subhead}
-              </div>
-            )}
-
             <ActionMenu
-              inversed={inversed}
               firstName={this.props.firstName}
               onMenuToggleClick={this.handleMenuToggleClick}
               locale={this.props.initialLanguage}
               loggedIn={this.props.loggedIn}
               open={this.state.openMenu}
-              deConsumer={this.props.deConsumer}
-              subpath={this.props.subpath}
-              primaryDomain={this.props.primaryDomain}
-              switchLocaleLink={this.props.switchLocaleLink}
+              links={links}
             />
           </div>
         </div>
 
-        {this.props.subhead && (
-          <div className="hc-c-header__subhead ds-l-container ds-u-display--block ds-u-md-display--none ds-u-padding-y--1 ds-u-border-top--1 ds-u-border-color--inverse">
-            {this.props.subhead}
-          </div>
-        )}
-
         <Menu
-          afterLinks={this.afterMenuLinks()}
           beforeLinks={this.beforeMenuLinks()}
           links={links}
           open={this.state.openMenu}
           primaryDomain={this.props.primaryDomain}
+          submenuTop={this.props.submenuTop}
+          submenuBottom={this.props.submenuBottom}
         />
 
-        {this.props.deConsumer && (
-          <DeConsumerMessage deBrokerName={this.props.deBrokerName} />
-        )}
+        {this.props.deConsumer && <DeConsumerMessage deBrokerName={this.props.deBrokerName} />}
       </header>
     );
   }
 }
 
 _Header.defaultProps = {
-  inverse: true,
-  inversed: true,
   initialLanguage: 'en',
   skipNavHref: '#main',
 };
@@ -179,10 +144,6 @@ _Header.propTypes = {
    * Additional classes to be added to the root `<header>` element.
    */
   className: PropTypes.string,
-  /** @hide-prop [Deprecated] Use inversed instead */
-  inverse: PropTypes.bool,
-  /** Applies the inverse theme styling */
-  inversed: PropTypes.bool,
   /**
    * The language the header will render as.
    */
@@ -200,13 +161,22 @@ _Header.propTypes = {
    */
   loggedIn: PropTypes.bool,
   /**
+   * When set to true, do not display the Login text in the upper right of the
+   * header
+   */
+  hideLoginLink: PropTypes.bool,
+  /**
+   * When set to true, even if logged in the Logout link will not render
+   */
+  hideLogoutLink: PropTypes.bool,
+  /**
+   * When set to true, do not display the the switch locale link
+   */
+  hideLanguageSwitch: PropTypes.bool,
+  /**
    * For logged-in users, pass in their first name to display in the header
    */
   firstName: PropTypes.node,
-  /**
-   * For product headers, pass in the product name to display next to the logo.
-   */
-  subhead: PropTypes.node,
   /**
    * For applications hosted at paths other than the root `healthcare.gov`/
    * `cuidadodesalud.gov`. This string will be appended to the end of the
@@ -264,6 +234,19 @@ _Header.propTypes = {
       onClick: PropTypes.func,
     })
   ),
+  /**
+   * Optionally pass a React component to render within the menu. Useful for
+   * when you need more control over what appears in the menu than what's
+   * provided by the `links` prop, e.g. a search input. Will appear *above* any
+   * links provided by the `defaultMenuLinks` method or the links provided by
+   * the `links` prop.
+   */
+  submenuTop: PropTypes.node,
+  /**
+   * Same as `submenuTop`, except it will appear *below* any links provided by
+   * the `defaultMenuLinks` method or the links provided by the `links` prop.
+   */
+  submenuBottom: PropTypes.node,
 };
 
 export const Header = translate()(_Header);

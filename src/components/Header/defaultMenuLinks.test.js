@@ -8,30 +8,65 @@ describe('MenuList', function () {
     expect(typeof namedExportDefaultMenuLinks).toBe('function');
   });
 
+  it('leaves out login link if hideLoginLink true', () => {
+    expect(
+      defaultMenuLinks(undefined, undefined, undefined, undefined, undefined, true)
+    ).toMatchSnapshot();
+  });
+
+  it('leaves out logout link if hideLogoutLink true', () => {
+    expect(
+      defaultMenuLinks(undefined, undefined, undefined, undefined, undefined, undefined, true)
+    ).toMatchSnapshot();
+  });
+
+  it('leaves out locale links if hideLanguageSwitch true', () => {
+    expect(
+      defaultMenuLinks(
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        true
+      )
+    ).toMatchSnapshot();
+  });
+
+  it('leaves out the myProfile and myApplicationsAndCoverage when customLinksPassedIn is true', () => {
+    expect(
+      defaultMenuLinks(
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        true
+      )
+    ).toMatchSnapshot();
+  });
+
   describe('English', () => {
     it('returns array of menu list objects', () => {
       expect(defaultMenuLinks()).toMatchSnapshot();
     });
 
     it('returns array of menu list objects with subpath', () => {
-      expect(defaultMenuLinks('en', false, 'tax-tool/')).toMatchSnapshot();
+      expect(defaultMenuLinks('en', 'tax-tool/')).toMatchSnapshot();
     });
 
     it('returns array of menu list objects with absolute URLs', () => {
-      expect(
-        defaultMenuLinks('en', false, undefined, 'https://www.healthcare.gov')
-      ).toMatchSnapshot();
+      expect(defaultMenuLinks('en', undefined, 'https://www.healthcare.gov')).toMatchSnapshot();
     });
 
     it('returns array of menu list objects with custom locale switch link', () => {
       expect(
-        defaultMenuLinks(
-          'en',
-          false,
-          undefined,
-          undefined,
-          'https://ayudalocal.cuidadodesalud.gov/es'
-        )
+        defaultMenuLinks('en', undefined, undefined, 'https://ayudalocal.cuidadodesalud.gov/es')
       ).toMatchSnapshot();
     });
   });
@@ -42,24 +77,16 @@ describe('MenuList', function () {
     });
 
     it('returns array of menu list objects with subpath', () => {
-      expect(defaultMenuLinks('es', false, 'tax-tool/')).toMatchSnapshot();
+      expect(defaultMenuLinks('es', 'tax-tool/')).toMatchSnapshot();
     });
 
     it('returns array of menu list objects with absolute URLs', () => {
-      expect(
-        defaultMenuLinks('es', false, undefined, 'https://www.healthcare.gov')
-      ).toMatchSnapshot();
+      expect(defaultMenuLinks('es', undefined, 'https://www.healthcare.gov')).toMatchSnapshot();
     });
 
     it('returns array of menu list objects with custom locale switch link', () => {
       expect(
-        defaultMenuLinks(
-          'es',
-          false,
-          undefined,
-          undefined,
-          'https://localhelp.healthcare.gov'
-        )
+        defaultMenuLinks('es', undefined, undefined, 'https://localhelp.healthcare.gov')
       ).toMatchSnapshot();
     });
   });

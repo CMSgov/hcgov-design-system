@@ -1,6 +1,6 @@
+import { mount, shallow } from 'enzyme';
 import ActionMenu from './ActionMenu';
 import React from 'react';
-import { mount } from 'enzyme';
 
 describe('ActionMenu', function () {
   const handleMenuToggleClick = jest.fn();
@@ -14,9 +14,9 @@ describe('ActionMenu', function () {
       return (
         <ActionMenu
           loggedIn
-          locale="en"
           firstName="John"
           onMenuToggleClick={handleMenuToggleClick}
+          links={[]}
           {...props}
         />
       );
@@ -47,6 +47,12 @@ describe('ActionMenu', function () {
           loggedIn={false}
           locale="en"
           onMenuToggleClick={handleMenuToggleClick}
+          links={[
+            {
+              label: 'label',
+              href: 'href',
+            },
+          ]}
           {...props}
         />
       );
@@ -56,21 +62,94 @@ describe('ActionMenu', function () {
     it('renders logged-out version', () => {
       expect(mount(component())).toMatchSnapshot();
     });
+  });
 
-    it('renders links with absolute URLs', () => {
-      expect(
-        mount(component({ primaryDomain: 'https://www.healthcare.gov' }))
-      ).toMatchSnapshot();
+  describe('analytics', () => {
+    beforeEach(() => {
+      window.utag = {
+        link: jest.fn(),
+      };
     });
 
-    it('renders custom locale switch link', () => {
-      expect(
-        mount(
-          component({
-            switchLocaleLink: 'https://ayudalocal.cuidadodesalud.gov/es',
-          })
-        )
-      ).toMatchSnapshot();
+    function getMenuButton(wrapper, loggedIn) {
+      return wrapper
+        .dive()
+        .find(loggedIn ? 'LoggedInActionMenu' : 'LoggedOutActionMenu')
+        .dive()
+        .find('MenuButton')
+        .dive()
+        .find('Button');
+    }
+
+    it('sends analytics event when logged-out action menu link clicked', () => {
+      const wrapper = shallow(
+        <ActionMenu
+          loggedIn={false}
+          locale="en"
+          onMenuToggleClick={handleMenuToggleClick}
+          links={[
+            {
+              label: 'ZOMBO',
+              href: 'https://www.zombo.com',
+            },
+          ]}
+        />
+      );
+      wrapper.dive().find('LoggedOutActionMenu').dive().find('a').simulate('click');
+      expect(window.utag.link.mock.calls[0][0]).toMatchSnapshot();
+    });
+
+    it('sends analytics event when logged-out menu opened', () => {
+      const wrapper = shallow(
+        <ActionMenu
+          loggedIn={false}
+          locale="en"
+          onMenuToggleClick={handleMenuToggleClick}
+          links={[{ label: 'label', href: 'href' }]}
+        />
+      );
+      getMenuButton(wrapper).simulate('click');
+      expect(window.utag.link.mock.calls[0][0]).toMatchSnapshot();
+      expect(handleMenuToggleClick).toHaveBeenCalled();
+    });
+
+    it('sends analytics event when logged-out menu closed', () => {
+      const wrapper = shallow(
+        <ActionMenu
+          loggedIn={false}
+          open
+          locale="en"
+          onMenuToggleClick={handleMenuToggleClick}
+          links={[{ label: 'label', href: 'href' }]}
+        />
+      );
+      getMenuButton(wrapper).simulate('click');
+      expect(window.utag.link.mock.calls[0][0]).toMatchSnapshot();
+      expect(handleMenuToggleClick).toHaveBeenCalled();
+    });
+
+    it('sends analytics event when logged-in menu opened', () => {
+      const wrapper = shallow(
+        <ActionMenu loggedIn locale="en" onMenuToggleClick={handleMenuToggleClick} links={[]} />
+      );
+      getMenuButton(wrapper, true).simulate('click');
+      expect(window.utag.link.mock.calls[0][0]).toMatchSnapshot();
+      expect(handleMenuToggleClick).toHaveBeenCalled();
+    });
+
+    it('sends analytics event when logged-in menu closed', () => {
+      const wrapper = shallow(
+        <ActionMenu
+          loggedIn
+          open
+          locale="en"
+          onMenuToggleClick={handleMenuToggleClick}
+          links={[]}
+        />
+      );
+      getMenuButton(wrapper, true).simulate('click');
+      expect(window.utag.link.mock.calls[0][0]).toMatchSnapshot();
+      expect(handleMenuToggleClick).toHaveBeenCalled();
     });
   });
 });
