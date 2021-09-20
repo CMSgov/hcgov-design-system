@@ -146,6 +146,7 @@ Header dropdown menu - Shared across header variations
   right: 0;
   top: 0;
   z-index: 1;
+
   @media (min-width: $width-sm) {
     // Span only part of non-mobile screens
     left: auto;
@@ -157,5 +158,13 @@ Header dropdown menu - Shared across header variations
     display: block;
     padding: $spacer-1;
     text-decoration: none;
+  }
+}
+
+@media (min-width: $width-sm) {
+  .hc-c-header--logged-out {
+    .hc-c-menu__content {
+      display: none;
+    }
   }
 }
