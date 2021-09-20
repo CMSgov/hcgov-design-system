@@ -16,4 +16,20 @@ describe('MenuLinks', function () {
       )
     ).toMatchSnapshot();
   });
+
+  describe('analytics', () => {
+    beforeEach(() => {
+      window.utag = {
+        link: jest.fn(),
+      };
+    });
+
+    it('sends analytics event when menu link clicked', () => {
+      const wrapper = shallow(
+        <MenuLinks links={[{ href: 'https://www.zombo.com', label: 'ZOMBO' }]} />
+      );
+      wrapper.find('a').simulate('click');
+      expect(window.utag.link.mock.calls[0][0]).toMatchSnapshot();
+    });
+  });
 });

@@ -1,18 +1,16 @@
-import { Choice, ChoiceList, Header } from '@design-system';
+import { Button, ChoiceList, Header, TextField } from '@design-system';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-const variationChoices = [
-  { value: 'home', label: 'Home' },
-  { value: 'product', label: 'Product' },
-  { value: 'product-de', label: 'Product (DE)' },
-  { value: 'logged-in', label: 'Logged-in' },
-  { value: 'logged-in-de', label: 'Logged-in (DE)' },
-];
 
 const localeChoices = [
   { value: 'en', label: 'English' },
   { value: 'es', label: 'Español' },
+];
+
+const customLinks = [
+  { label: 'Custom Link 1', href: '#customLink1' },
+  { label: 'Custom Link 2', href: '#customLink2' },
+  { label: 'Custom Link 3', href: '#customLink3' },
 ];
 
 class HeaderExample extends React.PureComponent {
@@ -21,18 +19,11 @@ class HeaderExample extends React.PureComponent {
 
     this.state = {
       locale: 'en',
-      variation: 'logged-in',
-      inversed: true,
     };
   }
 
   renderHeaderToggles() {
-    const { locale, variation, inversed } = this.state;
-
-    const variations = variationChoices.map((choice) => ({
-      ...choice,
-      checked: choice.value === variation,
-    }));
+    const { locale } = this.state;
     const locales = localeChoices.map((choice) => ({
       ...choice,
       checked: choice.value === locale,
@@ -41,67 +32,50 @@ class HeaderExample extends React.PureComponent {
     return (
       <div className="ds-u-margin-top--4">
         <ChoiceList
-          label="Change variation"
-          name="variation"
-          choices={variations}
-          onChange={(event) => this.setState({ variation: event.target.value })}
-          type="radio"
-        />
-        <ChoiceList
           label="Change language"
           name="locale"
           choices={locales}
           onChange={(event) => this.setState({ locale: event.target.value })}
           type="radio"
         />
-
-        <fieldset className="ds-c-fieldset">
-          <legend className="ds-c-label">Change theme</legend>
-          <Choice
-            name="inversed"
-            value="inversed"
-            onChange={(event) =>
-              this.setState({ inversed: event.target.checked })
-            }
-            checked={inversed}
-            type="checkbox"
-          >
-            Inverse header
-          </Choice>
-        </fieldset>
       </div>
     );
   }
 
   render() {
-    const { locale, variation, inversed } = this.state;
-    const headerProps = {
-      home: {},
-      product: { subhead: 'Tax Tools', subpath: 'tax-tool/' },
-      'product-de': {
-        subhead: 'Verify your identity',
-        deConsumer: true,
-        deBrokerName: 'Acme Co.',
-      },
-      'logged-in': { loggedIn: true, firstName: 'Maximiliano-Longname' },
-      'logged-in-de': {
-        loggedIn: true,
-        deConsumer: true,
-        deBrokerName: 'Acme Co.',
-      },
-    };
-    let wrapperClassNames = 'ds-u-padding--1';
-    if (!inversed) {
-      wrapperClassNames += ' ds-base--inverse';
-    }
+    const { locale } = this.state;
+    const wrapperClassNames = 'ds-u-padding--1';
+
+    const SampleLearnSubmenu = () => (
+      <div className="ds-u-display--flex">
+        <div className="ds-u-margin-right--1" style={{ flex: 1 }}>
+          <TextField
+            fieldClassName="ds-u-margin-y--0"
+            labelClassName="ds-u-display--none"
+            label="Search"
+            name="SubmenuSearch"
+          />
+        </div>
+        <Button>Search</Button>
+      </div>
+    );
 
     return (
       // Add min-height so the options don't get cut off when switching to product-de
       <div style={{ minHeight: 679 }}>
+        <h6 className="preview__label">Minimal</h6>
+        <Header initialLanguage={locale} hideLoginLink hideLanguageSwitch />
+        <h6 className="preview__label">Logged-Out</h6>
+        <Header initialLanguage={locale} submenuTop={<SampleLearnSubmenu />} />
+        <h6 className="preview__label">Logged-In</h6>
+        <Header loggedIn firstName="Maximiliano-Longname" initialLanguage={locale} />
+        <h6 className="preview__label">Direct Enrollment - Logged-In with Custom Links</h6>
         <Header
-          {...headerProps[variation]}
+          loggedIn
+          deConsumer
+          deBrokerName="Acme Co."
           initialLanguage={locale}
-          inversed={inversed}
+          links={customLinks}
         />
         <div className={wrapperClassNames}>{this.renderHeaderToggles()}</div>
       </div>

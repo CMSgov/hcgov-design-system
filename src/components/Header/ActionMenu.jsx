@@ -1,9 +1,11 @@
 /* eslint-disable react/no-multi-comp, jsx-a11y/no-redundant-roles */
 import { Button } from '@cmsgov/design-system';
-import LoggedOutLinks from './LoggedOutLinks';
+import ClearIcon from '@cmsgov/design-system/dist/components/FilterChip/ClearIconAlternate';
+import MenuIcon from './MenuIcon';
 import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
+import { sendHeaderEvent } from './analytics';
 import { translate } from 'react-i18next';
 
 const menuId = 'hc-c-menu';
@@ -23,11 +25,7 @@ const ActionMenu = function (props) {
       className="hc-c-header__actions ds-l-col ds-l-col--auto ds-u-margin-left--auto ds-u-font-weight--bold"
       role="navigation"
     >
-      {props.loggedIn ? (
-        <LoggedInActionMenu {...props} />
-      ) : (
-        <LoggedOutActionMenu {...props} />
-      )}
+      {props.loggedIn ? <LoggedInActionMenu {...props} /> : <LoggedOutActionMenu {...props} />}
     </nav>
   );
 };
@@ -36,9 +34,7 @@ function LoggedInActionMenu(props) {
   return (
     <div>
       {props.firstName && (
-        <span className="ds-u-display--none ds-u-sm-display--inline-block">
-          {props.firstName}
-        </span>
+        <span className="ds-u-display--none ds-u-sm-display--inline-block">{props.firstName}</span>
       )}
       <MenuButton {...props} />
     </div>
@@ -46,19 +42,26 @@ function LoggedInActionMenu(props) {
 }
 
 function LoggedOutActionMenu(props) {
+  if (props.links.length <= 0) return <></>;
+
   return (
     <div>
-      <LoggedOutLinks
-        locale={props.locale}
-        deConsumer={props.deConsumer}
-        subpath={props.subpath}
-        primaryDomain={props.primaryDomain}
-        switchLocaleLink={props.switchLocaleLink}
-      />
-      <MenuButton
-        {...props}
-        className="ds-u-display--inline-block ds-u-sm-display--none"
-      />
+      <ul className="hc-c-logged-out-links ds-c-list--bare ds-u-display--none ds-u-sm-display--inline-block">
+        {props.links.map((link) => {
+          return (
+            <li key={link.href} className="hc-c-logged-out-links__li">
+              <a
+                href={link.href}
+                onClick={() => sendHeaderEvent(link.label, link.href)}
+                className="hc-c-logged-out-links__link"
+              >
+                {link.label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+      <MenuButton {...props} className="ds-u-display--inline-block ds-u-sm-display--none" />
     </div>
   );
 }
@@ -66,30 +69,33 @@ function LoggedOutActionMenu(props) {
 function MenuButton({ t, open, ...props }) {
   const className = classnames(
     'hc-c-action-menu-button',
-    'ds-u-font-weight--bold',
     'ds-u-sm-margin-left--2',
     props.className
   );
+
+  function onClick(event) {
+    sendHeaderEvent(open ? 'menu closed' : 'menu opened');
+    props.onMenuToggleClick(event);
+  }
+
   return (
     <Button
-      inversed={props.inversed}
       aria-controls={menuId}
       aria-expanded={!!open}
       aria-label={open ? t('header.closeMenu') : t('header.openMenu')}
       className={className}
-      onClick={props.onMenuToggleClick}
+      onClick={onClick}
       size="small"
     >
-      {open ? t('header.close') : t('header.menu')}
+      {open ? <ClearIcon /> : <MenuIcon className="ds-u-margin-right--1" />}
+      {t('header.menu')}
     </Button>
   );
 }
 
 ActionMenu.propTypes = {
   /** Applies the inverse theme styling */
-  inversed: PropTypes.bool,
   firstName: PropTypes.string,
-  locale: PropTypes.string.isRequired,
   loggedIn: PropTypes.bool,
   onMenuToggleClick: PropTypes.func.isRequired,
   /**
@@ -98,16 +104,18 @@ ActionMenu.propTypes = {
    */
   open: PropTypes.bool,
   /**
-   * Indicates when a consumer is coming from a Direct Enrollment flow.
-   * This will include additional messaging and modify some of the links.
+   * These are the links that are visible in the upper left when there
+   * is no menu button present. Currently, these only show up when the
+   * user is logged out
    */
-  deConsumer: PropTypes.bool,
-  /**
-   * [See `Header.props.subpath`]({{root}}/patterns/header/#patterns.header.react)
-   */
-  subpath: PropTypes.string,
-  primaryDomain: PropTypes.string,
-  switchLocaleLink: PropTypes.string,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      identifier: PropTypes.string,
+      href: PropTypes.string.isRequired,
+      label: PropTypes.node.isRequired,
+      onClick: PropTypes.func,
+    })
+  ).isRequired,
 };
 
 LoggedInActionMenu.propTypes = {
@@ -119,18 +127,20 @@ LoggedInActionMenu.propTypes = {
 LoggedOutActionMenu.propTypes = {
   onMenuToggleClick: ActionMenu.propTypes.onMenuToggleClick,
   open: ActionMenu.propTypes.open,
-  deConsumer: ActionMenu.propTypes.deConsumer,
-  locale: ActionMenu.propTypes.locale,
-  subpath: ActionMenu.propTypes.subpath,
-  primaryDomain: ActionMenu.propTypes.primaryDomain,
-  switchLocaleLink: ActionMenu.propTypes.switchLocaleLink,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      identifier: PropTypes.string,
+      href: PropTypes.string.isRequired,
+      label: PropTypes.node.isRequired,
+      onClick: PropTypes.func,
+    })
+  ).isRequired,
 };
 
 MenuButton.propTypes = {
   onMenuToggleClick: ActionMenu.propTypes.onMenuToggleClick,
   open: ActionMenu.propTypes.open,
   className: PropTypes.string,
-  inversed: ActionMenu.propTypes.inversed,
 };
 
 export default translate()(ActionMenu);
