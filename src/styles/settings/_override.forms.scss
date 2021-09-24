@@ -1,10 +1,39 @@
 $button-border-width: 2px;
 
-// On HealthCare.gov, primary buttons have the success color
-$button-primary-bg: $color-green;
-$button-primary-bg--hover: $color-success-dark;
-$button-primary-bg--focus: $color-success-dark;
-$button-primary-bg--active: $color-success-darker;
-
-// Likewise, input fields should not have a border radius
+// Input fields should not have a border radius
 $input-border-radius: 0;
+
+// Primary button
+$button-primary-text-color: $color-white;
+$button-primary-bg: $color-green;
+$button-primary-border-color: transparent;
+// hover
+$button-primary-text-color--hover: $color-white;
+$button-primary-bg--hover: $color-green-dark;
+$button-primary-border-color--hover: transparent;
+// active
+$button-primary-text-color--active: $color-white;
+$button-primary-bg--active: $color-green-darker;
+$button-primary-border-color--active: transparent;
+// disabled
+$button-primary-text-color--disabled: $color-gray-dark;
+$button-primary-bg--disabled: $color-gray-lighter;
+$button-primary-border-color--disabled: $color-gray-lighter;
+
+// Tertiary button
+$button-tertiary-text-decoration: underline;
+$button-tertiary-text-color: $color-primary;
+$button-tertiary-bg: transparent;
+$button-tertiary-border-color: transparent;
+// hover
+$button-tertiary-text-color--hover: $color-primary-darker;
+$button-tertiary-bg--hover: transparent;
+$button-tertiary-border-color--hover: transparent;
+// active
+$button-tertiary-text-color--active: $color-primary-darkest;
+$button-tertiary-bg--active: transparent;
+$button-tertiary-border-color--active: transparent;
+// disabled
+$button-tertiary-text-color--disabled: $color-gray-lighter;
+$button-tertiary-bg--disabled: transparent;
+$button-tertiary-border-color--disabled: transparent;
