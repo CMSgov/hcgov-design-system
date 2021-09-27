@@ -1,12 +1,10 @@
 #!/bin/sh
 
 # This script checks out a specified release tag, builds it, and publishes
-# it to npm. The second argument is optional and is for an 
-# [npm dist-tag](https://docs.npmjs.com/cli/v7/commands/npm-dist-tag). If
-# you are publishing a beta release, please use "beta" for the second arg.
+# it to npm.
 #
 # Usage:
-# $ yarn publish-release <version number> [npm dist-tag]
+# $ yarn publish-release <version number>
 
 set -e
 
@@ -18,16 +16,20 @@ NC='\033[0m' # No color
 echo "${GREEN}Checking out release $1...${NC}"
 TAG_PREFIX="v"
 git fetch --tags
-git checkout tags/$TAG_PREFIX$1
+# git checkout tags/$TAG_PREFIX$1
 
 echo "${GREEN}Building packages...${NC}"
-yarn install
-yarn build
+# yarn install
+# yarn build
 
 echo "${GREEN}Publishing ${CYAN}$1${GREEN} to npm...${NC}"
-NPM_TAG="${2:-""}"
-echo $NPM_TAG
-# npm publish --tag $2
+if [[ $1 == *"beta"* ]]; then
+  NPM_TAG="--tag beta"
+else
+  NPM_TAG=""
+fi
+echo "npm publish $NPM_TAG"
+# npm publish $NPM_TAG
 
 echo "${GREEN}Done.${NC}"
 echo ""
