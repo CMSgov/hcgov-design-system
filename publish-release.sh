@@ -21,11 +21,11 @@ git fetch --tags
 git checkout tags/$TAG_PREFIX$1
 
 echo "${GREEN}Building packages...${NC}"
-# yarn install
-# yarn build
+yarn install
+yarn build
 
 echo "${GREEN}Publishing ${CYAN}$1${GREEN} to npm...${NC}"
-NPM_TAG="${NPM_TAG:-""}"
+NPM_TAG="${2:-""}"
 echo $NPM_TAG
 # npm publish --tag $2
 
