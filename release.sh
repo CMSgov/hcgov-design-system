@@ -10,7 +10,6 @@ NC='\033[0m' # No color
 
 echo "${GREEN}Bumping version...${NC}"
 yarn bump
-PACKAGE_VERSION=$(node -pe "require('./package.json').version")
 
 if git diff-index --quiet HEAD --; then
   echo "${RED}No local changes detected, therefore version bump did not occur. Exiting...${NC}"

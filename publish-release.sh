@@ -16,11 +16,11 @@ NC='\033[0m' # No color
 echo "${GREEN}Checking out release $1...${NC}"
 TAG_PREFIX="v"
 git fetch --tags
-# git checkout tags/$TAG_PREFIX$1
+git checkout tags/$TAG_PREFIX$1
 
 echo "${GREEN}Building packages...${NC}"
-# yarn install
-# yarn build
+yarn install
+yarn build
 
 echo "${GREEN}Publishing ${CYAN}$1${GREEN} to npm...${NC}"
 if [[ $1 == *"beta"* ]]; then
@@ -29,7 +29,7 @@ else
   NPM_TAG=""
 fi
 echo "npm publish $NPM_TAG"
-# npm publish $NPM_TAG
+npm publish $NPM_TAG
 
 echo "${GREEN}Done.${NC}"
 echo ""
