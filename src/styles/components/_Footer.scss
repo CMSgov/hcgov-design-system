@@ -38,8 +38,16 @@
     }
   }
 
-  &::after {
-    content: '·';
+  &:not(:last-child)::after {
+    --marker-size: 2px;
+    background-color: currentColor;
+    border-radius: 50%;
+
+    content: '';
+    display: inline-block;
+    height: var(--marker-size);
+    vertical-align: middle;
+    width: var(--marker-size);
   }
 
   &:first-child a {
@@ -48,9 +56,5 @@
 
   &:last-child {
     margin-right: 0;
-  }
-
-  &:last-child::after {
-    content: '';
   }
 }
