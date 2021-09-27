@@ -29,7 +29,7 @@ else
   NPM_TAG=""
 fi
 echo "npm publish $NPM_TAG"
-npm publish $NPM_TAG
+# npm publish $NPM_TAG
 
 echo "${GREEN}Done.${NC}"
 echo ""
