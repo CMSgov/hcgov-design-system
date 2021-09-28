@@ -1,7 +1,5 @@
 @import './Logo';
 
-$hc-c-footer-list-marker-size: 2px;
-
 .hc-c-footer {
   a {
     color: $color-muted;
@@ -41,6 +39,8 @@ $hc-c-footer-list-marker-size: 2px;
   }
 
   &:not(:last-child)::after {
+    $hc-c-footer-list-marker-size: 2px;
+
     background-color: currentColor;
     border-radius: 50%;
     content: '';
