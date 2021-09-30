@@ -16,7 +16,8 @@
     "updateSnapshot": "yarn cmsds test ./src --updateSnapshot",
     "lint": "yarn cmsds lint ./src ./docs",
     "gh-pages": "yarn build && gh-pages -d './docs/dist'",
-    "release": "./prepublish.sh",
+    "release": "./release.sh",
+    "publish-release": "./publish-release.sh",
     "prepare": "husky install"
   },
   "main": "dist/components/index.js",
