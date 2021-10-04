@@ -29,7 +29,7 @@
     "src"
   ],
   "dependencies": {
-    "@cmsgov/design-system": "^2.8.0",
+    "@cmsgov/design-system": "^2.9.0-beta.1",
     "classnames": "^2.0.0",
     "i18next": "^14.0.1",
     "js-cookie": "^2.2.0",
@@ -40,8 +40,8 @@
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/plugin-transform-object-assign": "^7.10.4",
     "@babel/preset-typescript": "^7.15.0",
-    "@cmsgov/design-system-docs": "^2.8.0",
-    "@cmsgov/design-system-scripts": "^2.8.0",
+    "@cmsgov/design-system-docs": "^2.9.0-beta.1",
+    "@cmsgov/design-system-scripts": "^2.9.0-beta.1",
     "@cmsgov/eslint-config-design-system": "2.0.0",
     "@cmsgov/stylelint-config-design-system": "2.0.0",
     "@types/react": "^17.0.5",
