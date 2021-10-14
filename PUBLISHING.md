@@ -46,7 +46,7 @@ When the cherry-picking has been resolved, you can move on to the next step.
 Run
 
 ```
-yarn release
+./release.sh
 ```
 
 and go through the interactive prompt to choose the release version. See notes on [SemVer release format](#versioning). It will automatically apply the version bumps, commit it to a branch, and tag it as a release.
@@ -56,7 +56,7 @@ and go through the interactive prompt to choose the release version. See notes o
 Find out your tag name from the previous step and run
 
 ```
-yarn publish-release <tag name>
+./publish-release.sh <tag name>
 ```
 
 After successfully publishing, there will be three zip files for uploading to the GitHub release in the next step.
