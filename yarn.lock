@@ -1110,12 +1110,12 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@cmsgov/design-system-docs@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-docs/-/design-system-docs-2.9.0.tgz#27358ef6f66e3a6feb9ec4fe39f593e1f443447c"
-  integrity sha512-R7TBDqMSNR1tb2GHiR52q74tkLAERjAiKQanATWbzu7I+wHffco+W5BR1wX8j+9brh/NKde/voJsGnb+h93+bg==
+"@cmsgov/design-system-docs@^2.10.0-beta.1":
+  version "2.10.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-docs/-/design-system-docs-2.10.0-beta.1.tgz#cc16f787465c2c1d2c1c9bc718ab9124aaf46c81"
+  integrity sha512-MhPRnVZX0aPGjvYmKYPxAmKbFUOUnhgrBCnO9NOJqyAphjbJVHMbwbFuIsD5Vk7i9+RcDWBPOOVn3Xz/PsMMUg==
   dependencies:
-    "@cmsgov/design-system" "^2.9.0"
+    "@cmsgov/design-system" "^2.10.0-beta.1"
     classnames "^2.2.5"
     lodash "^4.17.19"
     prismjs "^1.11.0"
@@ -1124,10 +1124,10 @@
     react-hot-loader "^3.1.3"
     url-join "^4.0.1"
 
-"@cmsgov/design-system-scripts@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-scripts/-/design-system-scripts-2.9.0.tgz#bddb724f057c8b35b50fee4e1ce14d37bf74b0f3"
-  integrity sha512-E+xaWirb9USSluQpM3yJSWfkzwKcEsgznqHtYNS3l8LRG603pwyvnVSQR7C9ffV84I/xK3tmHBNMTwWcsnTq2g==
+"@cmsgov/design-system-scripts@^2.10.0-beta.1":
+  version "2.10.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@cmsgov/design-system-scripts/-/design-system-scripts-2.10.0-beta.1.tgz#33fcba8ae70bb6365fa6a175333b057ac1151731"
+  integrity sha512-6/uWxDEtDtVIQdBGTRpSZQkNwZNmBrUgSxf0C1P16V4wPp+Cq9XM/JGMPs/VNi53KTwwubbuO2e76avi0dtsuQ==
   dependencies:
     "@axe-core/webdriverjs" "^4.2.2"
     "@babel/core" "^7.8.4"
@@ -1139,6 +1139,7 @@
     "@babel/register" "^7.8.4"
     "@testing-library/jest-dom" "^5.10.1"
     "@testing-library/react" "^10.3.0"
+    "@testing-library/user-event" "^13.5.0"
     autoprefixer "9.6.0"
     babel-loader "^8.0.0"
     babel-plugin-inline-react-svg "^1.1.2"
@@ -1203,10 +1204,10 @@
     webpack-hot-middleware "2.25.0"
     yargs "^11.0.0"
 
-"@cmsgov/design-system@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@cmsgov/design-system/-/design-system-2.9.0.tgz#ee7eecfc13760a3cb086013c766ee3491671f136"
-  integrity sha512-jsNySFbdPfgi51O6vkueXoNQhBcYZ6vfJ6G8RmM7NY3a+LyPbnGJ7EEM8gOU5giWyl61h+s8E64CGYYY3tl47A==
+"@cmsgov/design-system@^2.10.0-beta.1":
+  version "2.10.0-beta.1"
+  resolved "https://registry.yarnpkg.com/@cmsgov/design-system/-/design-system-2.10.0-beta.1.tgz#c8addcfb44af51f76e07e6bfa5da1a2320d829f7"
+  integrity sha512-XMAuKu7PbwAOBCLQ1/5mBY1jAcWE3gBwo3o6t4bg4hMDed4oB4TXdIElYt8EKCAsYA1otBAP7fv05PGCecU7iw==
   dependencies:
     "@popperjs/core" "^2.4.4"
     classnames "^2.2.5"
@@ -1214,7 +1215,7 @@
     downshift "^3.2.10"
     ev-emitter "^1.1.1"
     focus-trap-react "^6.0.0"
-    lodash.uniqueid "^4.0.1"
+    lodash "^4.17.21"
     prop-types "^15.7.2"
     react-aria-modal "^2.11.1"
     react-transition-group "^2.9.0"
@@ -1586,6 +1587,13 @@
   dependencies:
     "@babel/runtime" "^7.10.3"
     "@testing-library/dom" "^7.22.3"
+
+"@testing-library/user-event@^13.5.0":
+  version "13.5.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-13.5.0.tgz#69d77007f1e124d55314a2b73fd204b333b13295"
+  integrity sha512-5Kwtbo3Y/NowpkbRuSepbyMFkZmHgD+vPzYB/RJ4oxt5Gj/avFFBYjhw27cqSVPVw/3a67NK1PbiIr9k4Gwmdg==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
 
 "@types/aria-query@^4.2.0":
   version "4.2.1"
@@ -8773,11 +8781,6 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash.uniqueid@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/lodash.uniqueid/-/lodash.uniqueid-4.0.1.tgz#3268f26a7c88e4f4b1758d679271814e31fa5b26"
-  integrity sha1-MmjyanyI5PSxdY1nknGBTjH6WyY=
-
 lodash.upperfirst@4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/lodash.upperfirst/-/lodash.upperfirst-4.3.1.tgz#1365edf431480481ef0d1c68957a5ed99d49f7ce"
@@ -8792,6 +8795,11 @@ lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.1
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-symbols@^4.0.0:
   version "4.0.0"
